@@ -1,0 +1,2 @@
+curl -L "https://www.mapa.lodz.pl/3/rest/services/MapyPodkladowe/MapaBazowa/MapServer/11/query?where=1%3D1&outFields=DZIELNICA&returnGeometry=true&outSR=4326&f=geojson" \
+  -o public/lodz-districts.geojson

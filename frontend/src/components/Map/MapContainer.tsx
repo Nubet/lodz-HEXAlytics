@@ -1,0 +1,291 @@
+import { useCallback, useMemo, useSyncExternalStore } from 'react';
+import type { PickingInfo, ViewStateChangeParameters } from '@deck.gl/core';
+import DeckGL from '@deck.gl/react';
+import { Map } from 'react-map-gl/maplibre';
+
+import type { AccidentPoint, HexBin } from '@/types/accident.types';
+import type { AppTheme } from '@/hooks/useTheme';
+import type { AppViewState, VisualizationMode } from '@/types/map.types';
+import { createHexagonLayer, createHexLabelLayer, createScatterplotLayer } from './layers';
+
+let isDeckReady = false;
+let isDeckReadyScheduled = false;
+const deckReadyListeners = new Set<() => void>();
+let isLumaCanvasPatched = false;
+
+async function ensureDeckRuntimeReady() {
+  if (typeof window === 'undefined' || isDeckReadyScheduled) {
+    return;
+  }
+
+  isDeckReadyScheduled = true;
+
+  if (!isLumaCanvasPatched) {
+    const { WebGLCanvasContext } = await import('@luma.gl/webgl');
+    const originalGetMaxDrawingBufferSize = WebGLCanvasContext.prototype.getMaxDrawingBufferSize;
+
+    WebGLCanvasContext.prototype.getMaxDrawingBufferSize = function getSafeMaxDrawingBufferSize() {
+      const maxTextureDimension = this.device?.limits?.maxTextureDimension2D;
+
+      if (maxTextureDimension) {
+        return originalGetMaxDrawingBufferSize.call(this);
+      }
+
+      const width = Math.max(
+        4096,
+        Math.ceil((globalThis.innerWidth || this.cssWidth || this.canvas?.width || 1) * (globalThis.devicePixelRatio || 1)),
+      );
+      const height = Math.max(
+        4096,
+        Math.ceil((globalThis.innerHeight || this.cssHeight || this.canvas?.height || 1) * (globalThis.devicePixelRatio || 1)),
+      );
+
+      return [width, height];
+    };
+
+    isLumaCanvasPatched = true;
+  }
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      isDeckReady = true;
+      for (const listener of deckReadyListeners) {
+        listener();
+      }
+    });
+  });
+}
+
+const subscribeDeckReady = (onStoreChange: () => void) => {
+  deckReadyListeners.add(onStoreChange);
+
+  if (!isDeckReady && typeof window !== 'undefined') {
+    void ensureDeckRuntimeReady();
+  }
+
+  return () => {
+    deckReadyListeners.delete(onStoreChange);
+  };
+};
+
+interface MapContainerProps {
+  points: AccidentPoint[];
+  hexBins: HexBin[];
+  hexStats: {
+    minCount: number;
+    maxCount: number;
+    minAvgSeverity: number;
+    maxAvgSeverity: number;
+  };
+  dateIndex: Record<number, string> | null;
+  mode: VisualizationMode;
+  mapStyle: string;
+  theme: AppTheme;
+  showHexLabels: boolean;
+  hideHexOnZoom: boolean;
+  hexHideZoom: number;
+  viewState: AppViewState;
+  onViewStateChange: (params: ViewStateChangeParameters<AppViewState>) => void;
+  onHover?: (info: PickingInfo<AccidentPoint | HexBin>) => void;
+  onClick?: (info: PickingInfo<AccidentPoint | HexBin>) => void;
+}
+
+function getLayers(
+  mode: VisualizationMode,
+  points: AccidentPoint[],
+  hexBins: HexBin[],
+  hexStats: MapContainerProps['hexStats'],
+  showHexLabels: boolean,
+  theme: AppTheme,
+  zoom: number,
+  hideHexOnZoom: boolean,
+  hexHideZoom: number
+) {
+  const shouldHideHexes = hideHexOnZoom && zoom >= hexHideZoom;
+  const lineColor: [number, number, number, number] = shouldHideHexes
+    ? (theme === 'dark' ? [255, 255, 255, 140] : [15, 23, 42, 120])
+    : (theme === 'dark' ? [255, 255, 255, 40] : [15, 23, 42, 30]);
+  const lineWidth = shouldHideHexes ? 1.4 : 0.5;
+  const fillOpacityMultiplier = 1;
+  const buildHexLayer = (extruded: boolean) =>
+    createHexagonLayer({
+      hexBins,
+      extruded,
+      minCount: hexStats.minCount,
+      maxCount: hexStats.maxCount,
+      showFill: !shouldHideHexes,
+      fillOpacityMultiplier,
+      lineColor,
+      lineWidth,
+    });
+
+  const buildHexLabelsLayer = () =>
+    createHexLabelLayer({
+      hexBins,
+      theme,
+    });
+
+  switch (mode) {
+    case 'points':
+      return [createScatterplotLayer({ points })];
+    case 'hex_2d':
+      return showHexLabels
+        ? [buildHexLayer(false), buildHexLabelsLayer()]
+        : [buildHexLayer(false)];
+    case 'hex_3d':
+      return showHexLabels
+        ? [buildHexLayer(true), buildHexLabelsLayer()]
+        : [buildHexLayer(true)];
+    default:
+      return [];
+  }
+}
+
+const SEVERITY_LABELS: Record<AccidentPoint['severity'], string> = {
+  L: 'Lekkie',
+  C: 'Ciężkie',
+  S: 'Śmiertelne',
+};
+
+function getYearFromIndex(dateIndex: Record<number, string> | null, id: number): string | null {
+  if (!dateIndex) return null;
+  const rawDate = dateIndex[id];
+  if (!rawDate) return null;
+  const year = Number(rawDate.slice(0, 4));
+  return Number.isNaN(year) ? null : String(year);
+}
+
+function formatAccidentTooltip(
+  point: AccidentPoint,
+  dateIndex: Record<number, string> | null
+): string {
+  const lines = [`Zdarzenie ID: ${point.id}`, `Ciężkość: ${SEVERITY_LABELS[point.severity]}`];
+
+  if (point.district) {
+    lines.push(`Dzielnica: ${point.district}`);
+  }
+
+  const year = getYearFromIndex(dateIndex, point.id);
+  lines.push(`Rok: ${year ?? 'brak danych'}`);
+
+  return lines.join('\n');
+}
+
+function formatHexTooltip(hex: HexBin): string {
+  return [
+    `Zdarzenia: ${hex.count}`,
+    `Średnia ciężkość: ${hex.avgSeverityWeight.toFixed(2)}`,
+  ].join('\n');
+}
+
+function getTooltipContent(
+  object: unknown,
+  mode: VisualizationMode,
+  dateIndex: Record<number, string> | null
+): string | null {
+  if (!object || typeof object !== 'object') {
+    return null;
+  }
+
+  if (mode === 'points' && isAccidentPoint(object)) {
+    return formatAccidentTooltip(object, dateIndex);
+  }
+
+  if (isHexBin(object)) {
+    return formatHexTooltip(object);
+  }
+
+  return null;
+}
+
+function isAccidentPoint(object: object): object is AccidentPoint {
+  return 'id' in object && 'severity' in object && 'gminaName' in object;
+}
+
+function isHexBin(object: object): object is HexBin {
+  return 'avgSeverityWeight' in object && 'count' in object;
+}
+
+export function MapContainer({
+  points,
+  hexBins,
+  hexStats,
+  dateIndex,
+  mode,
+  mapStyle,
+  theme,
+  showHexLabels,
+  hideHexOnZoom,
+  hexHideZoom,
+  viewState,
+  onViewStateChange,
+  onHover,
+  onClick,
+}: MapContainerProps) {
+  const isDeckMounted = useSyncExternalStore(
+    subscribeDeckReady,
+    () => isDeckReady,
+    () => false,
+  );
+
+  const layers = useMemo(
+    () =>
+      getLayers(
+        mode,
+        points,
+        hexBins,
+        hexStats,
+        showHexLabels,
+        theme,
+        viewState.zoom,
+        hideHexOnZoom,
+        hexHideZoom
+      ),
+    [
+      mode,
+      points,
+      hexBins,
+      hexStats,
+      showHexLabels,
+      theme,
+      viewState.zoom,
+      hideHexOnZoom,
+      hexHideZoom,
+    ]
+  );
+
+  const handleViewStateChange = useCallback(
+    (params: ViewStateChangeParameters) => {
+      onViewStateChange(params as ViewStateChangeParameters<AppViewState>);
+    },
+    [onViewStateChange]
+  );
+
+  const handleTooltip = useCallback(
+    ({ object }: PickingInfo<AccidentPoint | HexBin>) =>
+      getTooltipContent(object, mode, dateIndex),
+    [dateIndex, mode]
+  );
+
+  if (!isDeckMounted) {
+    return <div className="relative size-full overflow-hidden bg-slate-950" />;
+  }
+
+  return (
+    <div className="relative size-full overflow-hidden bg-slate-950">
+      <DeckGL
+        deviceProps={{ type: 'webgl' }}
+        viewState={viewState}
+        onViewStateChange={handleViewStateChange}
+        layers={layers}
+        getCursor={({ isHovering }) => (isHovering ? 'pointer' : 'grab')}
+        onHover={onHover}
+        onClick={onClick}
+        getTooltip={handleTooltip}
+        controller={true}
+      >
+        <Map mapStyle={mapStyle} />
+      </DeckGL>
+    </div>
+  );
+}

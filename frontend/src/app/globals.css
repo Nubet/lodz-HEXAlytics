@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+@import 'maplibre-gl/dist/maplibre-gl.css';
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+:root {
+  --app-bg: #f6f8fc;
+  --app-surface: rgb(255 255 255 / 0.9);
+  --app-card: #ffffff;
+  --app-panel: rgb(255 255 255 / 0.72);
+  --app-border: #dfe4ef;
+  --app-text: #0f1729;
+  --app-muted: #566072;
+  --app-accent: #2c7be5;
+  --app-accent-strong: #1b5adf;
+  --app-accent-soft: rgb(44 123 229 / 0.16);
+  --app-success: #2fbf71;
+  --app-warning: #f5a524;
+  --app-danger: #ef4444;
+  --surface-elevated-blur: 16px;
+  --card-gradient:
+    radial-gradient(circle at 20% 20%, rgb(44 123 229 / 0.12), transparent 32%),
+    radial-gradient(circle at 80% 0%, rgb(47 191 113 / 0.12), transparent 26%);
+  --surface-elevated-bg: rgb(255 255 255 / 0.78);
+  --surface-elevated-border: rgb(255 255 255 / 0.5);
+  --surface-elevated-shadow: 0 4px 24px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
+  --surface-elevated-shadow-hover: 0 8px 32px rgb(0 0 0 / 0.1), 0 2px 4px rgb(0 0 0 / 0.06);
+  --surface-elevated-foreground: #1f2937;
+  --surface-elevated-muted: #4b5563;
+  --surface-elevated-subtle: #6b7280;
+  --surface-elevated-hover: rgb(0 0 0 / 0.05);
+  --surface-elevated-active: rgb(0 0 0 / 0.08);
+  --surface-elevated-divider: rgb(0 0 0 / 0.1);
+  --focus-ring: 0 0 0 3px var(--app-accent-soft), 0 0 0 4px color-mix(in srgb, var(--app-accent) 45%, transparent);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --app-bg: #0d111a;
+  --app-surface: rgb(16 21 34 / 0.9);
+  --app-card: #111827;
+  --app-panel: rgb(17 24 39 / 0.78);
+  --app-border: #1f2737;
+  --app-text: #e5e8f1;
+  --app-muted: #8a93a8;
+  --app-accent: #5ea1ff;
+  --app-accent-strong: #7bb7ff;
+  --app-accent-soft: rgb(94 161 255 / 0.18);
+  --app-success: #2fbf71;
+  --app-warning: #f5a524;
+  --app-danger: #f87171;
+  --surface-elevated-blur: 18px;
+  --card-gradient:
+    radial-gradient(circle at 18% 10%, rgb(94 161 255 / 0.18), transparent 30%),
+    radial-gradient(circle at 82% 12%, rgb(245 165 36 / 0.14), transparent 30%);
+  --surface-elevated-bg: rgb(20 20 20 / 0.75);
+  --surface-elevated-border: rgb(255 255 255 / 0.15);
+  --surface-elevated-shadow: 0 4px 24px rgb(0 0 0 / 0.3), 0 1px 2px rgb(0 0 0 / 0.15);
+  --surface-elevated-shadow-hover: 0 8px 32px rgb(0 0 0 / 0.4), 0 2px 4px rgb(0 0 0 / 0.2);
+  --surface-elevated-foreground: #ffffff;
+  --surface-elevated-muted: #d1d5db;
+  --surface-elevated-subtle: #9ca3af;
+  --surface-elevated-hover: rgb(255 255 255 / 0.08);
+  --surface-elevated-active: rgb(255 255 255 / 0.12);
+  --surface-elevated-divider: rgb(255 255 255 / 0.1);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', SFMono-Regular, Menlo, monospace;
+
+  --color-app-bg: var(--app-bg);
+  --color-app-surface: var(--app-surface);
+  --color-app-card: var(--app-card);
+  --color-app-panel: var(--app-panel);
+  --color-app-border: var(--app-border);
+  --color-app-text: var(--app-text);
+  --color-app-muted: var(--app-muted);
+  --color-app-accent: var(--app-accent);
+  --color-app-accent-strong: var(--app-accent-strong);
+  --color-app-accent-soft: var(--app-accent-soft);
+  --color-app-success: var(--app-success);
+  --color-app-warning: var(--app-warning);
+  --color-app-danger: var(--app-danger);
+
+  --color-surface-elevated: var(--surface-elevated-bg);
+  --color-surface-elevated-border: var(--surface-elevated-border);
+  --color-surface-elevated-foreground: var(--surface-elevated-foreground);
+  --color-surface-elevated-muted: var(--surface-elevated-muted);
+  --color-surface-elevated-subtle: var(--surface-elevated-subtle);
+  --color-surface-elevated-hover: var(--surface-elevated-hover);
+  --color-surface-elevated-active: var(--surface-elevated-active);
+  --color-surface-elevated-divider: var(--surface-elevated-divider);
+
+  --radius-panel: 1rem;
+  --radius-card: 1.375rem;
+  --shadow-surface-elevated: var(--surface-elevated-shadow);
+  --shadow-surface-elevated-hover: var(--surface-elevated-shadow-hover);
+  --shadow-surface-dialog: var(--surface-elevated-shadow), 0 20px 40px rgb(0 0 0 / 0.25);
+  --shadow-surface-dialog-strong: var(--surface-elevated-shadow), 0 24px 48px rgb(0 0 0 / 0.28);
+  --shadow-surface-drawer: var(--surface-elevated-shadow), 0 10px 30px rgb(0 0 0 / 0.18);
+  --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.08);
+  --shadow-medium: 0 14px 40px rgb(0 0 0 / 0.12);
+  --shadow-strong: 0 18px 60px rgb(0 0 0 / 0.16);
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    @apply h-full w-full overflow-hidden;
+  }
+
+  body {
+    @apply bg-app-bg font-sans text-app-text antialiased transition-colors duration-200;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--app-accent) 24%, transparent);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--app-border) 70%, transparent);
+    border-radius: 999px;
+    border: 2px solid transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in srgb, var(--app-accent) 65%, transparent);
+  }
+
+  .maplibre-gl-canvas {
+    outline: none;
+  }
+
+  .deck-tooltip {
+    font-family: var(--font-sans) !important;
+    font-size: 12px !important;
+    padding: 10px 14px !important;
+    background: color-mix(in srgb, var(--app-panel) 90%, var(--app-card)) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--app-border) !important;
+    color: var(--app-text) !important;
+    border-radius: 10px !important;
+    max-width: 240px !important;
+    pointer-events: none !important;
+    box-shadow: var(--shadow-medium) !important;
+    white-space: pre-wrap;
+    z-index: 1000;
+  }
+
+  input[type='range'] {
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface-elevated-divider) 65%, transparent);
+    outline: none;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--app-accent);
+    box-shadow: 0 0 0 4px var(--app-accent-soft);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  input[type='range']::-webkit-slider-thumb:active {
+    transform: scale(1.05);
+  }
+
+  input[type='range']::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--app-accent);
+    box-shadow: 0 0 0 4px var(--app-accent-soft);
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@utility elevated-panel {
+  background: var(--surface-elevated-bg);
+  border: 1px solid var(--surface-elevated-border);
+  box-shadow: var(--surface-elevated-shadow);
+  backdrop-filter: blur(var(--surface-elevated-blur));
+  -webkit-backdrop-filter: blur(var(--surface-elevated-blur));
+}
+
+@utility elevated-dialog {
+  background: var(--surface-elevated-bg);
+  border: 1px solid var(--surface-elevated-border);
+  box-shadow: var(--shadow-surface-dialog);
+  backdrop-filter: blur(var(--surface-elevated-blur));
+  -webkit-backdrop-filter: blur(var(--surface-elevated-blur));
+}
+
+@utility surface-card {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+}
+
+@utility modal-backdrop {
+  background: rgb(10 12 18 / 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@utility overline-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--surface-elevated-subtle);
+}
+
+@utility section-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--surface-elevated-subtle);
+}
+
+@utility icon-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--surface-elevated-muted);
+  transition: all 0.2s ease;
+}
+
+@utility pill-control {
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+@utility thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--surface-elevated-border) 55%, transparent) transparent;
+}

@@ -1,0 +1,322 @@
+'use client';
+
+import { Component, useCallback, useMemo, useState, type ReactNode } from 'react';
+import dynamic from 'next/dynamic';
+import type { PickingInfo, ViewStateChangeParameters } from '@deck.gl/core';
+import { Map } from 'react-map-gl/maplibre';
+import { AccidentDetailsModal } from '@/components/AccidentDetails/AccidentDetailsModal';
+import { AboutOverlay } from '@/components/About/AboutOverlay';
+import { AuthorOverlay } from '@/components/Author/AuthorOverlay';
+import { DataOverlay } from '@/components/Data/DataOverlay';
+import { ControlPanel } from '@/components/Controls/ControlPanel';
+import { AdvancedSettingsDrawer } from '@/components/Settings/AdvancedSettingsDrawer';
+import { HeaderDock } from '@/components/Header';
+import { Loader } from '@/components/UI/Loader';
+import { H3_RESOLUTION } from '@/constants/h3.constants';
+import { INITIAL_VIEW_STATE, MAP_STYLE, MAP_STYLE_DARK, VIEW_STATE_2D, VIEW_STATE_3D, HEX_HIDE_ZOOM } from '@/constants/map.constants';
+import { useHexAggregation } from '@/hooks/useHexAggregation';
+import { useResponsivePanel } from '@/hooks/useResponsivePanel';
+import { useTheme } from '@/hooks/useTheme';
+import { createAccidentPredicate } from '@/utils/filterPredicates';
+import type { AccidentPoint, HexBin, MapPageData, SeverityLevel, ZdarzenieDetails } from '@/modules/accidents/domain/types';
+import type { AppViewState, VisualizationMode } from '@/types/map.types';
+
+const MapContainer = dynamic(
+  () => import('@/components/Map/MapContainer').then((module) => module.MapContainer),
+  {
+    ssr: false,
+    loading: () => <Loader message="Loading map..." />,
+  },
+);
+
+interface MapPageClientProps {
+  initialData: MapPageData;
+}
+
+interface DetailsState {
+  details: ZdarzenieDetails | null;
+  isLoading: boolean;
+  error: Error | null;
+}
+
+interface MapRuntimeBoundaryProps {
+  fallback: ReactNode;
+  children: ReactNode;
+}
+
+interface MapRuntimeBoundaryState {
+  hasError: boolean;
+}
+
+class MapRuntimeBoundary extends Component<MapRuntimeBoundaryProps, MapRuntimeBoundaryState> {
+  state: MapRuntimeBoundaryState = { hasError: false };
+
+  static getDerivedStateFromError(): MapRuntimeBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error) {
+    console.error('DeckGL runtime error', error);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+
+    return this.props.children;
+  }
+}
+
+function MapFallback({ mapStyle, viewState }: { mapStyle: string; viewState: AppViewState }) {
+  return (
+    <div className="relative size-full overflow-hidden bg-slate-950">
+      <Map
+        longitude={viewState.longitude}
+        latitude={viewState.latitude}
+        zoom={viewState.zoom}
+        pitch={viewState.pitch}
+        bearing={viewState.bearing}
+        mapStyle={mapStyle}
+        reuseMaps
+      />
+
+      <div className="pointer-events-none absolute right-4 bottom-4 z-10 max-w-sm rounded-2xl bg-black/60 px-4 py-3 text-sm text-white shadow-lg backdrop-blur-sm">
+        Warstwa wizualizacji jest chwilowo niedostepna. Mapa i pozostale kontrolki dalej dzialaja.
+      </div>
+    </div>
+  );
+}
+
+function toggleListItem<T>(items: T[], value: T) {
+  return items.includes(value)
+    ? items.filter((item) => item !== value)
+    : [...items, value];
+}
+
+export function MapPageClient({ initialData }: MapPageClientProps) {
+  const { points, stats, dateIndex, availableYears } = initialData;
+  const availableDistricts = useMemo(() => {
+    return Array.from(
+      new Set(
+        points
+          .map((point) => point.district)
+          .filter((district): district is string => Boolean(district)),
+      ),
+    ).sort((a, b) => a.localeCompare(b, 'pl'));
+  }, [points]);
+
+  const [mode, setMode] = useState<VisualizationMode>('hex_2d');
+  const [viewState, setViewState] = useState<AppViewState>(INITIAL_VIEW_STATE);
+  const [activeSeverities, setActiveSeverities] = useState<SeverityLevel[]>(['L', 'C', 'S']);
+  const [activeYears, setActiveYears] = useState<number[]>(availableYears);
+  const [activeDistricts, setActiveDistricts] = useState<string[]>(availableDistricts);
+  const [showAuthor, setShowAuthor] = useState(false);
+  const [showData, setShowData] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
+  const [isAdvancedOpen, setIsAdvancedOpen] = useState(false);
+  const [showHexLabels, setShowHexLabels] = useState(false);
+  const [hexResolution, setHexResolution] = useState(H3_RESOLUTION.DEFAULT);
+  const [hideHexOnZoom, setHideHexOnZoom] = useState(false);
+  const [hexHideZoom, setHexHideZoom] = useState(HEX_HIDE_ZOOM.DEFAULT);
+  const [selectedSeverity, setSelectedSeverity] = useState<SeverityLevel | null>(null);
+  const [detailsState, setDetailsState] = useState<DetailsState>({
+    details: null,
+    isLoading: false,
+    error: null,
+  });
+
+  const { theme, toggleTheme } = useTheme();
+  const { isControlPanelOpen, toggleControlPanel, closeControlPanel } = useResponsivePanel();
+
+  const filteredPoints = useMemo(() => {
+    const predicate = createAccidentPredicate(
+      activeSeverities,
+      activeYears,
+      dateIndex,
+      availableDistricts,
+      activeDistricts,
+    );
+
+    return points.filter(predicate);
+  }, [activeDistricts, activeSeverities, activeYears, availableDistricts, dateIndex, points]);
+
+  const { hexBins, stats: hexStats } = useHexAggregation(filteredPoints, hexResolution);
+  const mapStyle = theme === 'dark' ? MAP_STYLE_DARK : MAP_STYLE;
+  const isHexMode = mode !== 'points';
+
+  const selectedDistrict = useMemo(() => {
+    if (!detailsState.details) {
+      return null;
+    }
+
+    return points.find((point) => point.id === detailsState.details?.id)?.district ?? null;
+  }, [detailsState.details, points]);
+
+  const accidentStats = useMemo(
+    () => ({
+      displayed: filteredPoints.length,
+      total: stats?.total ?? 0,
+    }),
+    [filteredPoints.length, stats?.total],
+  );
+
+  const handleModeChange = useCallback((nextMode: VisualizationMode) => {
+    setMode(nextMode);
+    setViewState((current) => ({
+      ...current,
+      ...(nextMode === 'hex_3d' ? VIEW_STATE_3D : VIEW_STATE_2D),
+    }));
+  }, []);
+
+  const handleViewStateChange = useCallback((params: ViewStateChangeParameters<AppViewState>) => {
+    setViewState(params.viewState);
+  }, []);
+
+  const handleToggleSeverity = useCallback((severity: SeverityLevel) => {
+    setActiveSeverities((current) => toggleListItem(current, severity));
+  }, []);
+
+  const handleToggleYear = useCallback((year: number) => {
+    setActiveYears((current) => toggleListItem(current, year));
+  }, []);
+
+  const handleToggleDistrict = useCallback((district: string) => {
+    setActiveDistricts((current) => toggleListItem(current, district));
+  }, []);
+
+  const handleMapClick = useCallback(async (info: PickingInfo<AccidentPoint | HexBin>) => {
+    if (!info.object || !('id' in info.object) || mode !== 'points') {
+      return;
+    }
+
+    const accident = info.object as AccidentPoint;
+    setSelectedSeverity(accident.severity);
+    setDetailsState({ details: null, isLoading: true, error: null });
+
+    try {
+      const response = await fetch(`/api/accident-details?id=${accident.id}`);
+      if (!response.ok) {
+        const payload = (await response.json().catch(() => null)) as { message?: string } | null;
+        throw new Error(payload?.message ?? `Failed to load accident details (${response.status}).`);
+      }
+
+      const details = (await response.json()) as ZdarzenieDetails;
+      setDetailsState({ details, isLoading: false, error: null });
+    } catch (error) {
+      setDetailsState({
+        details: null,
+        isLoading: false,
+        error: error instanceof Error ? error : new Error('Unknown error'),
+      });
+    }
+  }, [mode]);
+
+  const handleCloseDetails = useCallback(() => {
+    setDetailsState({ details: null, isLoading: false, error: null });
+    setSelectedSeverity(null);
+  }, []);
+
+  const handleNavigate = useCallback((href: string) => {
+    if (href === '#author') {
+      setShowAuthor(true);
+    }
+    if (href === '#data') {
+      setShowData(true);
+    }
+    if (href === '#about') {
+      setShowAbout(true);
+    }
+  }, []);
+
+  return (
+    <div className="relative h-screen w-screen overflow-hidden bg-app-bg text-app-text">
+      <div className="absolute inset-0 z-0">
+        <MapRuntimeBoundary fallback={<MapFallback mapStyle={mapStyle} viewState={viewState} />}>
+          <MapContainer
+            points={filteredPoints}
+            hexBins={hexBins}
+            hexStats={hexStats}
+            dateIndex={dateIndex}
+            mode={mode}
+            mapStyle={mapStyle}
+            theme={theme}
+            showHexLabels={showHexLabels}
+            hideHexOnZoom={hideHexOnZoom}
+            hexHideZoom={hexHideZoom}
+            viewState={viewState}
+            onViewStateChange={handleViewStateChange}
+            onClick={handleMapClick}
+          />
+        </MapRuntimeBoundary>
+      </div>
+
+      <div className="pointer-events-none absolute inset-0 z-10">
+        <HeaderDock
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          onNavigate={handleNavigate}
+          isControlPanelOpen={isControlPanelOpen}
+          onToggleControlPanel={toggleControlPanel}
+        />
+
+        <div
+          className={[
+            'absolute inset-0 bg-slate-950/35 backdrop-blur-[2px] transition-opacity duration-200 min-[901px]:hidden',
+            isControlPanelOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
+          ].join(' ')}
+          onClick={closeControlPanel}
+          aria-hidden="true"
+        />
+
+        <ControlPanel
+          mode={mode}
+          onModeChange={handleModeChange}
+          activeSeverities={activeSeverities}
+          onToggleSeverity={handleToggleSeverity}
+          availableYears={availableYears}
+          activeYears={activeYears}
+          onToggleYear={handleToggleYear}
+          onResetYears={() => setActiveYears(availableYears)}
+          isDateIndexLoading={false}
+          isHexMode={isHexMode}
+          hexStats={hexStats}
+          accidentStats={accidentStats}
+          onOpenAdvancedSettings={() => setIsAdvancedOpen((current) => !current)}
+          isOpen={isControlPanelOpen}
+          onClose={closeControlPanel}
+        />
+      </div>
+
+      <AdvancedSettingsDrawer
+        isOpen={isAdvancedOpen}
+        onClose={() => setIsAdvancedOpen(false)}
+        showHexLabels={showHexLabels}
+        onToggleHexLabels={() => setShowHexLabels((current) => !current)}
+        hexResolution={hexResolution}
+        onChangeHexResolution={setHexResolution}
+        hideHexOnZoom={hideHexOnZoom}
+        onToggleHideHexOnZoom={() => setHideHexOnZoom((current) => !current)}
+        hexHideZoom={hexHideZoom}
+        onChangeHexHideZoom={setHexHideZoom}
+        availableDistricts={availableDistricts}
+        activeDistricts={activeDistricts}
+        onToggleDistrict={handleToggleDistrict}
+        onResetDistricts={() => setActiveDistricts(availableDistricts)}
+      />
+
+      <AccidentDetailsModal
+        details={detailsState.details}
+        severity={selectedSeverity}
+        district={selectedDistrict}
+        isLoading={detailsState.isLoading}
+        error={detailsState.error}
+        onClose={handleCloseDetails}
+      />
+
+      <AuthorOverlay isOpen={showAuthor} onClose={() => setShowAuthor(false)} />
+      <DataOverlay isOpen={showData} onClose={() => setShowData(false)} />
+      <AboutOverlay isOpen={showAbout} onClose={() => setShowAbout(false)} />
+    </div>
+  );
+}
