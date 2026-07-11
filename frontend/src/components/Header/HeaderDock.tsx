@@ -79,7 +79,7 @@ function LogoSection({ isControlPanelOpen, onToggleControlPanel }: LogoSectionPr
     <div className="flex shrink-0 items-center gap-3">
       <button
         type="button"
-        className="icon-control hidden size-9 rounded-full text-surface-elevated-subtle hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground active:scale-95 active:bg-surface-elevated-active max-[900px]:inline-flex"
+        className="icon-control nav-pill hidden size-9 text-surface-elevated-subtle max-[900px]:inline-flex"
         onClick={onToggleControlPanel}
         aria-label={isControlPanelOpen ? 'Ukryj panel filtrów' : 'Pokaż panel filtrów'}
         aria-expanded={isControlPanelOpen}
@@ -103,7 +103,7 @@ function LogoSection({ isControlPanelOpen, onToggleControlPanel }: LogoSectionPr
       </button>
       <div className="flex items-center gap-2.5" aria-label="Logo">
         <span
-          className="size-8 rounded-lg bg-app-accent shadow-[0_2px_8px_color-mix(in_srgb,var(--app-accent)_35%,transparent)]"
+          className="logo-mark size-8 rounded-lg bg-app-accent"
           aria-hidden="true"
           style={{
             WebkitMaskImage: "url('/hexa-logo.svg')",
@@ -146,7 +146,7 @@ function NavSection({ onNavigate }: NavSectionProps) {
           <li key={item.href}>
             <a
               href={item.href}
-              className="pill-control block whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-surface-elevated-muted hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground active:scale-[0.98] active:bg-surface-elevated-active max-[768px]:px-3 max-[768px]:py-1.5 max-[768px]:text-[13px]"
+              className="nav-pill block whitespace-nowrap px-4 py-2 text-sm font-medium text-surface-elevated-muted max-[768px]:px-3 max-[768px]:py-1.5 max-[768px]:text-[13px]"
               onClick={(e) => handleClick(e, item.href)}
             >
               {item.label}
@@ -168,7 +168,7 @@ function ToolsSection({ isDark, onToggleTheme }: ToolsSectionProps) {
     <div className="flex shrink-0 items-center gap-2 max-[540px]:ml-auto">
       <button
         type="button"
-        className="icon-control size-9 rounded-full text-surface-elevated-subtle hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground active:scale-95 active:bg-surface-elevated-active"
+        className="icon-control nav-pill size-9 text-surface-elevated-subtle"
         aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
         title={isDark ? 'Tryb jasny' : 'Tryb ciemny'}
         onClick={onToggleTheme}
@@ -182,7 +182,7 @@ function ToolsSection({ isDark, onToggleTheme }: ToolsSectionProps) {
         href={GITHUB_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="icon-control size-9 rounded-full text-surface-elevated-subtle hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground active:scale-95 active:bg-surface-elevated-active"
+        className="icon-control nav-pill size-9 text-surface-elevated-subtle"
         aria-label="GitHub Repository"
         title="Zobacz kod na GitHub"
       >
@@ -210,7 +210,7 @@ export function HeaderDock({
   const isDark = theme === 'dark';
 
   return (
-    <header className="elevated-panel pointer-events-auto absolute top-5 left-1/2 z-40 flex w-[calc(100%-48px)] max-w-[900px] -translate-x-1/2 items-center justify-between gap-6 rounded-full px-6 py-2.5 transition-shadow hover:shadow-surface-elevated-hover max-[768px]:w-[calc(100%-32px)] max-[768px]:gap-4 max-[768px]:px-4 max-[768px]:py-2 max-[540px]:w-[calc(100%-24px)] max-[540px]:gap-2 max-[540px]:rounded-2xl max-[540px]:px-3">
+    <header className="header-dock-shell elevated-panel pointer-events-auto absolute top-5 left-1/2 z-40 flex max-w-[900px] -translate-x-1/2 items-center justify-between gap-6 rounded-full px-6 py-2.5 transition-shadow hover:shadow-surface-elevated-hover max-[768px]:gap-4 max-[768px]:px-4 max-[768px]:py-2 max-[540px]:gap-2 max-[540px]:rounded-2xl max-[540px]:px-3">
       <LogoSection
         isControlPanelOpen={isControlPanelOpen}
         onToggleControlPanel={onToggleControlPanel}

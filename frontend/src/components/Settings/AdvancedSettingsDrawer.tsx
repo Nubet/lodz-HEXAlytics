@@ -133,7 +133,7 @@ export function AdvancedSettingsDrawer({
           </div>
           <button
             type="button"
-            className="flex size-8 items-center justify-center rounded-[10px] border border-surface-elevated-border text-lg leading-none text-surface-elevated-muted transition hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground"
+            className="dialog-close-button size-8 text-lg leading-none"
             onClick={onClose}
             aria-label="Zamknij"
           >

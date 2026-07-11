@@ -29,11 +29,11 @@ function ModeOptionButton({
   onModeChange,
 }: ModeOptionButtonProps) {
   return (
-    <button
-      className={classNames(
-        'pill-control flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[13px] font-medium text-surface-elevated-muted hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground',
-        isActive && 'bg-surface-elevated-active text-surface-elevated-foreground shadow-[0_0_0_1px_var(--surface-elevated-border)]'
-      )}
+      <button
+        className={classNames(
+          'interactive-pill flex items-center gap-1.5 px-3.5 py-1.5 text-[13px] font-medium text-surface-elevated-muted',
+          isActive && 'interactive-pill-active'
+        )}
       onClick={() => onModeChange(value)}
       type="button"
       role="radio"

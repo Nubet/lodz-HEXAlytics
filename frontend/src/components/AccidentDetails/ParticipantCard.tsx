@@ -8,6 +8,13 @@ const INJURY_LABELS: Record<InjuryLevel, string> = {
   none: 'Brak obrażeń',
 };
 
+const INJURY_BADGE_CLASSES: Record<InjuryLevel, string> = {
+  fatal: 'injury-badge-fatal',
+  serious: 'injury-badge-serious',
+  light: 'injury-badge-light',
+  none: 'injury-badge-none',
+};
+
 interface ParticipantCardProps {
   participant: ParticipantInfo;
 }
@@ -26,11 +33,8 @@ export function ParticipantCard({ participant }: ParticipantCardProps) {
             <span
               key={uniqueKey}
               className={classNames(
-                'rounded-xl border px-2 py-0.5 text-[11px] font-medium uppercase tracking-[0.03em]',
-                injury === 'fatal' && 'border-[color-mix(in_srgb,#ef4444_35%,var(--app-border))] bg-[color-mix(in_srgb,#ef4444_16%,var(--app-card))] text-[color-mix(in_srgb,#ef4444_75%,var(--app-text))]',
-                injury === 'serious' && 'border-[color-mix(in_srgb,#f59e0b_35%,var(--app-border))] bg-[color-mix(in_srgb,#f59e0b_18%,var(--app-card))] text-[color-mix(in_srgb,#f59e0b_75%,var(--app-text))]',
-                injury === 'light' && 'border-[color-mix(in_srgb,#3b82f6_35%,var(--app-border))] bg-[color-mix(in_srgb,#3b82f6_18%,var(--app-card))] text-[color-mix(in_srgb,#3b82f6_75%,var(--app-text))]',
-                injury === 'none' && 'border-[color-mix(in_srgb,#10b981_35%,var(--app-border))] bg-[color-mix(in_srgb,#10b981_18%,var(--app-card))] text-[color-mix(in_srgb,#10b981_70%,var(--app-text))]',
+                'injury-badge',
+                INJURY_BADGE_CLASSES[injury],
               )}
             >
               {INJURY_LABELS[injury]}

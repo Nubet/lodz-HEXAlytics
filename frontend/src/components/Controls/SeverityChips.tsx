@@ -32,11 +32,11 @@ function SeverityChip({ id, label, isActive, onToggle }: SeverityChipProps) {
   const color = getSeverityColor(id);
 
   return (
-    <button
-      className={classNames(
-        'pill-control flex items-center gap-1.5 rounded-full px-3 py-1 text-[13px] font-medium text-surface-elevated-muted hover:bg-surface-elevated-hover',
-        isActive && 'bg-surface-elevated-active text-surface-elevated-foreground shadow-[0_0_0_1px_var(--surface-elevated-border)]'
-      )}
+      <button
+        className={classNames(
+          'interactive-pill flex items-center gap-1.5 px-3 py-1 text-[13px] font-medium text-surface-elevated-muted',
+          isActive && 'interactive-pill-active'
+        )}
       onClick={() => onToggle(id)}
       aria-pressed={isActive}
       role="switch"

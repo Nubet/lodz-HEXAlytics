@@ -122,7 +122,7 @@ export function ControlPanel({
         </span>
         <button
           type="button"
-          className="icon-control size-8 rounded-full border border-surface-elevated-divider bg-surface-elevated-hover text-surface-elevated-foreground hover:bg-surface-elevated-active"
+          className="surface-button icon-control size-8 rounded-full"
           onClick={onClose}
           aria-label="Zamknij panel"
         >
@@ -176,7 +176,7 @@ export function ControlPanel({
       <PanelSection title="Ustawienia">
         <button
           type="button"
-          className="rounded-[10px] border border-surface-elevated-divider bg-surface-elevated-hover px-3 py-2 text-left text-xs font-semibold text-surface-elevated-foreground transition hover:bg-surface-elevated-active"
+          className="surface-button rounded-[10px] px-3 py-2 text-left text-xs font-semibold"
           onClick={onOpenAdvancedSettings}
         >
           Rozszerzone filtry

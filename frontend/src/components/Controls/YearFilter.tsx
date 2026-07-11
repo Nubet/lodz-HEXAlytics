@@ -1,4 +1,6 @@
 
+import { classNames } from '@/utils/classNames';
+
 interface YearFilterProps {
   availableYears: number[];
   activeYears: number[];
@@ -23,14 +25,11 @@ export function YearFilter({
           <button
             key={year}
             type="button"
-            className={[
-              'pill-control rounded-full border border-surface-elevated-divider bg-surface-elevated-hover px-3 py-1.5 text-xs text-surface-elevated-muted',
-              'hover:border-[color-mix(in_srgb,var(--app-accent)_45%,var(--surface-elevated-divider))] hover:text-surface-elevated-foreground',
-              activeYears.includes(year)
-                ? 'border-[color-mix(in_srgb,var(--app-accent)_70%,var(--surface-elevated-divider))] bg-surface-elevated-active text-surface-elevated-foreground shadow-[0_0_0_1px_color-mix(in_srgb,var(--app-accent)_55%,transparent)]'
-                : '',
-              isDisabled ? 'cursor-not-allowed opacity-60' : '',
-            ].join(' ')}
+            className={classNames(
+              'pill-control year-chip rounded-full px-3 py-1.5 text-xs',
+              activeYears.includes(year) && 'year-chip-active',
+              isDisabled && 'cursor-not-allowed opacity-60',
+            )}
             onClick={() => onToggleYear(year)}
             disabled={isDisabled}
           >

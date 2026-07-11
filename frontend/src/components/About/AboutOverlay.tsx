@@ -46,10 +46,10 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
       tabIndex={0}
     >
       <div className="elevated-dialog thin-scrollbar relative max-h-[86vh] w-full max-w-205 overflow-auto rounded-card p-8 text-surface-elevated-foreground shadow-surface-dialog-strong starting:translate-y-4 starting:scale-[0.98] starting:opacity-0 max-[640px]:p-6">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(255,255,255,0.16),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(44,123,229,0.18),transparent_50%)] opacity-50" />
+        <div className="overlay-soft-glow pointer-events-none absolute inset-0 opacity-50" />
 
         <button
-          className="absolute top-4 right-4 z-10 flex size-8.5 items-center justify-center rounded-xl border border-surface-elevated-border text-xl leading-none text-surface-elevated-muted transition hover:-translate-y-px hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground"
+          className="dialog-close-button absolute top-4 right-4 z-10 size-8.5 text-xl leading-none"
           onClick={onClose}
           aria-label="Close"
         >
@@ -61,7 +61,7 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
           <h2 className="font-display text-[28px] font-semibold max-[640px]:text-2xl">
             Szybki wgląd w zdarzenia drogowe
           </h2>
-          <p className="text-[15px] leading-7 text-surface-elevated-muted">
+          <p className="text-body-muted">
             Strona prezentuje zdarzenia drogowe w Łodzi w formie, którą można zrozumieć w kilka sekund.
             Projekt oferuje trzy perspektywy wizualizacji: punkty, heksy oraz widok 3D.
           </p>
@@ -70,15 +70,15 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
         <section className="relative z-10 mt-5 border-t border-surface-elevated-divider pt-4">
           <h3 className="mb-3 text-base font-semibold">Co tu zobaczysz</h3>
           <ul className="grid gap-2.5">
-            <li className="grid gap-1 rounded-[14px] border border-surface-elevated-divider bg-surface-elevated-hover px-3.5 py-3">
+            <li className="surface-info-card grid gap-1 px-3.5 py-3">
               <span className="overline-label text-[11px]">Punkty</span>
               <span className="text-sm text-surface-elevated-muted">pojedyncze zdarzenia w konkretnych lokalizacjach</span>
             </li>
-            <li className="grid gap-1 rounded-[14px] border border-surface-elevated-divider bg-surface-elevated-hover px-3.5 py-3">
+            <li className="surface-info-card grid gap-1 px-3.5 py-3">
               <span className="overline-label text-[11px]">Heksagony</span>
               <span className="text-sm text-surface-elevated-muted">zagęszczenie zdarzeń w podziale przestrzennym</span>
             </li>
-            <li className="grid gap-1 rounded-[14px] border border-surface-elevated-divider bg-surface-elevated-hover px-3.5 py-3">
+            <li className="surface-info-card grid gap-1 px-3.5 py-3">
               <span className="overline-label text-[11px]">3D</span>
               <span className="text-sm text-surface-elevated-muted">wysokość słupków pokazuje natężenie w danym obszarze</span>
             </li>
@@ -88,15 +88,15 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
         <section className="relative z-10 mt-6 border-t border-surface-elevated-divider pt-4">
           <h3 className="mb-3 text-base font-semibold">Kiedy używać którego widoku</h3>
           <div className="grid gap-3">
-            <div className="grid gap-1 rounded-[14px] border border-surface-elevated-divider bg-surface-elevated-hover px-3.5 py-3">
+            <div className="surface-info-card grid gap-1 px-3.5 py-3">
               <span className="overline-label text-[11px]">Punkty</span>
               <p className="text-sm text-surface-elevated-muted">gdy interesuje Cię lokalny obraz i rozkład „na ulicach”</p>
             </div>
-            <div className="grid gap-1 rounded-[14px] border border-surface-elevated-divider bg-surface-elevated-hover px-3.5 py-3">
+            <div className="surface-info-card grid gap-1 px-3.5 py-3">
               <span className="overline-label text-[11px]">Heksagony</span>
               <p className="text-sm text-surface-elevated-muted">gdy chcesz szybko znaleźć hotspoty i porównać obszary bez szumu punktów</p>
             </div>
-            <div className="grid gap-1 rounded-[14px] border border-surface-elevated-divider bg-surface-elevated-hover px-3.5 py-3">
+            <div className="surface-info-card grid gap-1 px-3.5 py-3">
               <span className="overline-label text-[11px]">3D</span>
               <p className="text-sm text-surface-elevated-muted">gdy zależy Ci na porównaniu natężenia między obszarami w jednym kadrze</p>
             </div>
@@ -105,7 +105,7 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
 
         <section className="relative z-10 mt-6 border-t border-surface-elevated-divider pt-4">
           <h3 className="mb-3 text-base font-semibold">Ważne uwagi</h3>
-          <p className="rounded-[14px] border border-surface-elevated-divider bg-[color-mix(in_srgb,var(--surface-elevated-hover)_70%,transparent)] px-3.5 py-3 text-sm text-surface-elevated-muted">
+          <p className="surface-note-card px-3.5 py-3 text-sm text-surface-elevated-muted">
             To jest wizualizacja poglądowa, a nie narzędzie raportowe ani oficjalne opracowanie.
           </p>
         </section>
