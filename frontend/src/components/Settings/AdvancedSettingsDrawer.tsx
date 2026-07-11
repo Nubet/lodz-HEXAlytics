@@ -101,14 +101,14 @@ export function AdvancedSettingsDrawer({
 
   return (
     <div
-      className={classNames('pointer-events-none fixed inset-0 z-50', isOpen && 'pointer-events-auto')}
+      className={classNames('fixed inset-0 z-50', isOpen ? 'visible' : 'invisible')}
       aria-hidden={!isOpen}
     >
       <button
         type="button"
         className={classNames(
           'absolute inset-0 border-0 bg-black/25 p-0 backdrop-blur-xs transition-opacity duration-200',
-          isOpen ? 'opacity-100' : 'opacity-0'
+          isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         )}
         aria-label="Zamknij ustawienia"
         onClick={onClose}
@@ -118,7 +118,7 @@ export function AdvancedSettingsDrawer({
       <aside
         className={classNames(
           'elevated-dialog thin-scrollbar absolute top-22.5 left-79 flex max-h-[calc(100vh-130px)] w-70 flex-col gap-3 overflow-hidden rounded-2xl shadow-surface-drawer transition duration-300 ease-out max-[768px]:left-72 max-[768px]:w-65 max-[700px]:top-20 max-[700px]:max-h-[calc(100vh-110px)] max-[540px]:left-0 max-[540px]:w-[min(92vw,320px)] max-[540px]:rounded-r-2xl max-[540px]:rounded-l-none',
-          isOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
+          isOpen ? 'pointer-events-auto translate-x-0 opacity-100' : 'pointer-events-none -translate-x-4 opacity-0'
         )}
         role="dialog"
         aria-modal="true"
