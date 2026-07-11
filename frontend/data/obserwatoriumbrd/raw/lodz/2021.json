@@ -1,0 +1,5518 @@
+{
+  "mapa": {
+    "wojewodztwa": [
+      {
+        "powiaty": [
+          {
+            "gminy": [
+              {
+                "zdarzenia": 913,
+                "gmi_nazwa": "Łódź",
+                "mie_nazwa": "Łódź",
+                "mie_rodzaj": "miasto                  ",
+                "gmi_kod": "106101",
+                "gmi_rodzaj": null,
+                "fallback_center_lng": 19.462555954326437,
+                "fallback_center_lat": 51.7637437315443,
+                "zdarzenia_detale": [
+                  {
+                    "id": 203065399,
+                    "wsp_gps_x": 19.4426107,
+                    "wsp_gps_y": 51.7441941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203065480,
+                    "wsp_gps_x": 19.4390552,
+                    "wsp_gps_y": 51.7766937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203067186,
+                    "wsp_gps_x": 19.4543888,
+                    "wsp_gps_y": 51.7902774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203067481,
+                    "wsp_gps_x": 19.5221382,
+                    "wsp_gps_y": 51.7606944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203068382,
+                    "wsp_gps_x": 19.3788326,
+                    "wsp_gps_y": 51.8133333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203068603,
+                    "wsp_gps_x": 19.4950552,
+                    "wsp_gps_y": 51.7279715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203068864,
+                    "wsp_gps_x": 19.4769715,
+                    "wsp_gps_y": 51.7787771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203069365,
+                    "wsp_gps_x": 19.3929163,
+                    "wsp_gps_y": 51.790083,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203072489,
+                    "wsp_gps_x": 19.4810826,
+                    "wsp_gps_y": 51.7625,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203073770,
+                    "wsp_gps_x": 19.4281937,
+                    "wsp_gps_y": 51.7481941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203074474,
+                    "wsp_gps_x": 19.5740826,
+                    "wsp_gps_y": 51.7518888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203075885,
+                    "wsp_gps_x": 19.5311382,
+                    "wsp_gps_y": 51.7344718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203076609,
+                    "wsp_gps_x": 19.444083,
+                    "wsp_gps_y": 51.8174993,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203077130,
+                    "wsp_gps_x": 19.3649166,
+                    "wsp_gps_y": 51.7320271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203077614,
+                    "wsp_gps_x": 19.4123611,
+                    "wsp_gps_y": 51.7737493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203077993,
+                    "wsp_gps_x": 19.5543888,
+                    "wsp_gps_y": 51.7586388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203080043,
+                    "wsp_gps_x": 19.4091388,
+                    "wsp_gps_y": 51.7628333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203083030,
+                    "wsp_gps_x": 19.4411663,
+                    "wsp_gps_y": 51.7974441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203083170,
+                    "wsp_gps_x": 19.5681104,
+                    "wsp_gps_y": 51.7391941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203083737,
+                    "wsp_gps_x": 19.508,
+                    "wsp_gps_y": 51.7636944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203087109,
+                    "wsp_gps_x": 19.4533333,
+                    "wsp_gps_y": 51.7308882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203087208,
+                    "wsp_gps_x": 19.4565833,
+                    "wsp_gps_y": 51.787583,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203087917,
+                    "wsp_gps_x": 19.4505833,
+                    "wsp_gps_y": 51.781916,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203088271,
+                    "wsp_gps_x": 19.4269715,
+                    "wsp_gps_y": 51.8133611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203091592,
+                    "wsp_gps_x": 19.535583,
+                    "wsp_gps_y": 51.75725,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203092330,
+                    "wsp_gps_x": 19.539583,
+                    "wsp_gps_y": 51.7208048,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203098023,
+                    "wsp_gps_x": 19.4024444,
+                    "wsp_gps_y": 51.795083,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203100239,
+                    "wsp_gps_x": 19.4561111,
+                    "wsp_gps_y": 51.7570833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203100420,
+                    "wsp_gps_x": 19.4308048,
+                    "wsp_gps_y": 51.7547777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203102316,
+                    "wsp_gps_x": 19.4154166,
+                    "wsp_gps_y": 51.7964718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203102421,
+                    "wsp_gps_x": 19.4492774,
+                    "wsp_gps_y": 51.7257771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203102547,
+                    "wsp_gps_x": 19.4445552,
+                    "wsp_gps_y": 51.7571111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203103213,
+                    "wsp_gps_x": 19.4746382,
+                    "wsp_gps_y": 51.724166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203103736,
+                    "wsp_gps_x": 19.4603333,
+                    "wsp_gps_y": 51.7949718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203104060,
+                    "wsp_gps_x": 19.4216382,
+                    "wsp_gps_y": 51.7797771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203104879,
+                    "wsp_gps_x": 19.527916,
+                    "wsp_gps_y": 51.734583,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203113590,
+                    "wsp_gps_x": 19.427666,
+                    "wsp_gps_y": 51.790833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203114973,
+                    "wsp_gps_x": 19.4429163,
+                    "wsp_gps_y": 51.7675548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203118359,
+                    "wsp_gps_x": 19.4757771,
+                    "wsp_gps_y": 51.7386385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203119018,
+                    "wsp_gps_x": 19.4668604,
+                    "wsp_gps_y": 51.7319437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203119716,
+                    "wsp_gps_x": 19.5737771,
+                    "wsp_gps_y": 51.7517777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203120119,
+                    "wsp_gps_x": 19.3503333,
+                    "wsp_gps_y": 51.7858607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203120732,
+                    "wsp_gps_x": 19.4388607,
+                    "wsp_gps_y": 51.777166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203121957,
+                    "wsp_gps_x": 19.453,
+                    "wsp_gps_y": 51.7837218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203127192,
+                    "wsp_gps_x": 19.4898052,
+                    "wsp_gps_y": 51.7329715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203128505,
+                    "wsp_gps_x": 19.5243604,
+                    "wsp_gps_y": 51.7346107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203129495,
+                    "wsp_gps_x": 19.5207215,
+                    "wsp_gps_y": 51.7517777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203130137,
+                    "wsp_gps_x": 19.378916,
+                    "wsp_gps_y": 51.7862496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203131048,
+                    "wsp_gps_x": 19.4573333,
+                    "wsp_gps_y": 51.8483607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203131469,
+                    "wsp_gps_x": 19.4761104,
+                    "wsp_gps_y": 51.8001111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203131545,
+                    "wsp_gps_x": 19.4521944,
+                    "wsp_gps_y": 51.7866385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203137296,
+                    "wsp_gps_x": 19.4489441,
+                    "wsp_gps_y": 51.7903052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203137393,
+                    "wsp_gps_x": 19.4522222,
+                    "wsp_gps_y": 51.7762493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203137413,
+                    "wsp_gps_x": 19.4650833,
+                    "wsp_gps_y": 51.7319437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203137955,
+                    "wsp_gps_x": 19.5082777,
+                    "wsp_gps_y": 51.7638055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203138534,
+                    "wsp_gps_x": 19.4043333,
+                    "wsp_gps_y": 51.7651666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203138833,
+                    "wsp_gps_x": 19.4253882,
+                    "wsp_gps_y": 51.8093611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203138926,
+                    "wsp_gps_x": 19.4193604,
+                    "wsp_gps_y": 51.7471663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203139314,
+                    "wsp_gps_x": 19.4390274,
+                    "wsp_gps_y": 51.7976107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203140043,
+                    "wsp_gps_x": 19.4826104,
+                    "wsp_gps_y": 51.7043611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203142126,
+                    "wsp_gps_x": 19.4392774,
+                    "wsp_gps_y": 51.7499441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203143784,
+                    "wsp_gps_x": 19.4209715,
+                    "wsp_gps_y": 51.7753882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203144006,
+                    "wsp_gps_x": 19.4574444,
+                    "wsp_gps_y": 51.7176382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203144114,
+                    "wsp_gps_x": 19.475416,
+                    "wsp_gps_y": 51.7743604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203144208,
+                    "wsp_gps_x": 19.4942496,
+                    "wsp_gps_y": 51.7776937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203149009,
+                    "wsp_gps_x": 19.5607777,
+                    "wsp_gps_y": 51.7562222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203149096,
+                    "wsp_gps_x": 19.4514444,
+                    "wsp_gps_y": 51.7442774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203150063,
+                    "wsp_gps_x": 19.5466385,
+                    "wsp_gps_y": 51.7493052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203151021,
+                    "wsp_gps_x": 19.4544166,
+                    "wsp_gps_y": 51.778916,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203151439,
+                    "wsp_gps_x": 19.5001666,
+                    "wsp_gps_y": 51.7323048,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203152603,
+                    "wsp_gps_x": 19.5964441,
+                    "wsp_gps_y": 51.7486663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203153079,
+                    "wsp_gps_x": 19.4603055,
+                    "wsp_gps_y": 51.7327493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203153563,
+                    "wsp_gps_x": 19.4354441,
+                    "wsp_gps_y": 51.7891107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203153627,
+                    "wsp_gps_x": 19.4374718,
+                    "wsp_gps_y": 51.756,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203155432,
+                    "wsp_gps_x": 19.4840552,
+                    "wsp_gps_y": 51.7483052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203156654,
+                    "wsp_gps_x": 19.4914718,
+                    "wsp_gps_y": 51.7600277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203157573,
+                    "wsp_gps_x": 19.4952774,
+                    "wsp_gps_y": 51.7396663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203158268,
+                    "wsp_gps_x": 19.5543055,
+                    "wsp_gps_y": 51.8401107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203161399,
+                    "wsp_gps_x": 19.4798048,
+                    "wsp_gps_y": 51.7674993,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203162047,
+                    "wsp_gps_x": 19.4416107,
+                    "wsp_gps_y": 51.7880552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203162101,
+                    "wsp_gps_x": 19.4329715,
+                    "wsp_gps_y": 51.7151111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203163115,
+                    "wsp_gps_x": 19.4937496,
+                    "wsp_gps_y": 51.7471663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203163867,
+                    "wsp_gps_x": 19.4763882,
+                    "wsp_gps_y": 51.7000277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203166005,
+                    "wsp_gps_x": 19.4422496,
+                    "wsp_gps_y": 51.7363885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203166126,
+                    "wsp_gps_x": 19.4623611,
+                    "wsp_gps_y": 51.7529722,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203167165,
+                    "wsp_gps_x": 19.4715271,
+                    "wsp_gps_y": 51.8529722,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203168682,
+                    "wsp_gps_x": 19.4943607,
+                    "wsp_gps_y": 51.7325271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203169718,
+                    "wsp_gps_x": 19.4589444,
+                    "wsp_gps_y": 51.7827771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203170747,
+                    "wsp_gps_x": 19.449333,
+                    "wsp_gps_y": 51.7681104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203170823,
+                    "wsp_gps_x": 19.420916,
+                    "wsp_gps_y": 51.7898607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203171005,
+                    "wsp_gps_x": 19.4457496,
+                    "wsp_gps_y": 51.7629444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203172309,
+                    "wsp_gps_x": 19.4599722,
+                    "wsp_gps_y": 51.75275,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203172657,
+                    "wsp_gps_x": 19.5741104,
+                    "wsp_gps_y": 51.7519166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203174154,
+                    "wsp_gps_x": 19.4363885,
+                    "wsp_gps_y": 51.6992774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203175096,
+                    "wsp_gps_x": 19.4289993,
+                    "wsp_gps_y": 51.7701382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203176188,
+                    "wsp_gps_x": 19.5765271,
+                    "wsp_gps_y": 51.7946385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203176875,
+                    "wsp_gps_x": 19.471416,
+                    "wsp_gps_y": 51.7546111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203176891,
+                    "wsp_gps_x": 19.5410274,
+                    "wsp_gps_y": 51.7110277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203176940,
+                    "wsp_gps_x": 19.6008333,
+                    "wsp_gps_y": 51.7467218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203177080,
+                    "wsp_gps_x": 19.4500833,
+                    "wsp_gps_y": 51.7647777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203177122,
+                    "wsp_gps_x": 19.4432774,
+                    "wsp_gps_y": 51.7993052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203177334,
+                    "wsp_gps_x": 19.4783326,
+                    "wsp_gps_y": 51.7405552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203177389,
+                    "wsp_gps_x": 19.4453607,
+                    "wsp_gps_y": 51.7956107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203180122,
+                    "wsp_gps_x": 19.4554722,
+                    "wsp_gps_y": 51.8137222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203180615,
+                    "wsp_gps_x": 19.4602777,
+                    "wsp_gps_y": 51.7772493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203180700,
+                    "wsp_gps_x": 19.4214993,
+                    "wsp_gps_y": 51.7725826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203180743,
+                    "wsp_gps_x": 19.4506388,
+                    "wsp_gps_y": 51.7475552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203181698,
+                    "wsp_gps_x": 19.4763604,
+                    "wsp_gps_y": 51.7291104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203182382,
+                    "wsp_gps_x": 19.4388885,
+                    "wsp_gps_y": 51.7671937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203183232,
+                    "wsp_gps_x": 19.4049166,
+                    "wsp_gps_y": 51.7481941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203183316,
+                    "wsp_gps_x": 19.4190826,
+                    "wsp_gps_y": 51.7886107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203183534,
+                    "wsp_gps_x": 19.4857774,
+                    "wsp_gps_y": 51.7785826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203183835,
+                    "wsp_gps_x": 19.4402496,
+                    "wsp_gps_y": 51.7413052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203184352,
+                    "wsp_gps_x": 19.4525277,
+                    "wsp_gps_y": 51.7363052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203185022,
+                    "wsp_gps_x": 19.4573333,
+                    "wsp_gps_y": 51.7776937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203188795,
+                    "wsp_gps_x": 19.4897218,
+                    "wsp_gps_y": 51.7556388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203190053,
+                    "wsp_gps_x": 19.4426107,
+                    "wsp_gps_y": 51.7371107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203191971,
+                    "wsp_gps_x": 19.4786937,
+                    "wsp_gps_y": 51.7325548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203192054,
+                    "wsp_gps_x": 19.415,
+                    "wsp_gps_y": 51.7472774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203192659,
+                    "wsp_gps_x": 19.4654722,
+                    "wsp_gps_y": 51.7965274,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203192985,
+                    "wsp_gps_x": 19.45925,
+                    "wsp_gps_y": 51.7367496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203194367,
+                    "wsp_gps_x": 19.3863607,
+                    "wsp_gps_y": 51.7993052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203195954,
+                    "wsp_gps_x": 19.4551111,
+                    "wsp_gps_y": 51.7628055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203197913,
+                    "wsp_gps_x": 19.4318048,
+                    "wsp_gps_y": 51.7462496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203197978,
+                    "wsp_gps_x": 19.4496107,
+                    "wsp_gps_y": 51.789583,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203198528,
+                    "wsp_gps_x": 19.469916,
+                    "wsp_gps_y": 51.7356941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203198648,
+                    "wsp_gps_x": 19.4396107,
+                    "wsp_gps_y": 51.7451107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203198652,
+                    "wsp_gps_x": 19.4710271,
+                    "wsp_gps_y": 51.7803604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203200038,
+                    "wsp_gps_x": 19.4735548,
+                    "wsp_gps_y": 51.7563055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203200117,
+                    "wsp_gps_x": 19.457,
+                    "wsp_gps_y": 51.7088611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203200398,
+                    "wsp_gps_x": 19.422416,
+                    "wsp_gps_y": 51.7547777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203200707,
+                    "wsp_gps_x": 19.5083611,
+                    "wsp_gps_y": 51.7890552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203202058,
+                    "wsp_gps_x": 19.4187215,
+                    "wsp_gps_y": 51.7904718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203203814,
+                    "wsp_gps_x": 19.391083,
+                    "wsp_gps_y": 51.7791104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203205925,
+                    "wsp_gps_x": 19.4429441,
+                    "wsp_gps_y": 51.7675548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203205955,
+                    "wsp_gps_x": 19.398833,
+                    "wsp_gps_y": 51.8134444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203205974,
+                    "wsp_gps_x": 19.4484718,
+                    "wsp_gps_y": 51.7517777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203205979,
+                    "wsp_gps_x": 19.4379163,
+                    "wsp_gps_y": 51.7489163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203206799,
+                    "wsp_gps_x": 19.3927774,
+                    "wsp_gps_y": 51.7893607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203206884,
+                    "wsp_gps_x": 19.4142222,
+                    "wsp_gps_y": 51.752,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203207411,
+                    "wsp_gps_x": 19.4126666,
+                    "wsp_gps_y": 51.7477496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203207802,
+                    "wsp_gps_x": 19.5746382,
+                    "wsp_gps_y": 51.739583,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203211678,
+                    "wsp_gps_x": 19.4452496,
+                    "wsp_gps_y": 51.7728604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203212096,
+                    "wsp_gps_x": 19.4766382,
+                    "wsp_gps_y": 51.7610277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203212360,
+                    "wsp_gps_x": 19.4640555,
+                    "wsp_gps_y": 51.8506944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203213067,
+                    "wsp_gps_x": 19.5083611,
+                    "wsp_gps_y": 51.7632222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203213286,
+                    "wsp_gps_x": 19.5394718,
+                    "wsp_gps_y": 51.721166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203214927,
+                    "wsp_gps_x": 19.5081388,
+                    "wsp_gps_y": 51.7882218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203216098,
+                    "wsp_gps_x": 19.4210271,
+                    "wsp_gps_y": 51.7562222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203216173,
+                    "wsp_gps_x": 19.4435274,
+                    "wsp_gps_y": 51.7488885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203216966,
+                    "wsp_gps_x": 19.4868052,
+                    "wsp_gps_y": 51.7139444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203217074,
+                    "wsp_gps_x": 19.4441663,
+                    "wsp_gps_y": 51.8175548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203217333,
+                    "wsp_gps_x": 19.4784437,
+                    "wsp_gps_y": 51.7640833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203217841,
+                    "wsp_gps_x": 19.4639444,
+                    "wsp_gps_y": 51.7413885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203217915,
+                    "wsp_gps_x": 19.4630555,
+                    "wsp_gps_y": 51.7598888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203219207,
+                    "wsp_gps_x": 19.4555555,
+                    "wsp_gps_y": 51.7523888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203220176,
+                    "wsp_gps_x": 19.4206104,
+                    "wsp_gps_y": 51.7923052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203220771,
+                    "wsp_gps_x": 19.4215271,
+                    "wsp_gps_y": 51.7673882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203221473,
+                    "wsp_gps_x": 19.4538888,
+                    "wsp_gps_y": 51.7671104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203221592,
+                    "wsp_gps_x": 19.4780548,
+                    "wsp_gps_y": 51.7608333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203222276,
+                    "wsp_gps_x": 19.3919718,
+                    "wsp_gps_y": 51.7852496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203222332,
+                    "wsp_gps_x": 19.4785826,
+                    "wsp_gps_y": 51.7611388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203225255,
+                    "wsp_gps_x": 19.4521111,
+                    "wsp_gps_y": 51.7776382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203226814,
+                    "wsp_gps_x": 19.4209993,
+                    "wsp_gps_y": 51.7479996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203227632,
+                    "wsp_gps_x": 19.5136388,
+                    "wsp_gps_y": 51.7751382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203227991,
+                    "wsp_gps_x": 19.4359996,
+                    "wsp_gps_y": 51.75625,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203229527,
+                    "wsp_gps_x": 19.4484718,
+                    "wsp_gps_y": 51.790333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203229558,
+                    "wsp_gps_x": 19.4311104,
+                    "wsp_gps_y": 51.7138888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203230205,
+                    "wsp_gps_x": 19.4670548,
+                    "wsp_gps_y": 51.738833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203230352,
+                    "wsp_gps_x": 19.4525,
+                    "wsp_gps_y": 51.7650277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203230599,
+                    "wsp_gps_x": 19.384833,
+                    "wsp_gps_y": 51.7479163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203231893,
+                    "wsp_gps_x": 19.4512777,
+                    "wsp_gps_y": 51.8122222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203233591,
+                    "wsp_gps_x": 19.4207771,
+                    "wsp_gps_y": 51.7897218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203233859,
+                    "wsp_gps_x": 19.5372774,
+                    "wsp_gps_y": 51.8327215,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203235823,
+                    "wsp_gps_x": 19.4642222,
+                    "wsp_gps_y": 51.8008055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203236881,
+                    "wsp_gps_x": 19.4211104,
+                    "wsp_gps_y": 51.7801937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203237480,
+                    "wsp_gps_x": 19.3891663,
+                    "wsp_gps_y": 51.7786104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203239088,
+                    "wsp_gps_x": 19.458,
+                    "wsp_gps_y": 51.7874718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203239540,
+                    "wsp_gps_x": 19.5947496,
+                    "wsp_gps_y": 51.7293604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203239585,
+                    "wsp_gps_x": 19.4420274,
+                    "wsp_gps_y": 51.7361663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203239844,
+                    "wsp_gps_x": 19.4721937,
+                    "wsp_gps_y": 51.7392218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203240600,
+                    "wsp_gps_x": 19.426666,
+                    "wsp_gps_y": 51.7674437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203240916,
+                    "wsp_gps_x": 19.4224437,
+                    "wsp_gps_y": 51.7763882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203241031,
+                    "wsp_gps_x": 19.4384996,
+                    "wsp_gps_y": 51.8243048,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203241208,
+                    "wsp_gps_x": 19.5048055,
+                    "wsp_gps_y": 51.7633055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203241301,
+                    "wsp_gps_x": 19.4548055,
+                    "wsp_gps_y": 51.8163333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203242281,
+                    "wsp_gps_x": 19.4653055,
+                    "wsp_gps_y": 51.767666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203242584,
+                    "wsp_gps_x": 19.4698048,
+                    "wsp_gps_y": 51.7423052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203243001,
+                    "wsp_gps_x": 19.4519166,
+                    "wsp_gps_y": 51.7870552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203246161,
+                    "wsp_gps_x": 19.4643611,
+                    "wsp_gps_y": 51.7203048,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203246516,
+                    "wsp_gps_x": 19.489333,
+                    "wsp_gps_y": 51.7735826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203247693,
+                    "wsp_gps_x": 19.4514444,
+                    "wsp_gps_y": 51.779416,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203248308,
+                    "wsp_gps_x": 19.5090555,
+                    "wsp_gps_y": 51.7498607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203248339,
+                    "wsp_gps_x": 19.5419441,
+                    "wsp_gps_y": 51.7161111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203249309,
+                    "wsp_gps_x": 19.4686937,
+                    "wsp_gps_y": 51.7603333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203249909,
+                    "wsp_gps_x": 19.4333885,
+                    "wsp_gps_y": 51.75925,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203250191,
+                    "wsp_gps_x": 19.5690826,
+                    "wsp_gps_y": 51.7408052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203250215,
+                    "wsp_gps_x": 19.579416,
+                    "wsp_gps_y": 51.7348885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203250225,
+                    "wsp_gps_x": 19.4511944,
+                    "wsp_gps_y": 51.779416,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203250375,
+                    "wsp_gps_x": 19.4888607,
+                    "wsp_gps_y": 51.7555833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203250917,
+                    "wsp_gps_x": 19.5354996,
+                    "wsp_gps_y": 51.7573055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203253108,
+                    "wsp_gps_x": 19.4389718,
+                    "wsp_gps_y": 51.7561666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203253168,
+                    "wsp_gps_x": 19.4726104,
+                    "wsp_gps_y": 51.771916,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203253872,
+                    "wsp_gps_x": 19.4899441,
+                    "wsp_gps_y": 51.7222493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203254038,
+                    "wsp_gps_x": 19.5219715,
+                    "wsp_gps_y": 51.7808326,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203254054,
+                    "wsp_gps_x": 19.4483052,
+                    "wsp_gps_y": 51.7734993,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203254224,
+                    "wsp_gps_x": 19.5297493,
+                    "wsp_gps_y": 51.8295548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203254371,
+                    "wsp_gps_x": 19.50875,
+                    "wsp_gps_y": 51.7634444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203254748,
+                    "wsp_gps_x": 19.4932774,
+                    "wsp_gps_y": 51.747833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203255281,
+                    "wsp_gps_x": 19.4871663,
+                    "wsp_gps_y": 51.7376107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203256025,
+                    "wsp_gps_x": 19.4713326,
+                    "wsp_gps_y": 51.787083,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203256962,
+                    "wsp_gps_x": 19.5148333,
+                    "wsp_gps_y": 51.7966385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203257779,
+                    "wsp_gps_x": 19.3935552,
+                    "wsp_gps_y": 51.7925552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203259681,
+                    "wsp_gps_x": 19.5068055,
+                    "wsp_gps_y": 51.7673326,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203259896,
+                    "wsp_gps_x": 19.4244437,
+                    "wsp_gps_y": 51.7807493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203259932,
+                    "wsp_gps_x": 19.4461941,
+                    "wsp_gps_y": 51.7589166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203260093,
+                    "wsp_gps_x": 19.4891663,
+                    "wsp_gps_y": 51.7436663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203260107,
+                    "wsp_gps_x": 19.3922218,
+                    "wsp_gps_y": 51.744333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203262022,
+                    "wsp_gps_x": 19.4794437,
+                    "wsp_gps_y": 51.6998885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203262371,
+                    "wsp_gps_x": 19.3844718,
+                    "wsp_gps_y": 51.747833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203262734,
+                    "wsp_gps_x": 19.421166,
+                    "wsp_gps_y": 51.780416,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203263495,
+                    "wsp_gps_x": 19.4419996,
+                    "wsp_gps_y": 51.7325548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203265710,
+                    "wsp_gps_x": 19.4754715,
+                    "wsp_gps_y": 51.6998607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203266671,
+                    "wsp_gps_x": 19.4811382,
+                    "wsp_gps_y": 51.7610555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203267289,
+                    "wsp_gps_x": 19.4238882,
+                    "wsp_gps_y": 51.7070277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203267433,
+                    "wsp_gps_x": 19.3857218,
+                    "wsp_gps_y": 51.748333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203267579,
+                    "wsp_gps_x": 19.4545833,
+                    "wsp_gps_y": 51.8043611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203268260,
+                    "wsp_gps_x": 19.4244715,
+                    "wsp_gps_y": 51.7988607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203268487,
+                    "wsp_gps_x": 19.4931663,
+                    "wsp_gps_y": 51.7479163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203268496,
+                    "wsp_gps_x": 19.5832771,
+                    "wsp_gps_y": 51.7943052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203269961,
+                    "wsp_gps_x": 19.4504722,
+                    "wsp_gps_y": 51.780666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203270795,
+                    "wsp_gps_x": 19.4665833,
+                    "wsp_gps_y": 51.7712493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203274716,
+                    "wsp_gps_x": 19.4752493,
+                    "wsp_gps_y": 51.7233604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203275393,
+                    "wsp_gps_x": 19.5067777,
+                    "wsp_gps_y": 51.7743604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203276132,
+                    "wsp_gps_x": 19.4211104,
+                    "wsp_gps_y": 51.7559722,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203277019,
+                    "wsp_gps_x": 19.4280271,
+                    "wsp_gps_y": 51.766,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203277666,
+                    "wsp_gps_x": 19.4476663,
+                    "wsp_gps_y": 51.7621111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203278002,
+                    "wsp_gps_x": 19.4701937,
+                    "wsp_gps_y": 51.7284437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203279286,
+                    "wsp_gps_x": 19.4212493,
+                    "wsp_gps_y": 51.776666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203280008,
+                    "wsp_gps_x": 19.4176382,
+                    "wsp_gps_y": 51.7727771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203281026,
+                    "wsp_gps_x": 19.4750826,
+                    "wsp_gps_y": 51.7785271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203282271,
+                    "wsp_gps_x": 19.5290271,
+                    "wsp_gps_y": 51.7526111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203282912,
+                    "wsp_gps_x": 19.479916,
+                    "wsp_gps_y": 51.7674715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203284156,
+                    "wsp_gps_x": 19.4215826,
+                    "wsp_gps_y": 51.7812771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203284862,
+                    "wsp_gps_x": 19.3931107,
+                    "wsp_gps_y": 51.7908052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203288948,
+                    "wsp_gps_x": 19.4275548,
+                    "wsp_gps_y": 51.787333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203289639,
+                    "wsp_gps_x": 19.482916,
+                    "wsp_gps_y": 51.7728604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203290428,
+                    "wsp_gps_x": 19.5429441,
+                    "wsp_gps_y": 51.7594444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203291446,
+                    "wsp_gps_x": 19.4376663,
+                    "wsp_gps_y": 51.7558888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203291928,
+                    "wsp_gps_x": 19.4885274,
+                    "wsp_gps_y": 51.7559722,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203294406,
+                    "wsp_gps_x": 19.4378052,
+                    "wsp_gps_y": 51.7997218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203296143,
+                    "wsp_gps_x": 19.4422496,
+                    "wsp_gps_y": 51.7363885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203296483,
+                    "wsp_gps_x": 19.4869163,
+                    "wsp_gps_y": 51.7135277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203296850,
+                    "wsp_gps_x": 19.4346107,
+                    "wsp_gps_y": 51.7894163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203297299,
+                    "wsp_gps_x": 19.5114722,
+                    "wsp_gps_y": 51.7670271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203297335,
+                    "wsp_gps_x": 19.4846941,
+                    "wsp_gps_y": 51.7623611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203297979,
+                    "wsp_gps_x": 19.46225,
+                    "wsp_gps_y": 51.76,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203298147,
+                    "wsp_gps_x": 19.4614444,
+                    "wsp_gps_y": 51.8499441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203298299,
+                    "wsp_gps_x": 19.515,
+                    "wsp_gps_y": 51.7626111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203298465,
+                    "wsp_gps_x": 19.4598611,
+                    "wsp_gps_y": 51.7527777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203299112,
+                    "wsp_gps_x": 19.4705271,
+                    "wsp_gps_y": 51.8064722,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203299225,
+                    "wsp_gps_x": 19.4525,
+                    "wsp_gps_y": 51.7346941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203299666,
+                    "wsp_gps_x": 19.3847774,
+                    "wsp_gps_y": 51.794833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203300060,
+                    "wsp_gps_x": 19.386583,
+                    "wsp_gps_y": 51.7484996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203301970,
+                    "wsp_gps_x": 19.4687493,
+                    "wsp_gps_y": 51.76,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203302550,
+                    "wsp_gps_x": 19.483166,
+                    "wsp_gps_y": 51.772166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203302836,
+                    "wsp_gps_x": 19.5384996,
+                    "wsp_gps_y": 51.7254715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203303669,
+                    "wsp_gps_x": 19.5075555,
+                    "wsp_gps_y": 51.7764715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203304064,
+                    "wsp_gps_x": 19.388333,
+                    "wsp_gps_y": 51.7930274,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203304673,
+                    "wsp_gps_x": 19.5050833,
+                    "wsp_gps_y": 51.7352774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203305415,
+                    "wsp_gps_x": 19.5356663,
+                    "wsp_gps_y": 51.7572222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203305429,
+                    "wsp_gps_x": 19.4562222,
+                    "wsp_gps_y": 51.7446663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203305613,
+                    "wsp_gps_x": 19.4584722,
+                    "wsp_gps_y": 51.7389718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203306757,
+                    "wsp_gps_x": 19.4644444,
+                    "wsp_gps_y": 51.7690271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203306941,
+                    "wsp_gps_x": 19.4568055,
+                    "wsp_gps_y": 51.7446663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203307206,
+                    "wsp_gps_x": 19.4793326,
+                    "wsp_gps_y": 51.7265271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203307262,
+                    "wsp_gps_x": 19.4203604,
+                    "wsp_gps_y": 51.7901941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203307495,
+                    "wsp_gps_x": 19.4066388,
+                    "wsp_gps_y": 51.7482496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203307988,
+                    "wsp_gps_x": 19.4553055,
+                    "wsp_gps_y": 51.7813882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203309653,
+                    "wsp_gps_x": 19.4896107,
+                    "wsp_gps_y": 51.7280826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203309848,
+                    "wsp_gps_x": 19.4719715,
+                    "wsp_gps_y": 51.8004444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203309926,
+                    "wsp_gps_x": 19.444833,
+                    "wsp_gps_y": 51.761,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203311580,
+                    "wsp_gps_x": 19.3585555,
+                    "wsp_gps_y": 51.8046944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203311852,
+                    "wsp_gps_x": 19.5084722,
+                    "wsp_gps_y": 51.7883885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203312749,
+                    "wsp_gps_x": 19.5415274,
+                    "wsp_gps_y": 51.7111388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203312797,
+                    "wsp_gps_x": 19.4244437,
+                    "wsp_gps_y": 51.7990552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203313061,
+                    "wsp_gps_x": 19.3664722,
+                    "wsp_gps_y": 51.7944163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203316143,
+                    "wsp_gps_x": 19.4937496,
+                    "wsp_gps_y": 51.7621388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203317187,
+                    "wsp_gps_x": 19.438833,
+                    "wsp_gps_y": 51.7452774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203317547,
+                    "wsp_gps_x": 19.4935274,
+                    "wsp_gps_y": 51.7474163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203318065,
+                    "wsp_gps_x": 19.45475,
+                    "wsp_gps_y": 51.732666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203318244,
+                    "wsp_gps_x": 19.4804993,
+                    "wsp_gps_y": 51.725416,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203319912,
+                    "wsp_gps_x": 19.4600555,
+                    "wsp_gps_y": 51.7656388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203320151,
+                    "wsp_gps_x": 19.4641666,
+                    "wsp_gps_y": 51.769416,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203321104,
+                    "wsp_gps_x": 19.5718882,
+                    "wsp_gps_y": 51.7471107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203321192,
+                    "wsp_gps_x": 19.6086388,
+                    "wsp_gps_y": 51.7799437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203321915,
+                    "wsp_gps_x": 19.45075,
+                    "wsp_gps_y": 51.7471663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203321984,
+                    "wsp_gps_x": 19.5358607,
+                    "wsp_gps_y": 51.7574444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203322781,
+                    "wsp_gps_x": 19.4220271,
+                    "wsp_gps_y": 51.7727215,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203322846,
+                    "wsp_gps_x": 19.4470552,
+                    "wsp_gps_y": 51.792833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203323298,
+                    "wsp_gps_x": 19.5093888,
+                    "wsp_gps_y": 51.7497496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203323936,
+                    "wsp_gps_x": 19.4349718,
+                    "wsp_gps_y": 51.8072222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203325302,
+                    "wsp_gps_x": 19.4252771,
+                    "wsp_gps_y": 51.7522777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203325678,
+                    "wsp_gps_x": 19.4572777,
+                    "wsp_gps_y": 51.7640833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203325884,
+                    "wsp_gps_x": 19.4499718,
+                    "wsp_gps_y": 51.7578888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203326030,
+                    "wsp_gps_x": 19.4595555,
+                    "wsp_gps_y": 51.8009444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203327288,
+                    "wsp_gps_x": 19.5258604,
+                    "wsp_gps_y": 51.7851107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203327668,
+                    "wsp_gps_x": 19.5088333,
+                    "wsp_gps_y": 51.7499441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203328590,
+                    "wsp_gps_x": 19.4213604,
+                    "wsp_gps_y": 51.7898052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203328622,
+                    "wsp_gps_x": 19.5293326,
+                    "wsp_gps_y": 51.7745826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203330188,
+                    "wsp_gps_x": 19.5146388,
+                    "wsp_gps_y": 51.7641111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203330464,
+                    "wsp_gps_x": 19.4980274,
+                    "wsp_gps_y": 51.7624722,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203332531,
+                    "wsp_gps_x": 19.5045555,
+                    "wsp_gps_y": 51.7319437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203332791,
+                    "wsp_gps_x": 19.4556111,
+                    "wsp_gps_y": 51.7953885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203333138,
+                    "wsp_gps_x": 19.4367218,
+                    "wsp_gps_y": 51.789083,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203333436,
+                    "wsp_gps_x": 19.4718882,
+                    "wsp_gps_y": 51.764,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203334316,
+                    "wsp_gps_x": 19.45625,
+                    "wsp_gps_y": 51.7328326,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203334613,
+                    "wsp_gps_x": 19.4373607,
+                    "wsp_gps_y": 51.8106944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203336183,
+                    "wsp_gps_x": 19.5205826,
+                    "wsp_gps_y": 51.725166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203337942,
+                    "wsp_gps_x": 19.4522222,
+                    "wsp_gps_y": 51.7315548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203337950,
+                    "wsp_gps_x": 19.4698604,
+                    "wsp_gps_y": 51.7573888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203338069,
+                    "wsp_gps_x": 19.474166,
+                    "wsp_gps_y": 51.7492774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203338658,
+                    "wsp_gps_x": 19.4768604,
+                    "wsp_gps_y": 51.7294715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203339325,
+                    "wsp_gps_x": 19.3954718,
+                    "wsp_gps_y": 51.7973607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203339637,
+                    "wsp_gps_x": 19.3927218,
+                    "wsp_gps_y": 51.7570555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203340255,
+                    "wsp_gps_x": 19.5237771,
+                    "wsp_gps_y": 51.7349718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203340864,
+                    "wsp_gps_x": 19.4212493,
+                    "wsp_gps_y": 51.7803326,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203341575,
+                    "wsp_gps_x": 19.5847218,
+                    "wsp_gps_y": 51.7377218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203341608,
+                    "wsp_gps_x": 19.5301382,
+                    "wsp_gps_y": 51.7531944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203342416,
+                    "wsp_gps_x": 19.4454996,
+                    "wsp_gps_y": 51.7816382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203342547,
+                    "wsp_gps_x": 19.4518888,
+                    "wsp_gps_y": 51.7786104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203342982,
+                    "wsp_gps_x": 19.4220826,
+                    "wsp_gps_y": 51.7433607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203343114,
+                    "wsp_gps_x": 19.4227215,
+                    "wsp_gps_y": 51.70625,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203343929,
+                    "wsp_gps_x": 19.4562777,
+                    "wsp_gps_y": 51.7294993,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203344076,
+                    "wsp_gps_x": 19.4787215,
+                    "wsp_gps_y": 51.7725826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203344485,
+                    "wsp_gps_x": 19.4848052,
+                    "wsp_gps_y": 51.7186382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203345347,
+                    "wsp_gps_x": 19.4574444,
+                    "wsp_gps_y": 51.7176104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203347068,
+                    "wsp_gps_x": 19.4173326,
+                    "wsp_gps_y": 51.7728604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203348445,
+                    "wsp_gps_x": 19.5894441,
+                    "wsp_gps_y": 51.7939996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203348453,
+                    "wsp_gps_x": 19.4394996,
+                    "wsp_gps_y": 51.7848607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203348649,
+                    "wsp_gps_x": 19.4363052,
+                    "wsp_gps_y": 51.75625,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203348808,
+                    "wsp_gps_x": 19.4689993,
+                    "wsp_gps_y": 51.7717771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203348865,
+                    "wsp_gps_x": 19.4436941,
+                    "wsp_gps_y": 51.7643888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203349279,
+                    "wsp_gps_x": 19.4811104,
+                    "wsp_gps_y": 51.7613888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203349443,
+                    "wsp_gps_x": 19.4516666,
+                    "wsp_gps_y": 51.7775271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203350062,
+                    "wsp_gps_x": 19.4415274,
+                    "wsp_gps_y": 51.721666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203350394,
+                    "wsp_gps_x": 19.4766104,
+                    "wsp_gps_y": 51.7610555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203351459,
+                    "wsp_gps_x": 19.5641944,
+                    "wsp_gps_y": 51.7412496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203352138,
+                    "wsp_gps_x": 19.4577777,
+                    "wsp_gps_y": 51.7292771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203353012,
+                    "wsp_gps_x": 19.4221104,
+                    "wsp_gps_y": 51.80375,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203353240,
+                    "wsp_gps_x": 19.5004722,
+                    "wsp_gps_y": 51.7631666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203356753,
+                    "wsp_gps_x": 19.391833,
+                    "wsp_gps_y": 51.7848052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203359992,
+                    "wsp_gps_x": 19.4421663,
+                    "wsp_gps_y": 51.736833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203360195,
+                    "wsp_gps_x": 19.4565555,
+                    "wsp_gps_y": 51.7330271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203360669,
+                    "wsp_gps_x": 19.4344996,
+                    "wsp_gps_y": 51.7857774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203361003,
+                    "wsp_gps_x": 19.4460552,
+                    "wsp_gps_y": 51.7699715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203361409,
+                    "wsp_gps_x": 19.4779993,
+                    "wsp_gps_y": 51.7924163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203363398,
+                    "wsp_gps_x": 19.4797493,
+                    "wsp_gps_y": 51.6996385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203363473,
+                    "wsp_gps_x": 19.4563055,
+                    "wsp_gps_y": 51.7570277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203364334,
+                    "wsp_gps_x": 19.4498607,
+                    "wsp_gps_y": 51.7518888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203364756,
+                    "wsp_gps_x": 19.4581944,
+                    "wsp_gps_y": 51.75925,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203365455,
+                    "wsp_gps_x": 19.4614722,
+                    "wsp_gps_y": 51.7794437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203365885,
+                    "wsp_gps_x": 19.4868885,
+                    "wsp_gps_y": 51.7442496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203365927,
+                    "wsp_gps_x": 19.4216104,
+                    "wsp_gps_y": 51.7776937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203366372,
+                    "wsp_gps_x": 19.5202493,
+                    "wsp_gps_y": 51.753,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203366674,
+                    "wsp_gps_x": 19.4732215,
+                    "wsp_gps_y": 51.768666,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203367056,
+                    "wsp_gps_x": 19.4244715,
+                    "wsp_gps_y": 51.7685826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203370559,
+                    "wsp_gps_x": 19.4601111,
+                    "wsp_gps_y": 51.7508611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203370834,
+                    "wsp_gps_x": 19.4454163,
+                    "wsp_gps_y": 51.815,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203370859,
+                    "wsp_gps_x": 19.5070555,
+                    "wsp_gps_y": 51.7361941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203371905,
+                    "wsp_gps_x": 19.5367774,
+                    "wsp_gps_y": 51.7593888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203373389,
+                    "wsp_gps_x": 19.4484996,
+                    "wsp_gps_y": 51.7717215,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203373542,
+                    "wsp_gps_x": 19.5394441,
+                    "wsp_gps_y": 51.7213604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203373736,
+                    "wsp_gps_x": 19.470166,
+                    "wsp_gps_y": 51.7286937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203373883,
+                    "wsp_gps_x": 19.4471107,
+                    "wsp_gps_y": 51.7635555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203374048,
+                    "wsp_gps_x": 19.4250826,
+                    "wsp_gps_y": 51.6905274,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203375495,
+                    "wsp_gps_x": 19.4272771,
+                    "wsp_gps_y": 51.8279437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203378903,
+                    "wsp_gps_x": 19.4740548,
+                    "wsp_gps_y": 51.7313882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203379141,
+                    "wsp_gps_x": 19.4518611,
+                    "wsp_gps_y": 51.7787493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203379374,
+                    "wsp_gps_x": 19.4244993,
+                    "wsp_gps_y": 51.7989996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203380171,
+                    "wsp_gps_x": 19.3944718,
+                    "wsp_gps_y": 51.7984718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203381284,
+                    "wsp_gps_x": 19.5680271,
+                    "wsp_gps_y": 51.7406385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203381777,
+                    "wsp_gps_x": 19.4476663,
+                    "wsp_gps_y": 51.7760271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203382796,
+                    "wsp_gps_x": 19.4277215,
+                    "wsp_gps_y": 51.7908052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203382810,
+                    "wsp_gps_x": 19.4252771,
+                    "wsp_gps_y": 51.8294715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203383995,
+                    "wsp_gps_x": 19.4227771,
+                    "wsp_gps_y": 51.7059166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203384620,
+                    "wsp_gps_x": 19.4741937,
+                    "wsp_gps_y": 51.7492496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203385948,
+                    "wsp_gps_x": 19.4891663,
+                    "wsp_gps_y": 51.7520277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203386924,
+                    "wsp_gps_x": 19.4369996,
+                    "wsp_gps_y": 51.7248326,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203387167,
+                    "wsp_gps_x": 19.4189993,
+                    "wsp_gps_y": 51.746833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203387580,
+                    "wsp_gps_x": 19.5810271,
+                    "wsp_gps_y": 51.7943885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203388029,
+                    "wsp_gps_x": 19.4513055,
+                    "wsp_gps_y": 51.779916,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203388928,
+                    "wsp_gps_x": 19.3402774,
+                    "wsp_gps_y": 51.8116111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203389134,
+                    "wsp_gps_x": 19.4755548,
+                    "wsp_gps_y": 51.7636944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203390086,
+                    "wsp_gps_x": 19.4691937,
+                    "wsp_gps_y": 51.7735826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203390989,
+                    "wsp_gps_x": 19.4343052,
+                    "wsp_gps_y": 51.7901663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203391088,
+                    "wsp_gps_x": 19.3986941,
+                    "wsp_gps_y": 51.7463052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203392602,
+                    "wsp_gps_x": 19.5188326,
+                    "wsp_gps_y": 51.8245548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203393043,
+                    "wsp_gps_x": 19.574666,
+                    "wsp_gps_y": 51.7394163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203394824,
+                    "wsp_gps_x": 19.4658055,
+                    "wsp_gps_y": 51.8005555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203395044,
+                    "wsp_gps_x": 19.4392774,
+                    "wsp_gps_y": 51.7489718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203398841,
+                    "wsp_gps_x": 19.4859163,
+                    "wsp_gps_y": 51.7785271,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203400019,
+                    "wsp_gps_x": 19.4366107,
+                    "wsp_gps_y": 51.7512777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203401853,
+                    "wsp_gps_x": 19.4019444,
+                    "wsp_gps_y": 51.7959163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203402220,
+                    "wsp_gps_x": 19.4955552,
+                    "wsp_gps_y": 51.7230548,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203402760,
+                    "wsp_gps_x": 19.5153055,
+                    "wsp_gps_y": 51.7354996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203403116,
+                    "wsp_gps_x": 19.467666,
+                    "wsp_gps_y": 51.7631388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203403342,
+                    "wsp_gps_x": 19.4523611,
+                    "wsp_gps_y": 51.7347218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203406211,
+                    "wsp_gps_x": 19.4267493,
+                    "wsp_gps_y": 51.81375,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203406742,
+                    "wsp_gps_x": 19.4384996,
+                    "wsp_gps_y": 51.7484163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203410247,
+                    "wsp_gps_x": 19.4177771,
+                    "wsp_gps_y": 51.7516111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203412951,
+                    "wsp_gps_x": 19.5402496,
+                    "wsp_gps_y": 51.7198048,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203413825,
+                    "wsp_gps_x": 19.5762493,
+                    "wsp_gps_y": 51.7946941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203414385,
+                    "wsp_gps_x": 19.5549722,
+                    "wsp_gps_y": 51.7577777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203414461,
+                    "wsp_gps_x": 19.4396107,
+                    "wsp_gps_y": 51.7032222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203417846,
+                    "wsp_gps_x": 19.590083,
+                    "wsp_gps_y": 51.7938607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203419453,
+                    "wsp_gps_x": 19.4322771,
+                    "wsp_gps_y": 51.8193326,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203419604,
+                    "wsp_gps_x": 19.4011111,
+                    "wsp_gps_y": 51.6973885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203421350,
+                    "wsp_gps_x": 19.4471663,
+                    "wsp_gps_y": 51.7640833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203424563,
+                    "wsp_gps_x": 19.4491385,
+                    "wsp_gps_y": 51.7678604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203425891,
+                    "wsp_gps_x": 19.4226104,
+                    "wsp_gps_y": 51.7680826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203425922,
+                    "wsp_gps_x": 19.4347496,
+                    "wsp_gps_y": 51.7561944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203426582,
+                    "wsp_gps_x": 19.4881941,
+                    "wsp_gps_y": 51.7362774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203427922,
+                    "wsp_gps_x": 19.4424996,
+                    "wsp_gps_y": 51.7997774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203428807,
+                    "wsp_gps_x": 19.4784993,
+                    "wsp_gps_y": 51.7909718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203430668,
+                    "wsp_gps_x": 19.5388885,
+                    "wsp_gps_y": 51.7222771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203432279,
+                    "wsp_gps_x": 19.3728048,
+                    "wsp_gps_y": 51.7517222,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203432367,
+                    "wsp_gps_x": 19.4843052,
+                    "wsp_gps_y": 51.7207215,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203432901,
+                    "wsp_gps_x": 19.4778604,
+                    "wsp_gps_y": 51.7921385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203433453,
+                    "wsp_gps_x": 19.4090833,
+                    "wsp_gps_y": 51.7614722,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203433904,
+                    "wsp_gps_x": 19.3918052,
+                    "wsp_gps_y": 51.7835552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203434214,
+                    "wsp_gps_x": 19.3886107,
+                    "wsp_gps_y": 51.7929996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203434376,
+                    "wsp_gps_x": 19.4192493,
+                    "wsp_gps_y": 51.7514166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203434483,
+                    "wsp_gps_x": 19.449333,
+                    "wsp_gps_y": 51.7681382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203434575,
+                    "wsp_gps_x": 19.4404718,
+                    "wsp_gps_y": 51.8048611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203434607,
+                    "wsp_gps_x": 19.4523333,
+                    "wsp_gps_y": 51.7743882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203435075,
+                    "wsp_gps_x": 19.5213048,
+                    "wsp_gps_y": 51.7748882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203436122,
+                    "wsp_gps_x": 19.4441385,
+                    "wsp_gps_y": 51.7623611,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203436399,
+                    "wsp_gps_x": 19.4640555,
+                    "wsp_gps_y": 51.7493607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203436721,
+                    "wsp_gps_x": 19.4871385,
+                    "wsp_gps_y": 51.737333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203437483,
+                    "wsp_gps_x": 19.4227493,
+                    "wsp_gps_y": 51.7558055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203437868,
+                    "wsp_gps_x": 19.4524722,
+                    "wsp_gps_y": 51.7308604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203439869,
+                    "wsp_gps_x": 19.4718326,
+                    "wsp_gps_y": 51.7541944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203439953,
+                    "wsp_gps_x": 19.4345274,
+                    "wsp_gps_y": 51.8160277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203442158,
+                    "wsp_gps_x": 19.433833,
+                    "wsp_gps_y": 51.7993885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203442692,
+                    "wsp_gps_x": 19.4113333,
+                    "wsp_gps_y": 51.7636944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203443067,
+                    "wsp_gps_x": 19.6291937,
+                    "wsp_gps_y": 51.7231382,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203443084,
+                    "wsp_gps_x": 19.487083,
+                    "wsp_gps_y": 51.747333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203444301,
+                    "wsp_gps_x": 19.4422774,
+                    "wsp_gps_y": 51.820166,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203444323,
+                    "wsp_gps_x": 19.4704993,
+                    "wsp_gps_y": 51.7834718,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203445312,
+                    "wsp_gps_x": 19.4823882,
+                    "wsp_gps_y": 51.7739715,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203446552,
+                    "wsp_gps_x": 19.485833,
+                    "wsp_gps_y": 51.7166388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203446777,
+                    "wsp_gps_x": 19.3752493,
+                    "wsp_gps_y": 51.8018055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203447552,
+                    "wsp_gps_x": 19.4265826,
+                    "wsp_gps_y": 51.7856663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203448560,
+                    "wsp_gps_x": 19.5968052,
+                    "wsp_gps_y": 51.7486941,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203449168,
+                    "wsp_gps_x": 19.3989996,
+                    "wsp_gps_y": 51.7791104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203449546,
+                    "wsp_gps_x": 19.4602777,
+                    "wsp_gps_y": 51.7922496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203451594,
+                    "wsp_gps_x": 19.3997774,
+                    "wsp_gps_y": 51.7080555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203452164,
+                    "wsp_gps_x": 19.4483052,
+                    "wsp_gps_y": 51.7600555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203452246,
+                    "wsp_gps_x": 19.4136944,
+                    "wsp_gps_y": 51.7428607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203452891,
+                    "wsp_gps_x": 19.5314715,
+                    "wsp_gps_y": 51.7417774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203454176,
+                    "wsp_gps_x": 19.5616944,
+                    "wsp_gps_y": 51.7324437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203454425,
+                    "wsp_gps_x": 19.4421941,
+                    "wsp_gps_y": 51.7368052,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203454833,
+                    "wsp_gps_x": 19.4752771,
+                    "wsp_gps_y": 51.7233604,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203456185,
+                    "wsp_gps_x": 19.4513611,
+                    "wsp_gps_y": 51.7805826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203457269,
+                    "wsp_gps_x": 19.4225271,
+                    "wsp_gps_y": 51.7898607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203457547,
+                    "wsp_gps_x": 19.4492496,
+                    "wsp_gps_y": 51.7869996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203457913,
+                    "wsp_gps_x": 19.4372218,
+                    "wsp_gps_y": 51.7186104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203458698,
+                    "wsp_gps_x": 19.472166,
+                    "wsp_gps_y": 51.7741104,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203458927,
+                    "wsp_gps_x": 19.470916,
+                    "wsp_gps_y": 51.8066388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203459483,
+                    "wsp_gps_x": 19.5541944,
+                    "wsp_gps_y": 51.7429441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203460997,
+                    "wsp_gps_x": 19.4467218,
+                    "wsp_gps_y": 51.7121944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203463505,
+                    "wsp_gps_x": 19.484083,
+                    "wsp_gps_y": 51.7615555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203464158,
+                    "wsp_gps_x": 19.4989718,
+                    "wsp_gps_y": 51.7772771,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203464880,
+                    "wsp_gps_x": 19.4571944,
+                    "wsp_gps_y": 51.7447774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203466010,
+                    "wsp_gps_x": 19.4519166,
+                    "wsp_gps_y": 51.6891385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203466651,
+                    "wsp_gps_x": 19.5080555,
+                    "wsp_gps_y": 51.7881385,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203467890,
+                    "wsp_gps_x": 19.4797771,
+                    "wsp_gps_y": 51.7673882,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203468197,
+                    "wsp_gps_x": 19.4669437,
+                    "wsp_gps_y": 51.8438607,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203468807,
+                    "wsp_gps_x": 19.431916,
+                    "wsp_gps_y": 51.8189993,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203469009,
+                    "wsp_gps_x": 19.4282493,
+                    "wsp_gps_y": 51.8252493,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203469805,
+                    "wsp_gps_x": 19.4684437,
+                    "wsp_gps_y": 51.786333,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203470516,
+                    "wsp_gps_x": 19.3982218,
+                    "wsp_gps_y": 51.746083,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203470792,
+                    "wsp_gps_x": 19.5010277,
+                    "wsp_gps_y": 51.763,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203470872,
+                    "wsp_gps_x": 19.432666,
+                    "wsp_gps_y": 51.7571944,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203473076,
+                    "wsp_gps_x": 19.3953607,
+                    "wsp_gps_y": 51.7972218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203473218,
+                    "wsp_gps_x": 19.488583,
+                    "wsp_gps_y": 51.792833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203473549,
+                    "wsp_gps_x": 19.4865274,
+                    "wsp_gps_y": 51.7135277,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203473798,
+                    "wsp_gps_x": 19.423416,
+                    "wsp_gps_y": 51.7454441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203476462,
+                    "wsp_gps_x": 19.4338607,
+                    "wsp_gps_y": 51.7895274,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203476733,
+                    "wsp_gps_x": 19.4260271,
+                    "wsp_gps_y": 51.8045,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203477972,
+                    "wsp_gps_x": 19.4538333,
+                    "wsp_gps_y": 51.7766937,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203478303,
+                    "wsp_gps_x": 19.4561944,
+                    "wsp_gps_y": 51.7500555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203478750,
+                    "wsp_gps_x": 19.4460552,
+                    "wsp_gps_y": 51.7693048,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203478931,
+                    "wsp_gps_x": 19.4307771,
+                    "wsp_gps_y": 51.7985274,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203478999,
+                    "wsp_gps_x": 19.45825,
+                    "wsp_gps_y": 51.7407218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203479253,
+                    "wsp_gps_x": 19.444083,
+                    "wsp_gps_y": 51.7973885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203479288,
+                    "wsp_gps_x": 19.442833,
+                    "wsp_gps_y": 51.7601388,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203481376,
+                    "wsp_gps_x": 19.5156388,
+                    "wsp_gps_y": 51.7507777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203482755,
+                    "wsp_gps_x": 19.3450552,
+                    "wsp_gps_y": 51.8105555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203483054,
+                    "wsp_gps_x": 19.4342774,
+                    "wsp_gps_y": 51.8160555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203483382,
+                    "wsp_gps_x": 19.4250548,
+                    "wsp_gps_y": 51.7557777,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203484887,
+                    "wsp_gps_x": 19.4054444,
+                    "wsp_gps_y": 51.7441663,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203485145,
+                    "wsp_gps_x": 19.5963052,
+                    "wsp_gps_y": 51.7369163,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203485344,
+                    "wsp_gps_x": 19.4318326,
+                    "wsp_gps_y": 51.7850274,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203485503,
+                    "wsp_gps_x": 19.5302771,
+                    "wsp_gps_y": 51.7419441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203486476,
+                    "wsp_gps_x": 19.4699437,
+                    "wsp_gps_y": 51.7664444,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203486966,
+                    "wsp_gps_x": 19.4126944,
+                    "wsp_gps_y": 51.742583,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203487066,
+                    "wsp_gps_x": 19.5009722,
+                    "wsp_gps_y": 51.7630555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203488205,
+                    "wsp_gps_x": 19.4541111,
+                    "wsp_gps_y": 51.7874996,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203488873,
+                    "wsp_gps_x": 19.4603611,
+                    "wsp_gps_y": 51.7867218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203490563,
+                    "wsp_gps_x": 19.5427218,
+                    "wsp_gps_y": 51.7143888,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203491109,
+                    "wsp_gps_x": 19.4094166,
+                    "wsp_gps_y": 51.7944441,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203493166,
+                    "wsp_gps_x": 19.4500833,
+                    "wsp_gps_y": 51.7580555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203493936,
+                    "wsp_gps_x": 19.4956107,
+                    "wsp_gps_y": 51.7368885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203494421,
+                    "wsp_gps_x": 19.5742215,
+                    "wsp_gps_y": 51.7538055,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203497274,
+                    "wsp_gps_x": 19.4539166,
+                    "wsp_gps_y": 51.7684437,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203497445,
+                    "wsp_gps_x": 19.4206104,
+                    "wsp_gps_y": 51.7446107,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203497977,
+                    "wsp_gps_x": 19.4319437,
+                    "wsp_gps_y": 51.7555833,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203498117,
+                    "wsp_gps_x": 19.4079722,
+                    "wsp_gps_y": 51.7493885,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203498203,
+                    "wsp_gps_x": 19.4198326,
+                    "wsp_gps_y": 51.8175826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203499004,
+                    "wsp_gps_x": 19.4999163,
+                    "wsp_gps_y": 51.7625555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203499525,
+                    "wsp_gps_x": 19.5224437,
+                    "wsp_gps_y": 51.7460552,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203499547,
+                    "wsp_gps_x": 19.4500833,
+                    "wsp_gps_y": 51.7845274,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203499553,
+                    "wsp_gps_x": 19.4728604,
+                    "wsp_gps_y": 51.752,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203500024,
+                    "wsp_gps_x": 19.4390552,
+                    "wsp_gps_y": 51.7765826,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203501791,
+                    "wsp_gps_x": 19.4594166,
+                    "wsp_gps_y": 51.727916,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203502238,
+                    "wsp_gps_x": 19.4787493,
+                    "wsp_gps_y": 51.7902774,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203503155,
+                    "wsp_gps_x": 19.5044722,
+                    "wsp_gps_y": 51.7318326,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203505731,
+                    "wsp_gps_x": 19.4623333,
+                    "wsp_gps_y": 51.7412496,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203506940,
+                    "wsp_gps_x": 19.4854718,
+                    "wsp_gps_y": 51.7616111,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203508284,
+                    "wsp_gps_x": 19.3763326,
+                    "wsp_gps_y": 51.8010555,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203508290,
+                    "wsp_gps_x": 19.4525555,
+                    "wsp_gps_y": 51.7308048,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203508549,
+                    "wsp_gps_x": 19.4828882,
+                    "wsp_gps_y": 51.7837218,
+                    "ciezkosc": "C"
+                  },
+                  {
+                    "id": 203065993,
+                    "wsp_gps_x": 19.434583,
+                    "wsp_gps_y": 51.7556111,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203067782,
+                    "wsp_gps_x": 19.4184715,
+                    "wsp_gps_y": 51.8184715,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203069637,
+                    "wsp_gps_x": 19.4811104,
+                    "wsp_gps_y": 51.7610833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203075074,
+                    "wsp_gps_x": 19.4293882,
+                    "wsp_gps_y": 51.7702771,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203075366,
+                    "wsp_gps_x": 19.4496385,
+                    "wsp_gps_y": 51.7648888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203075797,
+                    "wsp_gps_x": 19.4211937,
+                    "wsp_gps_y": 51.7808882,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203080834,
+                    "wsp_gps_x": 19.4498885,
+                    "wsp_gps_y": 51.7830548,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203083427,
+                    "wsp_gps_x": 19.3942774,
+                    "wsp_gps_y": 51.7974996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203084931,
+                    "wsp_gps_x": 19.4503055,
+                    "wsp_gps_y": 51.7629166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203084957,
+                    "wsp_gps_x": 19.5105833,
+                    "wsp_gps_y": 51.7553055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203085258,
+                    "wsp_gps_x": 19.4628888,
+                    "wsp_gps_y": 51.7598611,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203087379,
+                    "wsp_gps_x": 19.4702215,
+                    "wsp_gps_y": 51.7718882,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203087515,
+                    "wsp_gps_x": 19.4389441,
+                    "wsp_gps_y": 51.7672493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203088847,
+                    "wsp_gps_x": 19.4482496,
+                    "wsp_gps_y": 51.7576944,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203088939,
+                    "wsp_gps_x": 19.4343607,
+                    "wsp_gps_y": 51.7568611,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203089537,
+                    "wsp_gps_x": 19.5416941,
+                    "wsp_gps_y": 51.7163055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203090058,
+                    "wsp_gps_x": 19.4498607,
+                    "wsp_gps_y": 51.7657222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203090331,
+                    "wsp_gps_x": 19.4196937,
+                    "wsp_gps_y": 51.7513055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203090710,
+                    "wsp_gps_x": 19.5078611,
+                    "wsp_gps_y": 51.7884441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203095833,
+                    "wsp_gps_x": 19.4789437,
+                    "wsp_gps_y": 51.6984996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203096151,
+                    "wsp_gps_x": 19.4917218,
+                    "wsp_gps_y": 51.7329437,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203097022,
+                    "wsp_gps_x": 19.4274715,
+                    "wsp_gps_y": 51.7871107,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203097366,
+                    "wsp_gps_x": 19.4631388,
+                    "wsp_gps_y": 51.75975,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203097789,
+                    "wsp_gps_x": 19.4594444,
+                    "wsp_gps_y": 51.7408052,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203098057,
+                    "wsp_gps_x": 19.5264993,
+                    "wsp_gps_y": 51.7909163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203099292,
+                    "wsp_gps_x": 19.419916,
+                    "wsp_gps_y": 51.7565555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203099569,
+                    "wsp_gps_x": 19.5312771,
+                    "wsp_gps_y": 51.7346107,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203100803,
+                    "wsp_gps_x": 19.4669715,
+                    "wsp_gps_y": 51.7707493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203102766,
+                    "wsp_gps_x": 19.5669715,
+                    "wsp_gps_y": 51.7408052,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203107278,
+                    "wsp_gps_x": 19.4349163,
+                    "wsp_gps_y": 51.7562222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203107717,
+                    "wsp_gps_x": 19.4606666,
+                    "wsp_gps_y": 51.7698048,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203110159,
+                    "wsp_gps_x": 19.3904996,
+                    "wsp_gps_y": 51.824666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203111067,
+                    "wsp_gps_x": 19.4569166,
+                    "wsp_gps_y": 51.7458607,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203111914,
+                    "wsp_gps_x": 19.4572777,
+                    "wsp_gps_y": 51.7175548,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203113692,
+                    "wsp_gps_x": 19.4526666,
+                    "wsp_gps_y": 51.785583,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203114777,
+                    "wsp_gps_x": 19.4496107,
+                    "wsp_gps_y": 51.7849163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203115862,
+                    "wsp_gps_x": 19.4564722,
+                    "wsp_gps_y": 51.7997218,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203117755,
+                    "wsp_gps_x": 19.4403052,
+                    "wsp_gps_y": 51.7707215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203117959,
+                    "wsp_gps_x": 19.4209715,
+                    "wsp_gps_y": 51.7749993,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203118152,
+                    "wsp_gps_x": 19.4646388,
+                    "wsp_gps_y": 51.7404718,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203120879,
+                    "wsp_gps_x": 19.4587777,
+                    "wsp_gps_y": 51.7707771,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203125659,
+                    "wsp_gps_x": 19.4388885,
+                    "wsp_gps_y": 51.7454163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203125798,
+                    "wsp_gps_x": 19.4623611,
+                    "wsp_gps_y": 51.7753882,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203125819,
+                    "wsp_gps_x": 19.5059166,
+                    "wsp_gps_y": 51.7694437,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203126035,
+                    "wsp_gps_x": 19.4482774,
+                    "wsp_gps_y": 51.7731382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203126988,
+                    "wsp_gps_x": 19.4768048,
+                    "wsp_gps_y": 51.7222215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203127110,
+                    "wsp_gps_x": 19.3857218,
+                    "wsp_gps_y": 51.7964441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203127816,
+                    "wsp_gps_x": 19.4715548,
+                    "wsp_gps_y": 51.7667493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203130079,
+                    "wsp_gps_x": 19.4784993,
+                    "wsp_gps_y": 51.7638333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203130136,
+                    "wsp_gps_x": 19.4466941,
+                    "wsp_gps_y": 51.7317215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203130821,
+                    "wsp_gps_x": 19.4856107,
+                    "wsp_gps_y": 51.7785271,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203131361,
+                    "wsp_gps_x": 19.4591388,
+                    "wsp_gps_y": 51.7951385,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203132256,
+                    "wsp_gps_x": 19.4506944,
+                    "wsp_gps_y": 51.747833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203132638,
+                    "wsp_gps_x": 19.4935552,
+                    "wsp_gps_y": 51.721166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203133227,
+                    "wsp_gps_x": 19.4510277,
+                    "wsp_gps_y": 51.7298326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203133415,
+                    "wsp_gps_x": 19.4472774,
+                    "wsp_gps_y": 51.7635,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203134049,
+                    "wsp_gps_x": 19.4596944,
+                    "wsp_gps_y": 51.786833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203135479,
+                    "wsp_gps_x": 19.4323326,
+                    "wsp_gps_y": 51.7311382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203135769,
+                    "wsp_gps_x": 19.4580277,
+                    "wsp_gps_y": 51.7623611,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203137820,
+                    "wsp_gps_x": 19.4699715,
+                    "wsp_gps_y": 51.7633333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203142164,
+                    "wsp_gps_x": 19.4429718,
+                    "wsp_gps_y": 51.7601111,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203142479,
+                    "wsp_gps_x": 19.4103055,
+                    "wsp_gps_y": 51.7941385,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203142580,
+                    "wsp_gps_x": 19.5312215,
+                    "wsp_gps_y": 51.7620833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203142960,
+                    "wsp_gps_x": 19.4232493,
+                    "wsp_gps_y": 51.7064722,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203143768,
+                    "wsp_gps_x": 19.4629722,
+                    "wsp_gps_y": 51.75975,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203144110,
+                    "wsp_gps_x": 19.4313604,
+                    "wsp_gps_y": 51.7926941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203146424,
+                    "wsp_gps_x": 19.4769715,
+                    "wsp_gps_y": 51.7290826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203147084,
+                    "wsp_gps_x": 19.4752771,
+                    "wsp_gps_y": 51.75375,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203148473,
+                    "wsp_gps_x": 19.5433885,
+                    "wsp_gps_y": 51.7113611,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203148774,
+                    "wsp_gps_x": 19.5277771,
+                    "wsp_gps_y": 51.7603888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203149006,
+                    "wsp_gps_x": 19.45775,
+                    "wsp_gps_y": 51.7791104,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203150974,
+                    "wsp_gps_x": 19.3992496,
+                    "wsp_gps_y": 51.7771382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203155774,
+                    "wsp_gps_x": 19.4542222,
+                    "wsp_gps_y": 51.7653055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203156855,
+                    "wsp_gps_x": 19.4479718,
+                    "wsp_gps_y": 51.744083,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203157133,
+                    "wsp_gps_x": 19.4495552,
+                    "wsp_gps_y": 51.7862218,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203157913,
+                    "wsp_gps_x": 19.4542222,
+                    "wsp_gps_y": 51.7703326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203160476,
+                    "wsp_gps_x": 19.4617222,
+                    "wsp_gps_y": 51.7117222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203161061,
+                    "wsp_gps_x": 19.595333,
+                    "wsp_gps_y": 51.7498052,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203162974,
+                    "wsp_gps_x": 19.4314993,
+                    "wsp_gps_y": 51.7690271,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203165154,
+                    "wsp_gps_x": 19.5086944,
+                    "wsp_gps_y": 51.7879718,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203166653,
+                    "wsp_gps_x": 19.4569722,
+                    "wsp_gps_y": 51.7290826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203166789,
+                    "wsp_gps_x": 19.5737771,
+                    "wsp_gps_y": 51.75025,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203168499,
+                    "wsp_gps_x": 19.483166,
+                    "wsp_gps_y": 51.7698048,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203170245,
+                    "wsp_gps_x": 19.397833,
+                    "wsp_gps_y": 51.7461107,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203172572,
+                    "wsp_gps_x": 19.4608888,
+                    "wsp_gps_y": 51.7484718,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203175518,
+                    "wsp_gps_x": 19.4420274,
+                    "wsp_gps_y": 51.735583,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203175693,
+                    "wsp_gps_x": 19.4636388,
+                    "wsp_gps_y": 51.7562777,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203177136,
+                    "wsp_gps_x": 19.4894996,
+                    "wsp_gps_y": 51.7323326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203178054,
+                    "wsp_gps_x": 19.5080833,
+                    "wsp_gps_y": 51.7884163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203181079,
+                    "wsp_gps_x": 19.4372496,
+                    "wsp_gps_y": 51.7888885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203181156,
+                    "wsp_gps_x": 19.4314715,
+                    "wsp_gps_y": 51.7608888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203181899,
+                    "wsp_gps_x": 19.482416,
+                    "wsp_gps_y": 51.7719993,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203182439,
+                    "wsp_gps_x": 19.4746104,
+                    "wsp_gps_y": 51.7484163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203186215,
+                    "wsp_gps_x": 19.4872218,
+                    "wsp_gps_y": 51.8109444,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203186542,
+                    "wsp_gps_x": 19.5035,
+                    "wsp_gps_y": 51.8140277,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203186902,
+                    "wsp_gps_x": 19.4192215,
+                    "wsp_gps_y": 51.7476107,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203187206,
+                    "wsp_gps_x": 19.4765826,
+                    "wsp_gps_y": 51.7386107,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203187320,
+                    "wsp_gps_x": 19.4188048,
+                    "wsp_gps_y": 51.7469996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203187648,
+                    "wsp_gps_x": 19.5745826,
+                    "wsp_gps_y": 51.7537222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203189300,
+                    "wsp_gps_x": 19.4787215,
+                    "wsp_gps_y": 51.7676104,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203190847,
+                    "wsp_gps_x": 19.4298882,
+                    "wsp_gps_y": 51.7563888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203194410,
+                    "wsp_gps_x": 19.425916,
+                    "wsp_gps_y": 51.7766937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203195438,
+                    "wsp_gps_x": 19.4441385,
+                    "wsp_gps_y": 51.7623888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203195672,
+                    "wsp_gps_x": 19.4503611,
+                    "wsp_gps_y": 51.76425,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203195680,
+                    "wsp_gps_x": 19.3690271,
+                    "wsp_gps_y": 51.8025555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203197078,
+                    "wsp_gps_x": 19.4329437,
+                    "wsp_gps_y": 51.7150833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203197571,
+                    "wsp_gps_x": 19.5014722,
+                    "wsp_gps_y": 51.7352774,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203198531,
+                    "wsp_gps_x": 19.4654722,
+                    "wsp_gps_y": 51.7965552,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203198885,
+                    "wsp_gps_x": 19.4724715,
+                    "wsp_gps_y": 51.7528888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203199154,
+                    "wsp_gps_x": 19.4476385,
+                    "wsp_gps_y": 51.7761382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203199871,
+                    "wsp_gps_x": 19.4308882,
+                    "wsp_gps_y": 51.7560555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203201060,
+                    "wsp_gps_x": 19.5708326,
+                    "wsp_gps_y": 51.7506944,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203202472,
+                    "wsp_gps_x": 19.4513333,
+                    "wsp_gps_y": 51.7589166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203202903,
+                    "wsp_gps_x": 19.4144166,
+                    "wsp_gps_y": 51.7573888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203203172,
+                    "wsp_gps_x": 19.4288882,
+                    "wsp_gps_y": 51.7270271,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203203546,
+                    "wsp_gps_x": 19.4518055,
+                    "wsp_gps_y": 51.7778326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203206203,
+                    "wsp_gps_x": 19.4673326,
+                    "wsp_gps_y": 51.7054166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203206817,
+                    "wsp_gps_x": 19.4515,
+                    "wsp_gps_y": 51.7783882,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203207187,
+                    "wsp_gps_x": 19.4625833,
+                    "wsp_gps_y": 51.71175,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203207527,
+                    "wsp_gps_x": 19.4795826,
+                    "wsp_gps_y": 51.8106111,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203209112,
+                    "wsp_gps_x": 19.448583,
+                    "wsp_gps_y": 51.8190271,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203209577,
+                    "wsp_gps_x": 19.4357496,
+                    "wsp_gps_y": 51.717416,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203210282,
+                    "wsp_gps_x": 19.4854718,
+                    "wsp_gps_y": 51.7613333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203211028,
+                    "wsp_gps_x": 19.444333,
+                    "wsp_gps_y": 51.7727771,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203211921,
+                    "wsp_gps_x": 19.46375,
+                    "wsp_gps_y": 51.75625,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203211998,
+                    "wsp_gps_x": 19.4265826,
+                    "wsp_gps_y": 51.8137777,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203213458,
+                    "wsp_gps_x": 19.4208604,
+                    "wsp_gps_y": 51.7898607,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203213712,
+                    "wsp_gps_x": 19.4257771,
+                    "wsp_gps_y": 51.7553611,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203213775,
+                    "wsp_gps_x": 19.6135,
+                    "wsp_gps_y": 51.7431663,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203213857,
+                    "wsp_gps_x": 19.4193604,
+                    "wsp_gps_y": 51.7514444,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203213945,
+                    "wsp_gps_x": 19.4216104,
+                    "wsp_gps_y": 51.7436941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203217099,
+                    "wsp_gps_x": 19.4521111,
+                    "wsp_gps_y": 51.7998052,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203217313,
+                    "wsp_gps_x": 19.4485274,
+                    "wsp_gps_y": 51.7720548,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203217498,
+                    "wsp_gps_x": 19.4615277,
+                    "wsp_gps_y": 51.7473052,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203217683,
+                    "wsp_gps_x": 19.4365552,
+                    "wsp_gps_y": 51.7854163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203218695,
+                    "wsp_gps_x": 19.4530555,
+                    "wsp_gps_y": 51.7716937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203219086,
+                    "wsp_gps_x": 19.4104722,
+                    "wsp_gps_y": 51.7942496,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203219099,
+                    "wsp_gps_x": 19.3647222,
+                    "wsp_gps_y": 51.8035,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203220261,
+                    "wsp_gps_x": 19.4515833,
+                    "wsp_gps_y": 51.780166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203220490,
+                    "wsp_gps_x": 19.4787771,
+                    "wsp_gps_y": 51.7610833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203221295,
+                    "wsp_gps_x": 19.477666,
+                    "wsp_gps_y": 51.7672771,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203221474,
+                    "wsp_gps_x": 19.4613055,
+                    "wsp_gps_y": 51.7466107,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203224422,
+                    "wsp_gps_x": 19.4768882,
+                    "wsp_gps_y": 51.7996941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203225060,
+                    "wsp_gps_x": 19.4688048,
+                    "wsp_gps_y": 51.7602777,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203225372,
+                    "wsp_gps_x": 19.4542777,
+                    "wsp_gps_y": 51.7875274,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203225982,
+                    "wsp_gps_x": 19.5051666,
+                    "wsp_gps_y": 51.7358607,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203228778,
+                    "wsp_gps_x": 19.4281382,
+                    "wsp_gps_y": 51.7879163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203228884,
+                    "wsp_gps_x": 19.4478607,
+                    "wsp_gps_y": 51.7265826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203229723,
+                    "wsp_gps_x": 19.4766382,
+                    "wsp_gps_y": 51.7616944,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203230688,
+                    "wsp_gps_x": 19.4853052,
+                    "wsp_gps_y": 51.7178326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203230967,
+                    "wsp_gps_x": 19.4543055,
+                    "wsp_gps_y": 51.7874996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203233040,
+                    "wsp_gps_x": 19.4322215,
+                    "wsp_gps_y": 51.7140277,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203233076,
+                    "wsp_gps_x": 19.5218326,
+                    "wsp_gps_y": 51.7750826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203233692,
+                    "wsp_gps_x": 19.5051388,
+                    "wsp_gps_y": 51.7362774,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203234368,
+                    "wsp_gps_x": 19.4730271,
+                    "wsp_gps_y": 51.7721104,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203235853,
+                    "wsp_gps_x": 19.4591944,
+                    "wsp_gps_y": 51.7565833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203240075,
+                    "wsp_gps_x": 19.4330271,
+                    "wsp_gps_y": 51.7151666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203240217,
+                    "wsp_gps_x": 19.3779993,
+                    "wsp_gps_y": 51.8035555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203241253,
+                    "wsp_gps_x": 19.442083,
+                    "wsp_gps_y": 51.7366385,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203241632,
+                    "wsp_gps_x": 19.483833,
+                    "wsp_gps_y": 51.7544722,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203244464,
+                    "wsp_gps_x": 19.4181937,
+                    "wsp_gps_y": 51.7483607,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203245405,
+                    "wsp_gps_x": 19.4789715,
+                    "wsp_gps_y": 51.7610555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203246831,
+                    "wsp_gps_x": 19.4464441,
+                    "wsp_gps_y": 51.7616666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203248301,
+                    "wsp_gps_x": 19.5034166,
+                    "wsp_gps_y": 51.7361941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203249254,
+                    "wsp_gps_x": 19.5080833,
+                    "wsp_gps_y": 51.7631666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203249299,
+                    "wsp_gps_x": 19.494583,
+                    "wsp_gps_y": 51.7436941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203251642,
+                    "wsp_gps_x": 19.6307215,
+                    "wsp_gps_y": 51.7529166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203252208,
+                    "wsp_gps_x": 19.4686937,
+                    "wsp_gps_y": 51.7603333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203252969,
+                    "wsp_gps_x": 19.4184715,
+                    "wsp_gps_y": 51.7470552,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203253126,
+                    "wsp_gps_x": 19.4519722,
+                    "wsp_gps_y": 51.7869441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203255182,
+                    "wsp_gps_x": 19.4862774,
+                    "wsp_gps_y": 51.7135,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203255572,
+                    "wsp_gps_x": 19.4705548,
+                    "wsp_gps_y": 51.7605555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203255593,
+                    "wsp_gps_x": 19.4668882,
+                    "wsp_gps_y": 51.7583055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203256877,
+                    "wsp_gps_x": 19.4895552,
+                    "wsp_gps_y": 51.7473885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203257812,
+                    "wsp_gps_x": 19.3791937,
+                    "wsp_gps_y": 51.8041944,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203258144,
+                    "wsp_gps_x": 19.3874996,
+                    "wsp_gps_y": 51.7932218,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203258937,
+                    "wsp_gps_x": 19.4056388,
+                    "wsp_gps_y": 51.7617222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203264499,
+                    "wsp_gps_x": 19.4927774,
+                    "wsp_gps_y": 51.7479163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203264541,
+                    "wsp_gps_x": 19.50325,
+                    "wsp_gps_y": 51.8171937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203265406,
+                    "wsp_gps_x": 19.4535833,
+                    "wsp_gps_y": 51.7684437,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203266225,
+                    "wsp_gps_x": 19.391583,
+                    "wsp_gps_y": 51.7972218,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203267786,
+                    "wsp_gps_x": 19.439083,
+                    "wsp_gps_y": 51.7705826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203269889,
+                    "wsp_gps_x": 19.4218882,
+                    "wsp_gps_y": 51.7918607,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203270362,
+                    "wsp_gps_x": 19.4515277,
+                    "wsp_gps_y": 51.7581666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203277034,
+                    "wsp_gps_x": 19.4724437,
+                    "wsp_gps_y": 51.7607777,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203279805,
+                    "wsp_gps_x": 19.4819715,
+                    "wsp_gps_y": 51.7237493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203280826,
+                    "wsp_gps_x": 19.5056666,
+                    "wsp_gps_y": 51.7631944,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203282645,
+                    "wsp_gps_x": 19.4586666,
+                    "wsp_gps_y": 51.7595555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203284709,
+                    "wsp_gps_x": 19.4454163,
+                    "wsp_gps_y": 51.7717215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203284920,
+                    "wsp_gps_x": 19.4421385,
+                    "wsp_gps_y": 51.7616388,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203286909,
+                    "wsp_gps_x": 19.4859441,
+                    "wsp_gps_y": 51.773166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203289793,
+                    "wsp_gps_x": 19.3860552,
+                    "wsp_gps_y": 51.7934441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203289835,
+                    "wsp_gps_x": 19.4544444,
+                    "wsp_gps_y": 51.7791382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203291242,
+                    "wsp_gps_x": 19.4436107,
+                    "wsp_gps_y": 51.7987774,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203291264,
+                    "wsp_gps_x": 19.4508888,
+                    "wsp_gps_y": 51.7818882,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203292505,
+                    "wsp_gps_x": 19.5082777,
+                    "wsp_gps_y": 51.7878885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203295841,
+                    "wsp_gps_x": 19.4283604,
+                    "wsp_gps_y": 51.7111666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203296856,
+                    "wsp_gps_x": 19.4515277,
+                    "wsp_gps_y": 51.7785548,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203296995,
+                    "wsp_gps_x": 19.438083,
+                    "wsp_gps_y": 51.8244437,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203297566,
+                    "wsp_gps_x": 19.4453052,
+                    "wsp_gps_y": 51.7727493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203298309,
+                    "wsp_gps_x": 19.4018611,
+                    "wsp_gps_y": 51.7696937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203299015,
+                    "wsp_gps_x": 19.4148611,
+                    "wsp_gps_y": 51.7429996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203304365,
+                    "wsp_gps_x": 19.4482496,
+                    "wsp_gps_y": 51.7272215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203304768,
+                    "wsp_gps_x": 19.4889163,
+                    "wsp_gps_y": 51.7377218,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203307944,
+                    "wsp_gps_x": 19.4563333,
+                    "wsp_gps_y": 51.8176937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203310663,
+                    "wsp_gps_x": 19.489333,
+                    "wsp_gps_y": 51.7549444,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203311667,
+                    "wsp_gps_x": 19.3945274,
+                    "wsp_gps_y": 51.7992496,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203312336,
+                    "wsp_gps_x": 19.433333,
+                    "wsp_gps_y": 51.7576666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203314093,
+                    "wsp_gps_x": 19.4406107,
+                    "wsp_gps_y": 51.7447496,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203315188,
+                    "wsp_gps_x": 19.5055555,
+                    "wsp_gps_y": 51.7359163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203317180,
+                    "wsp_gps_x": 19.4476385,
+                    "wsp_gps_y": 51.7270826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203319498,
+                    "wsp_gps_x": 19.4288882,
+                    "wsp_gps_y": 51.773916,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203321105,
+                    "wsp_gps_x": 19.4839441,
+                    "wsp_gps_y": 51.7665277,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203321427,
+                    "wsp_gps_x": 19.4627777,
+                    "wsp_gps_y": 51.7602222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203324479,
+                    "wsp_gps_x": 19.4526666,
+                    "wsp_gps_y": 51.7346385,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203325128,
+                    "wsp_gps_x": 19.4469718,
+                    "wsp_gps_y": 51.7873607,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203326622,
+                    "wsp_gps_x": 19.4389996,
+                    "wsp_gps_y": 51.7671937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203327532,
+                    "wsp_gps_x": 19.4175271,
+                    "wsp_gps_y": 51.7727215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203328141,
+                    "wsp_gps_x": 19.4777493,
+                    "wsp_gps_y": 51.7809715,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203328867,
+                    "wsp_gps_x": 19.45525,
+                    "wsp_gps_y": 51.7209993,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203329176,
+                    "wsp_gps_x": 19.5776104,
+                    "wsp_gps_y": 51.738833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203329417,
+                    "wsp_gps_x": 19.4565555,
+                    "wsp_gps_y": 51.7595,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203329709,
+                    "wsp_gps_x": 19.4214993,
+                    "wsp_gps_y": 51.7899441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203331517,
+                    "wsp_gps_x": 19.4752215,
+                    "wsp_gps_y": 51.7745271,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203332342,
+                    "wsp_gps_x": 19.4425552,
+                    "wsp_gps_y": 51.8000555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203335488,
+                    "wsp_gps_x": 19.5844996,
+                    "wsp_gps_y": 51.737833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203335700,
+                    "wsp_gps_x": 19.6168048,
+                    "wsp_gps_y": 51.7335274,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203336522,
+                    "wsp_gps_x": 19.4425552,
+                    "wsp_gps_y": 51.7811104,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203338382,
+                    "wsp_gps_x": 19.4858885,
+                    "wsp_gps_y": 51.7728604,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203340256,
+                    "wsp_gps_x": 19.5539444,
+                    "wsp_gps_y": 51.75725,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203341700,
+                    "wsp_gps_x": 19.4212215,
+                    "wsp_gps_y": 51.7799993,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203342068,
+                    "wsp_gps_x": 19.5212493,
+                    "wsp_gps_y": 51.783333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203342085,
+                    "wsp_gps_x": 19.4495552,
+                    "wsp_gps_y": 51.7648888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203344469,
+                    "wsp_gps_x": 19.4789715,
+                    "wsp_gps_y": 51.7610555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203347490,
+                    "wsp_gps_x": 19.5058055,
+                    "wsp_gps_y": 51.7696382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203348172,
+                    "wsp_gps_x": 19.6029166,
+                    "wsp_gps_y": 51.7013055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203350827,
+                    "wsp_gps_x": 19.4121666,
+                    "wsp_gps_y": 51.6989718,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203352305,
+                    "wsp_gps_x": 19.4325826,
+                    "wsp_gps_y": 51.769166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203354550,
+                    "wsp_gps_x": 19.4503055,
+                    "wsp_gps_y": 51.7868607,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203356532,
+                    "wsp_gps_x": 19.489083,
+                    "wsp_gps_y": 51.7374996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203357657,
+                    "wsp_gps_x": 19.4578333,
+                    "wsp_gps_y": 51.7969441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203357821,
+                    "wsp_gps_x": 19.4051666,
+                    "wsp_gps_y": 51.7483885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203357914,
+                    "wsp_gps_x": 19.4793604,
+                    "wsp_gps_y": 51.7318326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203358690,
+                    "wsp_gps_x": 19.4131388,
+                    "wsp_gps_y": 51.7736382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203359230,
+                    "wsp_gps_x": 19.4323604,
+                    "wsp_gps_y": 51.7602222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203359891,
+                    "wsp_gps_x": 19.4700271,
+                    "wsp_gps_y": 51.7633055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203360325,
+                    "wsp_gps_x": 19.5902218,
+                    "wsp_gps_y": 51.7939163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203360640,
+                    "wsp_gps_x": 19.3991941,
+                    "wsp_gps_y": 51.7593611,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203361720,
+                    "wsp_gps_x": 19.4243882,
+                    "wsp_gps_y": 51.7992218,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203361959,
+                    "wsp_gps_x": 19.4494441,
+                    "wsp_gps_y": 51.7517777,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203363755,
+                    "wsp_gps_x": 19.4492774,
+                    "wsp_gps_y": 51.7518333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203363964,
+                    "wsp_gps_x": 19.613,
+                    "wsp_gps_y": 51.7923885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203364220,
+                    "wsp_gps_x": 19.3993607,
+                    "wsp_gps_y": 51.7940274,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203370511,
+                    "wsp_gps_x": 19.4434441,
+                    "wsp_gps_y": 51.7811937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203370972,
+                    "wsp_gps_x": 19.3682493,
+                    "wsp_gps_y": 51.8024444,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203371056,
+                    "wsp_gps_x": 19.4154444,
+                    "wsp_gps_y": 51.7912774,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203371293,
+                    "wsp_gps_x": 19.5329993,
+                    "wsp_gps_y": 51.7554444,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203371307,
+                    "wsp_gps_x": 19.589583,
+                    "wsp_gps_y": 51.7939163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203374695,
+                    "wsp_gps_x": 19.4314437,
+                    "wsp_gps_y": 51.7689437,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203377126,
+                    "wsp_gps_x": 19.4234715,
+                    "wsp_gps_y": 51.7559166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203379741,
+                    "wsp_gps_x": 19.3779993,
+                    "wsp_gps_y": 51.7096111,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203381139,
+                    "wsp_gps_x": 19.4548888,
+                    "wsp_gps_y": 51.8163055,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203384340,
+                    "wsp_gps_x": 19.4608888,
+                    "wsp_gps_y": 51.7731382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203384950,
+                    "wsp_gps_x": 19.4555833,
+                    "wsp_gps_y": 51.7598888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203385409,
+                    "wsp_gps_x": 19.5885552,
+                    "wsp_gps_y": 51.7111666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203390137,
+                    "wsp_gps_x": 19.3824437,
+                    "wsp_gps_y": 51.8000555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203390351,
+                    "wsp_gps_x": 19.4729993,
+                    "wsp_gps_y": 51.7516944,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203393179,
+                    "wsp_gps_x": 19.5529444,
+                    "wsp_gps_y": 51.7431941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203397597,
+                    "wsp_gps_x": 19.5312771,
+                    "wsp_gps_y": 51.7477774,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203398470,
+                    "wsp_gps_x": 19.4555555,
+                    "wsp_gps_y": 51.7728882,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203399979,
+                    "wsp_gps_x": 19.4264715,
+                    "wsp_gps_y": 51.8036388,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203401941,
+                    "wsp_gps_x": 19.437083,
+                    "wsp_gps_y": 51.8159722,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203404283,
+                    "wsp_gps_x": 19.4505555,
+                    "wsp_gps_y": 51.782916,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203405161,
+                    "wsp_gps_x": 19.4199437,
+                    "wsp_gps_y": 51.779666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203405893,
+                    "wsp_gps_x": 19.4449163,
+                    "wsp_gps_y": 51.7716104,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203406004,
+                    "wsp_gps_x": 19.4526944,
+                    "wsp_gps_y": 51.7725826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203406616,
+                    "wsp_gps_x": 19.4626666,
+                    "wsp_gps_y": 51.7753048,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203410519,
+                    "wsp_gps_x": 19.4901941,
+                    "wsp_gps_y": 51.7280826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203410961,
+                    "wsp_gps_x": 19.4201382,
+                    "wsp_gps_y": 51.7041388,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203410988,
+                    "wsp_gps_x": 19.423916,
+                    "wsp_gps_y": 51.768416,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203411506,
+                    "wsp_gps_x": 19.4658611,
+                    "wsp_gps_y": 51.8005277,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203411683,
+                    "wsp_gps_x": 19.5562777,
+                    "wsp_gps_y": 51.8409996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203414310,
+                    "wsp_gps_x": 19.3601944,
+                    "wsp_gps_y": 51.8044166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203415433,
+                    "wsp_gps_x": 19.4876107,
+                    "wsp_gps_y": 51.7989163,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203416811,
+                    "wsp_gps_x": 19.4496107,
+                    "wsp_gps_y": 51.7844996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203418392,
+                    "wsp_gps_x": 19.4934163,
+                    "wsp_gps_y": 51.7640833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203418490,
+                    "wsp_gps_x": 19.4725826,
+                    "wsp_gps_y": 51.7720826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203418685,
+                    "wsp_gps_x": 19.5006111,
+                    "wsp_gps_y": 51.7630277,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203419773,
+                    "wsp_gps_x": 19.4553888,
+                    "wsp_gps_y": 51.7408052,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203422008,
+                    "wsp_gps_x": 19.5521111,
+                    "wsp_gps_y": 51.7544722,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203423035,
+                    "wsp_gps_x": 19.4414996,
+                    "wsp_gps_y": 51.7031388,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203428714,
+                    "wsp_gps_x": 19.4827215,
+                    "wsp_gps_y": 51.7229715,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203429251,
+                    "wsp_gps_x": 19.3983607,
+                    "wsp_gps_y": 51.7391941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203429309,
+                    "wsp_gps_x": 19.4541111,
+                    "wsp_gps_y": 51.7591388,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203429558,
+                    "wsp_gps_x": 19.5897774,
+                    "wsp_gps_y": 51.7938885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203430260,
+                    "wsp_gps_x": 19.4304993,
+                    "wsp_gps_y": 51.8223326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203432818,
+                    "wsp_gps_x": 19.5185271,
+                    "wsp_gps_y": 51.7659166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203433649,
+                    "wsp_gps_x": 19.4143611,
+                    "wsp_gps_y": 51.7475552,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203434155,
+                    "wsp_gps_x": 19.4894441,
+                    "wsp_gps_y": 51.7735826,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203435718,
+                    "wsp_gps_x": 19.4644444,
+                    "wsp_gps_y": 51.7689993,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203439847,
+                    "wsp_gps_x": 19.4302215,
+                    "wsp_gps_y": 51.770666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203441469,
+                    "wsp_gps_x": 19.4307215,
+                    "wsp_gps_y": 51.7548333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203441627,
+                    "wsp_gps_x": 19.4526666,
+                    "wsp_gps_y": 51.7324715,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203441757,
+                    "wsp_gps_x": 19.4673048,
+                    "wsp_gps_y": 51.7633611,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203442116,
+                    "wsp_gps_x": 19.5083888,
+                    "wsp_gps_y": 51.7894441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203445279,
+                    "wsp_gps_x": 19.429166,
+                    "wsp_gps_y": 51.7921385,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203446422,
+                    "wsp_gps_x": 19.4475552,
+                    "wsp_gps_y": 51.7797215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203446437,
+                    "wsp_gps_x": 19.4854441,
+                    "wsp_gps_y": 51.7160833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203446450,
+                    "wsp_gps_x": 19.374666,
+                    "wsp_gps_y": 51.7959996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203446779,
+                    "wsp_gps_x": 19.3672493,
+                    "wsp_gps_y": 51.789083,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203446897,
+                    "wsp_gps_x": 19.50875,
+                    "wsp_gps_y": 51.7636666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203447867,
+                    "wsp_gps_x": 19.4216104,
+                    "wsp_gps_y": 51.792583,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203448355,
+                    "wsp_gps_x": 19.4179993,
+                    "wsp_gps_y": 51.741083,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203449208,
+                    "wsp_gps_x": 19.5408885,
+                    "wsp_gps_y": 51.7182493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203449354,
+                    "wsp_gps_x": 19.45375,
+                    "wsp_gps_y": 51.7811382,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203449797,
+                    "wsp_gps_x": 19.3866107,
+                    "wsp_gps_y": 51.7990274,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203450815,
+                    "wsp_gps_x": 19.3859441,
+                    "wsp_gps_y": 51.7967218,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203451203,
+                    "wsp_gps_x": 19.478416,
+                    "wsp_gps_y": 51.7641111,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203451371,
+                    "wsp_gps_x": 19.5740826,
+                    "wsp_gps_y": 51.7519166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203452191,
+                    "wsp_gps_x": 19.4488607,
+                    "wsp_gps_y": 51.7872496,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203455703,
+                    "wsp_gps_x": 19.4285826,
+                    "wsp_gps_y": 51.7114722,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203456099,
+                    "wsp_gps_x": 19.3543333,
+                    "wsp_gps_y": 51.7899441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203457521,
+                    "wsp_gps_x": 19.4201382,
+                    "wsp_gps_y": 51.7668882,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203461367,
+                    "wsp_gps_x": 19.4677493,
+                    "wsp_gps_y": 51.7906941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203462427,
+                    "wsp_gps_x": 19.434833,
+                    "wsp_gps_y": 51.7560833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203462948,
+                    "wsp_gps_x": 19.4585,
+                    "wsp_gps_y": 51.7594722,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203463060,
+                    "wsp_gps_x": 19.4091388,
+                    "wsp_gps_y": 51.7743326,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203465129,
+                    "wsp_gps_x": 19.4590833,
+                    "wsp_gps_y": 51.7558888,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203466830,
+                    "wsp_gps_x": 19.4998607,
+                    "wsp_gps_y": 51.7391941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203467172,
+                    "wsp_gps_x": 19.5307771,
+                    "wsp_gps_y": 51.7523333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203468095,
+                    "wsp_gps_x": 19.6138055,
+                    "wsp_gps_y": 51.7394718,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203468966,
+                    "wsp_gps_x": 19.4887496,
+                    "wsp_gps_y": 51.7377496,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203469984,
+                    "wsp_gps_x": 19.4708604,
+                    "wsp_gps_y": 51.7606666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203470142,
+                    "wsp_gps_x": 19.4253604,
+                    "wsp_gps_y": 51.8096666,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203470643,
+                    "wsp_gps_x": 19.4666937,
+                    "wsp_gps_y": 51.8004722,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203471471,
+                    "wsp_gps_x": 19.4989718,
+                    "wsp_gps_y": 51.7772771,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203471686,
+                    "wsp_gps_x": 19.4413052,
+                    "wsp_gps_y": 51.7595277,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203473776,
+                    "wsp_gps_x": 19.4239437,
+                    "wsp_gps_y": 51.7555277,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203474167,
+                    "wsp_gps_x": 19.4783326,
+                    "wsp_gps_y": 51.7408885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203474851,
+                    "wsp_gps_x": 19.5693048,
+                    "wsp_gps_y": 51.7416663,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203475238,
+                    "wsp_gps_x": 19.4634166,
+                    "wsp_gps_y": 51.7712215,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203478686,
+                    "wsp_gps_x": 19.4748604,
+                    "wsp_gps_y": 51.7479441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203480363,
+                    "wsp_gps_x": 19.4207493,
+                    "wsp_gps_y": 51.7919441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203481645,
+                    "wsp_gps_x": 19.527916,
+                    "wsp_gps_y": 51.7345552,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203482174,
+                    "wsp_gps_x": 19.4555833,
+                    "wsp_gps_y": 51.7589444,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203482458,
+                    "wsp_gps_x": 19.4917218,
+                    "wsp_gps_y": 51.7186937,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203482785,
+                    "wsp_gps_x": 19.417666,
+                    "wsp_gps_y": 51.7409996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203482801,
+                    "wsp_gps_x": 19.445333,
+                    "wsp_gps_y": 51.7727771,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203483671,
+                    "wsp_gps_x": 19.5769437,
+                    "wsp_gps_y": 51.7346385,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203484753,
+                    "wsp_gps_x": 19.4423885,
+                    "wsp_gps_y": 51.7448885,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203484766,
+                    "wsp_gps_x": 19.4653888,
+                    "wsp_gps_y": 51.796833,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203485857,
+                    "wsp_gps_x": 19.4474441,
+                    "wsp_gps_y": 51.776166,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203486210,
+                    "wsp_gps_x": 19.4847496,
+                    "wsp_gps_y": 51.7617222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203489858,
+                    "wsp_gps_x": 19.4291104,
+                    "wsp_gps_y": 51.8247493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203490422,
+                    "wsp_gps_x": 19.4424441,
+                    "wsp_gps_y": 51.7797493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203493104,
+                    "wsp_gps_x": 19.4623333,
+                    "wsp_gps_y": 51.7414441,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203493500,
+                    "wsp_gps_x": 19.4444441,
+                    "wsp_gps_y": 51.7976385,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203494831,
+                    "wsp_gps_x": 19.4330826,
+                    "wsp_gps_y": 51.7598333,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203495663,
+                    "wsp_gps_x": 19.4629722,
+                    "wsp_gps_y": 51.7590555,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203502319,
+                    "wsp_gps_x": 19.442083,
+                    "wsp_gps_y": 51.7356941,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203504596,
+                    "wsp_gps_x": 19.4348607,
+                    "wsp_gps_y": 51.7167493,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203504671,
+                    "wsp_gps_x": 19.4653888,
+                    "wsp_gps_y": 51.7582222,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203508387,
+                    "wsp_gps_x": 19.386833,
+                    "wsp_gps_y": 51.799083,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203509325,
+                    "wsp_gps_x": 19.4343607,
+                    "wsp_gps_y": 51.7894996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203509839,
+                    "wsp_gps_x": 19.4581944,
+                    "wsp_gps_y": 51.7859996,
+                    "ciezkosc": "L"
+                  },
+                  {
+                    "id": 203069896,
+                    "wsp_gps_x": 19.4930552,
+                    "wsp_gps_y": 51.7620555,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203157947,
+                    "wsp_gps_x": 19.4020277,
+                    "wsp_gps_y": 51.824666,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203166790,
+                    "wsp_gps_x": 19.3921107,
+                    "wsp_gps_y": 51.7853052,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203189424,
+                    "wsp_gps_x": 19.4625,
+                    "wsp_gps_y": 51.7413052,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203193364,
+                    "wsp_gps_x": 19.4530277,
+                    "wsp_gps_y": 51.7842218,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203266175,
+                    "wsp_gps_x": 19.4349718,
+                    "wsp_gps_y": 51.7365552,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203307205,
+                    "wsp_gps_x": 19.4829715,
+                    "wsp_gps_y": 51.7836941,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203345635,
+                    "wsp_gps_x": 19.3886663,
+                    "wsp_gps_y": 51.7533611,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203424139,
+                    "wsp_gps_x": 19.4474996,
+                    "wsp_gps_y": 51.7619722,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203442618,
+                    "wsp_gps_x": 19.4429441,
+                    "wsp_gps_y": 51.6947496,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203447606,
+                    "wsp_gps_x": 19.4242215,
+                    "wsp_gps_y": 51.7991941,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203470998,
+                    "wsp_gps_x": 19.4270826,
+                    "wsp_gps_y": 51.7796937,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203489744,
+                    "wsp_gps_x": 19.6236104,
+                    "wsp_gps_y": 51.7481107,
+                    "ciezkosc": "S"
+                  },
+                  {
+                    "id": 203503836,
+                    "wsp_gps_x": 19.6053055,
+                    "wsp_gps_y": 51.7041388,
+                    "ciezkosc": "S"
+                  }
+                ]
+              }
+            ],
+            "pow_nazwa": "Łódź",
+            "pow_kod": "1061",
+            "zdarzenia": 913,
+            "fallback_center_lng": 19.462555954326437,
+            "fallback_center_lat": 51.7637437315443
+          }
+        ],
+        "woj_nazwa": "ŁÓDZKIE",
+        "woj_kod": "10",
+        "zdarzenia": 913,
+        "fallback_center_lng": 19.462555954326437,
+        "fallback_center_lat": 51.7637437315443
+      }
+    ],
+    "zdarzenia_count": 913,
+    "isMIE": false,
+    "groupBy": "POW"
+  },
+  "zdarzenia_count": 0
+}
