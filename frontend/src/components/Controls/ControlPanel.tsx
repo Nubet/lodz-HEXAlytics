@@ -70,7 +70,7 @@ function HexDensityLegend({ hexStats, accidentStats, mode }: HexDensityLegendPro
       <div className="flex flex-col gap-2 pt-1">
         <ul className="flex flex-col gap-1">
           {HEX_DENSITY_LEVELS.map(({ label, color }) => (
-            <li key={label} className="flex items-center gap-2 text-[10px] text-surface-elevated-muted">
+            <li key={label} className="text-micro flex items-center gap-2 text-surface-elevated-muted">
               <span
                 className="inline-block size-3.5 shrink-0 rounded-[3px] border border-surface-elevated-divider"
                 style={{ background: color }}
@@ -80,7 +80,7 @@ function HexDensityLegend({ hexStats, accidentStats, mode }: HexDensityLegendPro
           ))}
         </ul>
         {mode === 'hex_3d' && (
-          <p className="rounded-md border-l-2 border-app-accent bg-surface-elevated-hover px-2 py-1.5 text-[10px] leading-5 text-surface-elevated-subtle">
+          <p className="text-micro rounded-md border-l-2 border-app-accent bg-surface-elevated-hover px-2 py-1.5 leading-5">
             Wysokość = liczba wypadków
           </p>
         )}
@@ -110,14 +110,14 @@ export function ControlPanel({
     <aside
       id="control-panel"
       className={[
-        'thin-scrollbar pointer-events-auto fixed top-22.5 left-6 z-30 flex max-h-[calc(100vh-130px)] w-70 flex-col gap-2.5 overflow-y-auto transition duration-200 max-[900px]:top-19 max-[900px]:left-4 max-[900px]:w-[min(320px,78vw)] max-[900px]:max-h-[calc(100vh-96px)] max-[700px]:top-20 max-[700px]:max-h-[calc(100vh-110px)]',
+        'control-panel-shell thin-scrollbar',
         isOpen
           ? 'translate-x-0 opacity-100 max-[900px]:pointer-events-auto'
-          : 'max-[900px]:pointer-events-none max-[900px]:-translate-x-[calc(100%+24px)] max-[900px]:opacity-0',
+          : 'control-panel-shell-closed',
       ].join(' ')}
     >
       <div className="elevated-panel hidden items-center justify-between rounded-xl px-3 py-2 max-[900px]:flex">
-        <span className="font-display text-[11px] font-semibold uppercase tracking-[0.12em] text-surface-elevated-subtle">
+        <span className="panel-kicker">
           Panel filtrów
         </span>
         <button
@@ -181,7 +181,7 @@ export function ControlPanel({
         >
           Rozszerzone filtry
         </button>
-        <p className="text-[10px] leading-[1.3] text-surface-elevated-subtle italic">
+        <p className="text-micro-copy italic">
           Dodatkowe opcje widoku i filtracji danych.
         </p>
       </PanelSection>

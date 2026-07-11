@@ -277,6 +277,123 @@
   scrollbar-color: color-mix(in srgb, var(--surface-elevated-border) 55%, transparent) transparent;
 }
 
+@utility text-micro {
+  font-size: 10px;
+  color: var(--surface-elevated-subtle);
+}
+
+@utility text-micro-copy {
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--surface-elevated-subtle);
+}
+
+@utility text-caption {
+  font-size: 11px;
+  color: var(--surface-elevated-subtle);
+}
+
+@utility text-caption-strong {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--surface-elevated-subtle);
+}
+
+@utility text-ui-sm {
+  font-size: 13px;
+}
+
+@utility panel-kicker {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--surface-elevated-subtle);
+}
+
+@utility control-panel-shell {
+  position: fixed;
+  top: 5.625rem;
+  left: 1.5rem;
+  z-index: 30;
+  display: flex;
+  max-height: calc(100vh - 130px);
+  width: 17.5rem;
+  flex-direction: column;
+  gap: 0.625rem;
+  overflow-y: auto;
+  pointer-events: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  @media (width <= 900px) {
+    top: 4.75rem;
+    left: 1rem;
+    width: min(320px, 78vw);
+    max-height: calc(100vh - 96px);
+  }
+
+  @media (width <= 700px) {
+    top: 5rem;
+    max-height: calc(100vh - 110px);
+  }
+}
+
+@utility control-panel-shell-closed {
+  @media (width <= 900px) {
+    pointer-events: none;
+    transform: translateX(calc(-100% - 24px));
+    opacity: 0;
+  }
+}
+
+@utility advanced-drawer-shell {
+  position: absolute;
+  top: 5.625rem;
+  left: 19.75rem;
+  display: flex;
+  max-height: calc(100vh - 130px);
+  width: 17.5rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-surface-drawer);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+  @media (width <= 768px) {
+    left: 18rem;
+    width: 16.25rem;
+  }
+
+  @media (width <= 700px) {
+    top: 5rem;
+    max-height: calc(100vh - 110px);
+  }
+
+  @media (width <= 540px) {
+    left: 0;
+    width: min(92vw, 320px);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@utility advanced-drawer-scroll {
+  display: flex;
+  max-height: calc(100vh - 190px);
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+
+  @media (width <= 700px) {
+    max-height: calc(100vh - 170px);
+  }
+}
+
 @utility header-dock-shell {
   width: calc(100% - 48px);
 

@@ -34,7 +34,7 @@ function SeverityChip({ id, label, isActive, onToggle }: SeverityChipProps) {
   return (
       <button
         className={classNames(
-          'interactive-pill flex items-center gap-1.5 px-3 py-1 text-[13px] font-medium text-surface-elevated-muted',
+          'interactive-pill text-ui-sm flex items-center gap-1.5 px-3 py-1 font-medium text-surface-elevated-muted',
           isActive && 'interactive-pill-active'
         )}
       onClick={() => onToggle(id)}

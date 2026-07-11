@@ -49,7 +49,7 @@ export function ColorLegend({
         : 'elevated-panel flex min-w-55 flex-col gap-2 rounded-xl px-3.5 py-3'}
     >
       <div className="mb-0.5 flex items-baseline justify-between gap-4">
-        <span className="text-[11px] font-semibold uppercase tracking-wider text-surface-elevated-subtle">
+        <span className="text-caption-strong uppercase tracking-wider">
           {title}
         </span>
         {stats && <LegendStats stats={stats} />}
@@ -60,7 +60,7 @@ export function ColorLegend({
           className="h-2 rounded-sm opacity-90"
           style={{ backgroundImage: `linear-gradient(to right, ${gradient})` }}
         />
-        <div className="flex justify-between text-[10px] text-surface-elevated-subtle [font-variant-numeric:tabular-nums]">
+        <div className="text-micro flex justify-between [font-variant-numeric:tabular-nums]">
           <span>{safeMin}</span>
           <span>{midValue}</span>
           <span>{safeMax}</span>

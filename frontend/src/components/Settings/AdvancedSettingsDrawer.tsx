@@ -46,8 +46,8 @@ function ToggleRow({
   return (
     <div className="flex items-center justify-between gap-3">
       <div className="flex min-h-9 flex-1 flex-col gap-1">
-        <span className="text-[13px] font-semibold text-surface-elevated-foreground">{title}</span>
-        {subtitle && <span className="text-[11px] leading-5 text-surface-elevated-subtle">{subtitle}</span>}
+        <span className="text-ui-sm font-semibold text-surface-elevated-foreground">{title}</span>
+        {subtitle && <span className="text-caption leading-5">{subtitle}</span>}
       </div>
       <button
         type="button"
@@ -117,7 +117,7 @@ export function AdvancedSettingsDrawer({
 
       <aside
         className={classNames(
-          'elevated-dialog thin-scrollbar absolute top-22.5 left-79 flex max-h-[calc(100vh-130px)] w-70 flex-col gap-3 overflow-hidden rounded-2xl shadow-surface-drawer transition duration-300 ease-out max-[768px]:left-72 max-[768px]:w-65 max-[700px]:top-20 max-[700px]:max-h-[calc(100vh-110px)] max-[540px]:left-0 max-[540px]:w-[min(92vw,320px)] max-[540px]:rounded-r-2xl max-[540px]:rounded-l-none',
+          'advanced-drawer-shell elevated-dialog thin-scrollbar',
           isOpen ? 'pointer-events-auto translate-x-0 opacity-100' : 'pointer-events-none -translate-x-4 opacity-0'
         )}
         role="dialog"
@@ -141,7 +141,7 @@ export function AdvancedSettingsDrawer({
           </button>
         </header>
 
-        <div className="thin-scrollbar flex max-h-[calc(100vh-190px)] flex-col gap-3 overflow-y-auto px-4 pb-4 max-[700px]:max-h-[calc(100vh-170px)]">
+        <div className="advanced-drawer-scroll thin-scrollbar">
           <Section title="Widok heksów">
             <ToggleRow
               title="Liczby w heksach"
@@ -160,7 +160,7 @@ export function AdvancedSettingsDrawer({
               <div className="flex flex-col gap-2 pt-1">
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-xs font-semibold text-surface-elevated-foreground">Poziom zbliżenia</span>
-                  <span className="text-[11px] text-surface-elevated-subtle">{hexHideZoom.toFixed(1)}</span>
+                  <span className="text-caption">{hexHideZoom.toFixed(1)}</span>
                 </div>
                 <input
                   type="range"
@@ -178,7 +178,7 @@ export function AdvancedSettingsDrawer({
           <Section title="Skala heksów">
             <div className="flex items-center justify-between gap-2">
               <span className="text-xs font-semibold text-surface-elevated-foreground">Rozmiar heksów</span>
-              <span className="text-[11px] text-surface-elevated-subtle">{hexResolution}</span>
+              <span className="text-caption">{hexResolution}</span>
             </div>
             <input
               type="range"
@@ -197,7 +197,7 @@ export function AdvancedSettingsDrawer({
               action={
                 <button
                   type="button"
-                  className="text-[11px] font-semibold text-app-accent transition hover:text-app-accent-strong"
+                  className="text-caption-strong text-app-accent transition hover:text-app-accent-strong"
                   onClick={onResetDistricts}
                 >
                   Wszystkie

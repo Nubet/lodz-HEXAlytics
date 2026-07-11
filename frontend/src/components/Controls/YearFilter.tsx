@@ -37,18 +37,18 @@ export function YearFilter({
           </button>
         ))}
         {!isLoading && availableYears.length === 0 && (
-          <span className="text-[11px] text-surface-elevated-subtle">Brak danych w cache</span>
+          <span className="text-caption">Brak danych w cache</span>
         )}
       </div>
 
-      <div className="flex items-center justify-between gap-3 text-[10px] text-surface-elevated-subtle">
+      <div className="text-micro flex items-center justify-between gap-3">
         <span>
           {isLoading && 'Ładowanie lat...'}
           {!isLoading && availableYears.length > 0 && `${availableYears[0]} — ${availableYears[availableYears.length - 1]}`}
         </span>
         <button
           type="button"
-          className="rounded-md px-1.5 py-1 text-[11px] text-surface-elevated-muted transition-colors hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground disabled:cursor-not-allowed disabled:opacity-60"
+          className="text-caption rounded-md px-1.5 py-1 text-surface-elevated-muted transition-colors hover:bg-surface-elevated-hover hover:text-surface-elevated-foreground disabled:cursor-not-allowed disabled:opacity-60"
           onClick={onReset}
           disabled={isDisabled}
         >

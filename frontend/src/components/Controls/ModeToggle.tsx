@@ -31,7 +31,7 @@ function ModeOptionButton({
   return (
       <button
         className={classNames(
-          'interactive-pill flex items-center gap-1.5 px-3.5 py-1.5 text-[13px] font-medium text-surface-elevated-muted',
+          'interactive-pill text-ui-sm flex items-center gap-1.5 px-3.5 py-1.5 font-medium text-surface-elevated-muted',
           isActive && 'interactive-pill-active'
         )}
       onClick={() => onModeChange(value)}
