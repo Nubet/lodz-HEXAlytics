@@ -34,7 +34,7 @@ function useCloseOnEsc(onClose: () => void, isActive: boolean) {
 function DetailsSection({ title, children, fullWidth }: DetailsSectionProps) {
   return (
     <div className={classNames('flex flex-col gap-2', fullWidth && 'col-span-full')}>
-      <h3 className="text-[11px] font-semibold uppercase tracking-wider text-app-muted">{title}</h3>
+      <h3 className="text-caption-strong uppercase tracking-wider text-app-muted">{title}</h3>
       {children}
     </div>
   );
@@ -108,7 +108,7 @@ function ModalContent({
           <p className="text-sm leading-6 text-app-text">
             {formatDate(details.datetime.date)}
             <br />
-            <span className="text-[13px] text-app-muted">{details.datetime.time}</span>
+            <span className="text-ui-sm text-app-muted">{details.datetime.time}</span>
           </p>
         </DetailsSection>
 
@@ -123,7 +123,7 @@ function ModalContent({
             <span className={classNames('rounded-full px-2.5 py-1 text-xs font-semibold', SEVERITY_BADGE_STYLES[severityKey])}>
               {severity ? SEVERITY_LABELS[severity] : 'Brak danych'}
             </span>
-            {severity && <span className="text-[13px] text-app-muted">({severity})</span>}
+            {severity && <span className="text-ui-sm text-app-muted">({severity})</span>}
           </div>
           {fatalNote && <p className="mt-2 text-xs leading-5 text-app-muted">{fatalNote}</p>}
         </DetailsSection>
@@ -134,8 +134,8 @@ function ModalContent({
       </DetailsSection>
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-2 border-t border-app-border pt-5">
-        <span className="text-[13px] text-app-muted">ID źródła: {details.sourceId}</span>
-        <span className="text-[13px] text-app-muted">ID zdarzenia: {details.id}</span>
+        <span className="text-ui-sm text-app-muted">ID źródła: {details.sourceId}</span>
+        <span className="text-ui-sm text-app-muted">ID zdarzenia: {details.id}</span>
       </div>
     </>
   );
@@ -196,7 +196,7 @@ export function AccidentDetailsModal({
         {error && (
           <div className="rounded-lg border border-[color-mix(in_srgb,#ef4444_35%,var(--app-border))] bg-[color-mix(in_srgb,#ef4444_12%,var(--app-card))] p-5 text-[color-mix(in_srgb,#ef4444_75%,var(--app-text))]">
             <strong className="mb-2 block text-sm">Failed to load details</strong>
-            <p className="text-[13px] text-[color-mix(in_srgb,#ef4444_70%,var(--app-text))]">{error.message}</p>
+            <p className="text-ui-sm text-[color-mix(in_srgb,#ef4444_70%,var(--app-text))]">{error.message}</p>
           </div>
         )}
 

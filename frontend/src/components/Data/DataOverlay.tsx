@@ -71,7 +71,7 @@ export function DataOverlay({ isOpen, onClose }: DataOverlayProps) {
         </div>
 
         <div className="surface-info-card relative z-10 mt-4.5 flex flex-wrap items-center gap-x-3.5 gap-y-2 px-4 py-3">
-          <span className="overline-label text-[11px]">Źródło</span>
+          <span className="overline-label">Źródło</span>
           <a
             className="link-underline-accent text-sm"
             href="https://obserwatoriumbrd.pl"
@@ -82,7 +82,7 @@ export function DataOverlay({ isOpen, onClose }: DataOverlayProps) {
           </a>
         </div>
 
-        <p className="relative z-10 mt-4.5 text-[13px] text-surface-elevated-subtle">
+        <p className="text-ui-sm relative z-10 mt-4.5 text-surface-elevated-subtle">
           Projekt ma charakter poglądowy i nie stanowi oficjalnego opracowania.
         </p>
       </div>

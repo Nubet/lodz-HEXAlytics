@@ -71,15 +71,15 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
           <h3 className="mb-3 text-base font-semibold">Co tu zobaczysz</h3>
           <ul className="grid gap-2.5">
             <li className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label text-[11px]">Punkty</span>
+              <span className="overline-label">Punkty</span>
               <span className="text-sm text-surface-elevated-muted">pojedyncze zdarzenia w konkretnych lokalizacjach</span>
             </li>
             <li className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label text-[11px]">Heksagony</span>
+              <span className="overline-label">Heksagony</span>
               <span className="text-sm text-surface-elevated-muted">zagęszczenie zdarzeń w podziale przestrzennym</span>
             </li>
             <li className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label text-[11px]">3D</span>
+              <span className="overline-label">3D</span>
               <span className="text-sm text-surface-elevated-muted">wysokość słupków pokazuje natężenie w danym obszarze</span>
             </li>
           </ul>
@@ -89,15 +89,15 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
           <h3 className="mb-3 text-base font-semibold">Kiedy używać którego widoku</h3>
           <div className="grid gap-3">
             <div className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label text-[11px]">Punkty</span>
+              <span className="overline-label">Punkty</span>
               <p className="text-sm text-surface-elevated-muted">gdy interesuje Cię lokalny obraz i rozkład „na ulicach”</p>
             </div>
             <div className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label text-[11px]">Heksagony</span>
+              <span className="overline-label">Heksagony</span>
               <p className="text-sm text-surface-elevated-muted">gdy chcesz szybko znaleźć hotspoty i porównać obszary bez szumu punktów</p>
             </div>
             <div className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label text-[11px]">3D</span>
+              <span className="overline-label">3D</span>
               <p className="text-sm text-surface-elevated-muted">gdy zależy Ci na porównaniu natężenia między obszarami w jednym kadrze</p>
             </div>
           </div>
