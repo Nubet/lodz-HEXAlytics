@@ -1,51 +1,48 @@
 import { cache } from 'react';
 import { getDataStats } from '@/utils/dataTransformer';
-import { attachDistricts, parseDistricts } from '@/utils/districts';
-import { loadAccidentDetailsCache, loadAccidentDistricts, loadAccidentSourceData } from '@/modules/accidents/infrastructure/accident-files';
-import { flattenAccidentData } from '@/utils/dataTransformer';
-import type { MapPageData, ZdarzenieDetailsResponse } from '@/modules/accidents/domain/types';
+import { getSeverityWeight } from '@/utils/severityMapper';
+import { fetchAccidentFilters, fetchAccidentSummaries } from '@/modules/accidents/infrastructure/backend-api';
+import type { AccidentSummaryApiResponse, MapPageData } from '@/modules/accidents/domain/types';
 
-function buildDateIndex(details: Record<string, ZdarzenieDetailsResponse>) {
+function buildDateIndex(accidents: AccidentSummaryApiResponse[]) {
   const index: Record<number, string> = {};
-  const years = new Set<number>();
 
-  for (const entry of Object.values(details)) {
-    if (!entry.zdarzenie_id || !entry.id_w_czas) {
+  for (const accident of accidents) {
+    if (!accident.id || !accident.occurredAt) {
       continue;
     }
 
-    index[entry.zdarzenie_id] = entry.id_w_czas;
-
-    const year = Number(entry.id_w_czas.slice(0, 4));
-    if (!Number.isNaN(year)) {
-      years.add(year);
-    }
+    index[accident.id] = accident.occurredAt.slice(0, 10);
   }
 
+  return index;
+}
+
+function toAccidentPoint(accident: AccidentSummaryApiResponse) {
   return {
-    dateIndex: index,
-    availableYears: Array.from(years).sort((a, b) => a - b),
+    id: accident.id,
+    longitude: accident.longitude,
+    latitude: accident.latitude,
+    severity: accident.severity,
+    severityWeight: getSeverityWeight(accident.severity),
+    gminaName: accident.district ?? 'Łódź',
+    district: accident.district,
   };
 }
 
 export const getMapPageData = cache(async (): Promise<MapPageData> => {
-  const [rawData, rawDistricts, detailsCache] = await Promise.all([
-    loadAccidentSourceData(),
-    loadAccidentDistricts(),
-    loadAccidentDetailsCache(),
+  const [accidents, filters] = await Promise.all([
+    fetchAccidentSummaries(),
+    fetchAccidentFilters(),
   ]);
 
-  const points = attachDistricts(
-    flattenAccidentData(rawData),
-    parseDistricts(rawDistricts),
-  );
-
-  const { dateIndex, availableYears } = buildDateIndex(detailsCache);
+  const points = accidents.map(toAccidentPoint);
+  const dateIndex = buildDateIndex(accidents);
 
   return {
     points,
     stats: points.length > 0 ? getDataStats(points) : null,
     dateIndex,
-    availableYears,
+    availableYears: filters.years,
   };
 });

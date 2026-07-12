@@ -79,6 +79,7 @@ function MapFallback({ mapStyle, viewState }: { mapStyle: string; viewState: App
         bearing={viewState.bearing}
         mapStyle={mapStyle}
         reuseMaps
+        style={{ width: '100%', height: '100%' }}
       />
 
       <div className="pointer-events-none absolute right-4 bottom-4 z-10 max-w-sm rounded-2xl bg-black/60 px-4 py-3 text-sm text-white shadow-lg backdrop-blur-sm">

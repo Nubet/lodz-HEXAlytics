@@ -1,15 +1,7 @@
-import { transformZdarzenieDetails } from '@/utils/zdarzenieTransformer';
-import { fetchAccidentDetailsFromApi } from '@/modules/accidents/infrastructure/accident-details-api';
-import { loadAccidentDetailsCache } from '@/modules/accidents/infrastructure/accident-files';
+import { transformBackendAccidentDetails } from '@/utils/zdarzenieTransformer';
+import { fetchAccidentDetailsFromBackend } from '@/modules/accidents/infrastructure/backend-api';
 
 export async function getAccidentDetails(id: number) {
-  const detailsCache = await loadAccidentDetailsCache();
-  const cached = detailsCache[String(id)];
-
-  if (cached) {
-    return transformZdarzenieDetails(cached);
-  }
-
-  const remote = await fetchAccidentDetailsFromApi(id);
-  return remote ? transformZdarzenieDetails(remote) : null;
+  const remote = await fetchAccidentDetailsFromBackend(id);
+  return remote ? transformBackendAccidentDetails(remote) : null;
 }

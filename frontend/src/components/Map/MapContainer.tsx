@@ -1,6 +1,8 @@
-import { useCallback, useMemo, useSyncExternalStore } from 'react';
+import { useCallback, useMemo } from 'react';
 import type { PickingInfo, ViewStateChangeParameters } from '@deck.gl/core';
 import DeckGL from '@deck.gl/react';
+import { CanvasContext } from '@luma.gl/core';
+import { WebGLCanvasContext } from '@luma.gl/webgl';
 import { Map } from 'react-map-gl/maplibre';
 
 import type { AccidentPoint, HexBin } from '@/types/accident.types';
@@ -8,23 +10,18 @@ import type { AppTheme } from '@/hooks/useTheme';
 import type { AppViewState, VisualizationMode } from '@/types/map.types';
 import { createHexagonLayer, createHexLabelLayer, createScatterplotLayer } from './layers';
 
-let isDeckReady = false;
-let isDeckReadyScheduled = false;
-const deckReadyListeners = new Set<() => void>();
-let isLumaCanvasPatched = false;
+let isCanvasContextPatched = false;
 
-async function ensureDeckRuntimeReady() {
-  if (typeof window === 'undefined' || isDeckReadyScheduled) {
-    return;
-  }
+if (typeof window !== 'undefined' && !isCanvasContextPatched) {
+  const patchGetMaxDrawingBufferSize = (prototype: { getMaxDrawingBufferSize: () => [number, number] }) => {
+    const originalGetMaxDrawingBufferSize = prototype.getMaxDrawingBufferSize;
 
-  isDeckReadyScheduled = true;
-
-  if (!isLumaCanvasPatched) {
-    const { WebGLCanvasContext } = await import('@luma.gl/webgl');
-    const originalGetMaxDrawingBufferSize = WebGLCanvasContext.prototype.getMaxDrawingBufferSize;
-
-    WebGLCanvasContext.prototype.getMaxDrawingBufferSize = function getSafeMaxDrawingBufferSize() {
+    prototype.getMaxDrawingBufferSize = function getSafeMaxDrawingBufferSize(this: {
+      device?: { limits?: { maxTextureDimension2D?: number } };
+      cssWidth?: number;
+      cssHeight?: number;
+      canvas?: { clientWidth?: number; clientHeight?: number };
+    }) {
       const maxTextureDimension = this.device?.limits?.maxTextureDimension2D;
 
       if (maxTextureDimension) {
@@ -32,41 +29,23 @@ async function ensureDeckRuntimeReady() {
       }
 
       const width = Math.max(
-        4096,
-        Math.ceil((globalThis.innerWidth || this.cssWidth || this.canvas?.width || 1) * (globalThis.devicePixelRatio || 1)),
+        1,
+        Math.ceil((this.cssWidth || this.canvas?.clientWidth || globalThis.innerWidth || 1) * (globalThis.devicePixelRatio || 1)),
       );
       const height = Math.max(
-        4096,
-        Math.ceil((globalThis.innerHeight || this.cssHeight || this.canvas?.height || 1) * (globalThis.devicePixelRatio || 1)),
+        1,
+        Math.ceil((this.cssHeight || this.canvas?.clientHeight || globalThis.innerHeight || 1) * (globalThis.devicePixelRatio || 1)),
       );
 
       return [width, height];
     };
-
-    isLumaCanvasPatched = true;
-  }
-
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      isDeckReady = true;
-      for (const listener of deckReadyListeners) {
-        listener();
-      }
-    });
-  });
-}
-
-const subscribeDeckReady = (onStoreChange: () => void) => {
-  deckReadyListeners.add(onStoreChange);
-
-  if (!isDeckReady && typeof window !== 'undefined') {
-    void ensureDeckRuntimeReady();
-  }
-
-  return () => {
-    deckReadyListeners.delete(onStoreChange);
   };
-};
+
+  patchGetMaxDrawingBufferSize(CanvasContext.prototype);
+  patchGetMaxDrawingBufferSize(WebGLCanvasContext.prototype);
+
+  isCanvasContextPatched = true;
+}
 
 interface MapContainerProps {
   points: AccidentPoint[];
@@ -222,12 +201,6 @@ export function MapContainer({
   onHover,
   onClick,
 }: MapContainerProps) {
-  const isDeckMounted = useSyncExternalStore(
-    subscribeDeckReady,
-    () => isDeckReady,
-    () => false,
-  );
-
   const layers = useMemo(
     () =>
       getLayers(
@@ -267,13 +240,12 @@ export function MapContainer({
     [dateIndex, mode]
   );
 
-  if (!isDeckMounted) {
-    return <div className="relative size-full overflow-hidden bg-slate-950" />;
-  }
-
   return (
     <div className="relative size-full overflow-hidden bg-slate-950">
       <DeckGL
+        width="100%"
+        height="100%"
+        style={{ position: 'absolute', inset: 0 }}
         deviceProps={{ type: 'webgl' }}
         viewState={viewState}
         onViewStateChange={handleViewStateChange}
@@ -284,7 +256,7 @@ export function MapContainer({
         getTooltip={handleTooltip}
         controller={true}
       >
-        <Map mapStyle={mapStyle} />
+        <Map mapStyle={mapStyle} reuseMaps style={{ width: '100%', height: '100%' }} />
       </DeckGL>
     </div>
   );

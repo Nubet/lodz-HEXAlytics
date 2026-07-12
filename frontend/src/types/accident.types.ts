@@ -43,6 +43,24 @@ export interface AccidentPoint {
   district?: string | null;
 }
 
+export interface AccidentSummaryApiResponse {
+  id: number;
+  occurredAt: string;
+  severity: SeverityLevel;
+  eventType: string;
+  district: string | null;
+  longitude: number;
+  latitude: number;
+  victimCount: number;
+}
+
+export interface AccidentFiltersApiResponse {
+  years: number[];
+  severities: SeverityLevel[];
+  districts: string[];
+  eventTypes: string[];
+}
+
 export interface HexBin {
   h3Index: string;
   count: number;
@@ -89,6 +107,39 @@ export interface ZdarzenieDetails {
   participants: ParticipantInfo[];
   fatalContext?: 'on_scene' | 'within_30_days' | 'unknown' | null;
   sourceId: string;
+}
+
+export interface BackendAccidentDetailsResponse {
+  id: number;
+  sourceSystemId: number;
+  occurredAt: string;
+  severity: SeverityLevel;
+  eventType: string;
+  district: string | null;
+  sourceDistrictLabel: string | null;
+  longitude: number;
+  latitude: number;
+  participantCount: number;
+  victimCount: number;
+  fatalVictimCount: number;
+  seriousVictimCount: number;
+  lightVictimCount: number;
+  uninjuredVictimCount: number;
+  participants: BackendParticipantResponse[];
+}
+
+export interface BackendParticipantResponse {
+  id: number;
+  sourceParticipantRef: string;
+  participantOrder: number;
+  vehicleType: string;
+  casualties: BackendCasualtyResponse[];
+}
+
+export interface BackendCasualtyResponse {
+  role: string;
+  injuryLevel: 'fatal_on_scene' | 'fatal_30_days' | 'serious' | 'light' | 'none';
+  count: number;
 }
 
 export interface ParticipantInfo {
