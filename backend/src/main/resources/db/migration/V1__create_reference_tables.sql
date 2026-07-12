@@ -1,0 +1,15 @@
+CREATE TABLE districts (
+    id SMALLSERIAL PRIMARY KEY,
+    slug TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE event_types (
+    id SMALLSERIAL PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE vehicle_types (
+    id SMALLSERIAL PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE
+);

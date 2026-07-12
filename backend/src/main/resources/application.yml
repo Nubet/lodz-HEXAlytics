@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: hexa-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:55432/hexa}
+    username: ${SPRING_DATASOURCE_USERNAME:hexa}
+    password: ${SPRING_DATASOURCE_PASSWORD:hexa}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  import:
+    enabled: false
+    command: ""
+    years: []
+    source:
+      raw-directory: ../frontend/data/obserwatoriumbrd/raw/lodz
+      details-directory: ../frontend/data/obserwatoriumbrd/details/lodz
+      districts-geo-json-path: ../frontend/public/lodz-districts.geojson
