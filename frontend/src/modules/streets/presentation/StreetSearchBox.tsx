@@ -5,6 +5,7 @@ interface StreetSearchBoxProps {
   query: string;
   results: StreetSearchResult[];
   isLoading: boolean;
+  hasResolvedQuery: boolean;
   errorMessage: string | null;
   selectedStreetName: string | null;
   onQueryChange: (value: string) => void;
@@ -16,6 +17,7 @@ export function StreetSearchBox({
   query,
   results,
   isLoading,
+  hasResolvedQuery,
   errorMessage,
   selectedStreetName,
   onQueryChange,
@@ -23,7 +25,7 @@ export function StreetSearchBox({
   onClear,
 }: StreetSearchBoxProps) {
   const hasResults = results.length > 0;
-  const showDropdown = query.trim().length >= 2 && (hasResults || Boolean(errorMessage) || isLoading);
+  const showDropdown = query.trim().length >= 2 && (Boolean(errorMessage) || isLoading || hasResolvedQuery);
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter' && results[0]) {
@@ -100,6 +102,8 @@ export function StreetSearchBox({
         <div className="elevated-panel absolute top-[calc(100%+10px)] left-0 right-0 z-60 overflow-hidden rounded-2xl">
           {errorMessage ? (
             <div className="px-4 py-3 text-sm text-app-danger">{errorMessage}</div>
+          ) : isLoading ? (
+            <div className="px-4 py-3 text-sm text-app-muted">Ladowanie...</div>
           ) : hasResults ? (
             <ul className="max-h-72 overflow-y-auto py-2">
               {results.map((result) => (
@@ -115,9 +119,9 @@ export function StreetSearchBox({
                 </li>
               ))}
             </ul>
-          ) : (
+          ) : hasResolvedQuery ? (
             <div className="px-4 py-3 text-sm text-app-muted">Brak dopasowanych ulic.</div>
-          )}
+          ) : null}
         </div>
       )}
     </div>

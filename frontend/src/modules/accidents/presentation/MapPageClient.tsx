@@ -155,6 +155,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
   const [streetQuery, setStreetQuery] = useState('');
   const [streetResults, setStreetResults] = useState<StreetSearchResult[]>([]);
   const [isStreetSearchLoading, setIsStreetSearchLoading] = useState(false);
+  const [hasResolvedStreetQuery, setHasResolvedStreetQuery] = useState(false);
   const [streetSearchError, setStreetSearchError] = useState<string | null>(null);
   const [selectedStreet, setSelectedStreet] = useState<StreetSearchResult | null>(null);
   const [selectedSeverity, setSelectedSeverity] = useState<SeverityLevel | null>(null);
@@ -288,6 +289,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
     setStreetQuery('');
     setStreetResults([]);
     setIsStreetSearchLoading(false);
+    setHasResolvedStreetQuery(false);
     setStreetSearchError(null);
     setSelectedStreet(null);
   }, []);
@@ -306,6 +308,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
     setStreetResults([]);
     setStreetSearchError(null);
     setIsStreetSearchLoading(false);
+    setHasResolvedStreetQuery(false);
     setMode('points');
     setViewState((current) => fitStreetBounds(result.bounds, current));
   }, []);
@@ -328,10 +331,13 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
       setStreetResults([]);
       setStreetSearchError(null);
       setIsStreetSearchLoading(false);
+      setHasResolvedStreetQuery(false);
       return;
     }
 
     setIsStreetSearchLoading(true);
+    setStreetResults([]);
+    setHasResolvedStreetQuery(false);
     setStreetSearchError(null);
 
     searchTimeoutRef.current = setTimeout(() => {
@@ -342,6 +348,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
         .then((results) => {
           startTransition(() => {
             setStreetResults(results);
+            setHasResolvedStreetQuery(true);
             setStreetSearchError(null);
           });
         })
@@ -352,6 +359,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
 
           startTransition(() => {
             setStreetResults([]);
+            setHasResolvedStreetQuery(false);
             setStreetSearchError(error instanceof Error ? error.message : 'Street search failed.');
           });
         })
@@ -397,6 +405,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
             query: streetQuery,
             results: streetResults,
             isLoading: isStreetSearchLoading,
+            hasResolvedQuery: hasResolvedStreetQuery,
             errorMessage: streetSearchError,
             selectedStreetName: selectedStreet?.name ?? null,
             onQueryChange: handleStreetQueryChange,
