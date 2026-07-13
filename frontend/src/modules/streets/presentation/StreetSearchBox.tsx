@@ -64,7 +64,7 @@ export function StreetSearchBox({
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Szukaj ulicy w Łodzi"
+          placeholder="Szukaj po ulicy"
           aria-label="Szukaj ulicy w Łodzi"
           className="min-w-0 flex-1 bg-transparent text-sm text-app-text outline-none placeholder:text-app-muted"
           autoComplete="off"
