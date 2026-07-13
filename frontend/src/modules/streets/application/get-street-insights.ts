@@ -1,5 +1,6 @@
-import type { AccidentPoint, SeverityLevel } from '@/modules/accidents/domain/types';
-import type { StreetSearchResult } from '@/modules/streets/domain/types';
+import type { AccidentPoint, SeverityLevel } from '../../accidents/domain/types';
+import type { StreetSearchResult } from '../domain/types';
+import { isPointNearStreet } from './street-geometry';
 
 interface StreetInsights {
   accidentCount: number;
@@ -16,10 +17,7 @@ export function getStreetAccidents(points: AccidentPoint[], street: StreetSearch
   }
 
   return points.filter((point) => {
-    return point.longitude >= street.bounds.west
-      && point.longitude <= street.bounds.east
-      && point.latitude >= street.bounds.south
-      && point.latitude <= street.bounds.north;
+    return isPointNearStreet(street, point);
   });
 }
 

@@ -39,7 +39,7 @@ export function StreetInsightsCard({ street, insights, onClear }: StreetInsights
         <div className="min-w-0">
           <div className="overline-label">Analiza ulicy</div>
           <h2 className="truncate font-display text-xl font-semibold text-app-text">{street.name}</h2>
-          <p className="mt-1 text-ui-sm text-app-muted">Fokus mapy i statystyki dla aktualnego obszaru ulicy.</p>
+          <p className="mt-1 text-ui-sm text-app-muted">Fokus mapy i statystyki dla aktualnego przebiegu ulicy.</p>
         </div>
 
         <button

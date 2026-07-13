@@ -12,4 +12,10 @@ export interface StreetSearchResult {
     east: number;
     north: number;
   };
+  segments: Array<{
+    coordinates: Array<{
+      longitude: number;
+      latitude: number;
+    }>;
+  }>;
 }
