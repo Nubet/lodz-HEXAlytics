@@ -8,7 +8,9 @@ import { Map } from 'react-map-gl/maplibre';
 import type { AccidentPoint, HexBin } from '@/types/accident.types';
 import type { AppTheme } from '@/hooks/useTheme';
 import type { AppViewState, VisualizationMode } from '@/types/map.types';
-import { createHexagonLayer, createHexLabelLayer, createScatterplotLayer } from './layers';
+import { createHexagonLayer } from './layers/createHexagonLayer';
+import { createHexLabelLayer } from './layers/createHexLabelLayer';
+import { createScatterplotLayer } from './layers/createScatterplotLayer';
 
 const EMPTY_HIGHLIGHTED_POINTS: AccidentPoint[] = [];
 
