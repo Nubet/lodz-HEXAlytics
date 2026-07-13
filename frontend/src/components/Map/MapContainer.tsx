@@ -10,6 +10,8 @@ import type { AppTheme } from '@/hooks/useTheme';
 import type { AppViewState, VisualizationMode } from '@/types/map.types';
 import { createHexagonLayer, createHexLabelLayer, createScatterplotLayer } from './layers';
 
+const EMPTY_HIGHLIGHTED_POINTS: AccidentPoint[] = [];
+
 let isCanvasContextPatched = false;
 
 if (typeof window !== 'undefined' && !isCanvasContextPatched) {
@@ -208,7 +210,7 @@ function isHexBin(object: object): object is HexBin {
 
 export function MapContainer({
   points,
-  highlightedPoints = [],
+  highlightedPoints = EMPTY_HIGHLIGHTED_POINTS,
   hexBins,
   hexStats,
   dateIndex,
