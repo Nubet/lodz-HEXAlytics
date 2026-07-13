@@ -3,6 +3,7 @@ import type { AccidentPoint, SeverityLevel } from '@/types/accident.types';
 import { SEVERITY_COLORS } from '@/constants/colors.constants';
 
 interface ScatterplotLayerConfig {
+  id?: string;
   points: AccidentPoint[];
   radiusScale?: number;
   opacity?: number;
@@ -11,6 +12,7 @@ interface ScatterplotLayerConfig {
 
 export function createScatterplotLayer(config: ScatterplotLayerConfig) {
   const {
+    id = 'scatterplot-layer',
     points,
     radiusScale = 1,
     opacity = 0.8,
@@ -18,7 +20,7 @@ export function createScatterplotLayer(config: ScatterplotLayerConfig) {
   } = config;
 
   return new ScatterplotLayer<AccidentPoint>({
-    id: 'scatterplot-layer',
+    id,
     data: points,
     getPosition: (d) => [d.longitude, d.latitude],
     getRadius: (d) => getRadiusBySeverity(d.severity),

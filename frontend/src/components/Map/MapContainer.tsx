@@ -49,6 +49,7 @@ if (typeof window !== 'undefined' && !isCanvasContextPatched) {
 
 interface MapContainerProps {
   points: AccidentPoint[];
+  highlightedPoints?: AccidentPoint[];
   hexBins: HexBin[];
   hexStats: {
     minCount: number;
@@ -72,6 +73,7 @@ interface MapContainerProps {
 function getLayers(
   mode: VisualizationMode,
   points: AccidentPoint[],
+  highlightedPoints: AccidentPoint[],
   hexBins: HexBin[],
   hexStats: MapContainerProps['hexStats'],
   showHexLabels: boolean,
@@ -106,6 +108,25 @@ function getLayers(
 
   switch (mode) {
     case 'points':
+      if (highlightedPoints.length > 0) {
+        return [
+          createScatterplotLayer({
+            id: 'scatterplot-context-layer',
+            points,
+            opacity: 0.14,
+            radiusScale: 0.9,
+            pickable: false,
+          }),
+          createScatterplotLayer({
+            id: 'scatterplot-highlight-layer',
+            points: highlightedPoints,
+            opacity: 0.95,
+            radiusScale: 1.35,
+            pickable: true,
+          }),
+        ];
+      }
+
       return [createScatterplotLayer({ points })];
     case 'hex_2d':
       return showHexLabels
@@ -187,6 +208,7 @@ function isHexBin(object: object): object is HexBin {
 
 export function MapContainer({
   points,
+  highlightedPoints = [],
   hexBins,
   hexStats,
   dateIndex,
@@ -203,10 +225,11 @@ export function MapContainer({
 }: MapContainerProps) {
   const layers = useMemo(
     () =>
-      getLayers(
-        mode,
-        points,
-        hexBins,
+        getLayers(
+          mode,
+          points,
+          highlightedPoints,
+          hexBins,
         hexStats,
         showHexLabels,
         theme,
@@ -217,6 +240,7 @@ export function MapContainer({
     [
       mode,
       points,
+      highlightedPoints,
       hexBins,
       hexStats,
       showHexLabels,

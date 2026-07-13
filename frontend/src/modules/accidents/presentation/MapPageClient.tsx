@@ -369,6 +369,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
         <MapRuntimeBoundary fallback={<MapFallback mapStyle={mapStyle} viewState={viewState} />}>
           <MapContainer
             points={filteredPoints}
+            highlightedPoints={streetAccidents}
             hexBins={hexBins}
             hexStats={hexStats}
             dateIndex={dateIndex}
