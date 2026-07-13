@@ -67,8 +67,46 @@ test('normalization merges street segments with the same name', () => {
   assert.deepEqual(results[0]?.bounds, {
     west: 19.44,
     south: 51.76,
-    east: 19.46,
-    north: 51.78,
+    east: 19.45,
+    north: 51.77,
+  });
+});
+
+test('normalization keeps viewport bounds from the primary segment when merging distant street segments', () => {
+  const results = normalizeStreetSearchResults([
+    {
+      place_id: 2,
+      lat: '51.77',
+      lon: '19.45',
+      name: 'Piotrkowska',
+      display_name: 'Piotrkowska, Srodmiescie, Lodz, Poland',
+      category: 'highway',
+      type: 'tertiary',
+      addresstype: 'road',
+      boundingbox: ['51.76', '51.77', '19.44', '19.45'],
+      geojson: { type: 'LineString', coordinates: [[19.44, 51.76], [19.45, 51.77]] },
+    },
+    {
+      place_id: 3,
+      lat: '51.88',
+      lon: '19.56',
+      name: 'Piotrkowska',
+      display_name: 'Piotrkowska, Polnoc, Lodz, Poland',
+      category: 'highway',
+      type: 'tertiary',
+      addresstype: 'road',
+      boundingbox: ['51.87', '51.88', '19.55', '19.56'],
+      geojson: { type: 'LineString', coordinates: [[19.55, 51.87], [19.56, 51.88]] },
+    },
+  ]);
+
+  assert.equal(results.length, 1);
+  assert.equal(results[0]?.segments.length, 2);
+  assert.deepEqual(results[0]?.bounds, {
+    west: 19.44,
+    south: 51.76,
+    east: 19.45,
+    north: 51.77,
   });
 });
 

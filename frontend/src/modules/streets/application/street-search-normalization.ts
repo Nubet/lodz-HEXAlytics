@@ -89,7 +89,13 @@ export function isStreetSearchCandidate(result: NominatimStreetResult) {
 }
 
 export function normalizeStreetSearchResults(results: NominatimStreetResult[]): StreetSearchResult[] {
-  const groupedResults = new Map<string, { name: string; displayName: string; ids: string[]; segments: StreetSearchResult['segments'] }>();
+  const groupedResults = new Map<string, {
+    name: string;
+    displayName: string;
+    ids: string[];
+    segments: StreetSearchResult['segments'];
+    bounds: StreetSearchResult['bounds'];
+  }>();
 
   for (const result of results) {
     if (!isStreetSearchCandidate(result)) {
@@ -112,23 +118,24 @@ export function normalizeStreetSearchResults(results: NominatimStreetResult[]): 
       continue;
     }
 
+    const bounds = getBoundsFromSegments(segments);
+
     groupedResults.set(key, {
       name,
       displayName: result.display_name,
       ids: [String(result.place_id)],
       segments: [...segments],
+      bounds,
     });
   }
 
   return Array.from(groupedResults.entries()).map(([key, grouped]) => {
-    const bounds = getBoundsFromSegments(grouped.segments);
-
     return {
       id: key,
       name: grouped.name,
       displayName: grouped.displayName,
-      center: getCenterFromBounds(bounds),
-      bounds,
+      center: getCenterFromBounds(grouped.bounds),
+      bounds: grouped.bounds,
       segments: grouped.segments,
     };
   });
