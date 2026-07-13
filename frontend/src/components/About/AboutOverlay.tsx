@@ -32,7 +32,7 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
             Szybki wgląd w zdarzenia drogowe
           </h2>
           <p className="text-body-muted">
-            To interaktywna mapa zdarzeń drogowych w Łodzi, zaprojektowana tak, aby szybko przechodzić
+              "HexaLytics" to interaktywna mapa zdarzeń drogowych w Łodzi, zaprojektowana tak, aby szybko przechodzić
             od ogólnego obrazu miasta do konkretnych przypadków i ich szczegółów.
           </p>
         </header>
@@ -69,6 +69,28 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
             <div className="surface-info-card grid gap-1 px-3.5 py-3">
               <span className="overline-label">Zagęszczenie 3D</span>
               <p className="text-sm text-surface-elevated-muted">Sprawdza się wtedy, gdy chcesz mocniej podkreślić różnice między obszarami, bo wysokość słupków od razu wzmacnia wizualny odbiór natężenia.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative z-10 mt-6 border-t border-surface-elevated-divider pt-4">
+          <h3 className="mb-3 text-base font-semibold">Jak czytać widok heksów</h3>
+          <div className="grid gap-3">
+            <div className="surface-info-card grid gap-1 px-3.5 py-3">
+              <span className="overline-label">Dlaczego heksy zmieniają rozmiar?</span>
+              <p className="text-sm text-surface-elevated-muted">Rozmiar heksów możesz zmieniać ręcznie. Większe heksy pokazują szerszy obraz miasta i ułatwiają zauważenie ogólnych wzorców. Mniejsze heksy pokazują więcej lokalnych szczegółów.</p>
+            </div>
+            <div className="surface-info-card grid gap-1 px-3.5 py-3">
+              <span className="overline-label">Co oznaczają kolory heksów?</span>
+              <p className="text-sm text-surface-elevated-muted">Kolor pokazuje, ile wypadków znajduje się w danym heksie. Chłodniejsze kolory oznaczają mniejszą liczbę zdarzeń. Cieplejsze kolory oznaczają większą liczbę zdarzeń.</p>
+            </div>
+            <div className="surface-info-card grid gap-1 px-3.5 py-3">
+              <span className="overline-label">Dlaczego kolory mogą się zmieniać po użyciu filtrów?</span>
+              <p className="text-sm text-surface-elevated-muted">Kolory są liczone względem aktualnie widocznych wyników. Gdy zmienisz rok, dzielnicę albo rodzaj zdarzeń, skala kolorów przelicza się na nowo. Przez to ta sama liczba wypadków może wyglądać inaczej niż wcześniej.</p>
+            </div>
+            <div className="surface-info-card grid gap-1 px-3.5 py-3">
+              <span className="overline-label">Czy jeden heks oznacza jeden rodzaj wypadków?</span>
+              <p className="text-sm text-surface-elevated-muted">Nie. Jeden heks może zawierać różne typy zdarzeń i różne poziomy ciężkości. Heks pokazuje grupę wypadków z danego obszaru, a nie jeden konkretny przypadek.</p>
             </div>
           </div>
         </section>
