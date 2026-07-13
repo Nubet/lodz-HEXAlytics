@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react/dist/ssr';
-import { useEffect, useRef } from 'react';
+import { ModalDialog } from '@/components/shared/ModalDialog';
 
 interface AuthorOverlayProps {
   isOpen: boolean;
@@ -8,49 +8,20 @@ interface AuthorOverlayProps {
 }
 
 export function AuthorOverlay({ isOpen, onClose }: AuthorOverlayProps) {
-  const overlayRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [isOpen, onClose]);
-
-  const handleOverlayClick = (e: React.MouseEvent) => {
-    if (e.target === overlayRef.current) {
-      onClose();
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if ((e.key === 'Enter' || e.key === ' ') && e.target === overlayRef.current) {
-      e.preventDefault();
-      onClose();
-    }
-  };
-
-  if (!isOpen) return null;
-
   return (
-    <div
-      className="author-overlay-backdrop fixed inset-0 z-110 flex items-center justify-center p-6 starting:opacity-0"
-      ref={overlayRef}
-      onClick={handleOverlayClick}
-      onKeyDown={handleKeyDown}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Autor projektu"
-      tabIndex={0}
-    >
+    <ModalDialog isOpen={isOpen} onClose={onClose} label="Autor projektu" className="author-overlay-backdrop fixed inset-0 z-110 flex items-center justify-center p-6 starting:opacity-0">
+      <button
+        type="button"
+        className="absolute inset-0 border-0 bg-transparent p-0"
+        onClick={onClose}
+        aria-label="Zamknij okno Autor projektu"
+      />
       <div className="author-overlay-card relative w-full max-w-220 overflow-hidden rounded-card p-8 starting:translate-y-5 starting:scale-[0.98] starting:opacity-0 max-[900px]:p-6 max-[640px]:p-5">
         <div className="author-overlay-glow pointer-events-none absolute inset-0 opacity-40" />
         <div className="pointer-events-none absolute inset-0 opacity-40 mix-blend-multiply" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E\")" }} />
 
         <button
+          type="button"
           className="social-link-pill absolute top-4.5 right-4.5 z-10 flex size-9 items-center justify-center text-xl leading-none hover:rotate-[8deg]"
           onClick={onClose}
           aria-label="Close"
@@ -119,6 +90,6 @@ export function AuthorOverlay({ isOpen, onClose }: AuthorOverlayProps) {
           </div>
         </div>
       </div>
-    </div>
+    </ModalDialog>
   );
 }

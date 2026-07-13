@@ -241,6 +241,23 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
+@utility app-modal-dialog {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.app-modal-dialog::backdrop {
+  background: rgb(10 12 18 / 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 @utility overline-label {
   font-family: var(--font-mono);
   font-size: 11px;

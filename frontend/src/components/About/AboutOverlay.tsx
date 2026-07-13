@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { ModalDialog } from '@/components/shared/ModalDialog';
 
 interface AboutOverlayProps {
   isOpen: boolean;
@@ -6,49 +6,19 @@ interface AboutOverlayProps {
 }
 
 export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
-  const overlayRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [isOpen, onClose]);
-
-  const handleOverlayClick = (e: React.MouseEvent) => {
-    if (e.target === overlayRef.current) {
-      onClose();
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if ((e.key === 'Enter' || e.key === ' ') && e.target === overlayRef.current) {
-      e.preventDefault();
-      onClose();
-    }
-  };
-
-  if (!isOpen) return null;
-
   return (
-    <div
-      className="modal-backdrop fixed inset-0 z-100 flex items-center justify-center p-6 starting:opacity-0"
-      ref={overlayRef}
-      onClick={handleOverlayClick}
-      onKeyDown={handleKeyDown}
-      role="dialog"
-      aria-modal="true"
-      aria-label="O projekcie"
-      tabIndex={0}
-    >
+    <ModalDialog isOpen={isOpen} onClose={onClose} label="O projekcie" className="fixed inset-0 z-100 flex items-center justify-center p-6 starting:opacity-0">
+      <button
+        type="button"
+        className="absolute inset-0 border-0 bg-transparent p-0"
+        onClick={onClose}
+        aria-label="Zamknij okno O projekcie"
+      />
       <div className="elevated-dialog thin-scrollbar relative max-h-[86vh] w-full max-w-205 overflow-auto rounded-card p-8 text-surface-elevated-foreground shadow-surface-dialog-strong starting:translate-y-4 starting:scale-[0.98] starting:opacity-0 max-[640px]:p-6">
         <div className="overlay-soft-glow pointer-events-none absolute inset-0 opacity-50" />
 
         <button
+          type="button"
           className="dialog-close-button absolute top-4 right-4 z-10 size-8.5 text-xl leading-none"
           onClick={onClose}
           aria-label="Zamknij"
@@ -117,6 +87,6 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
           </ul>
         </section>
       </div>
-    </div>
+    </ModalDialog>
   );
 }

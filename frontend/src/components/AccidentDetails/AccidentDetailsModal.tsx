@@ -1,5 +1,6 @@
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import type { ReactNode } from 'react';
+import { ModalDialog } from '@/components/shared/ModalDialog';
 import { classNames } from '@/utils/classNames';
 import type { SeverityLevel, ZdarzenieDetails } from '@/types/accident.types';
 import { ParticipantCard } from './ParticipantCard';
@@ -17,18 +18,6 @@ interface DetailsSectionProps {
   title: string;
   children: ReactNode;
   fullWidth?: boolean;
-}
-
-function useCloseOnEsc(onClose: () => void, isActive: boolean) {
-  useEffect(() => {
-    if (!isActive) return undefined;
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [isActive, onClose]);
 }
 
 function DetailsSection({ title, children, fullWidth }: DetailsSectionProps) {
@@ -150,32 +139,21 @@ export function AccidentDetailsModal({
   onClose,
 }: AccidentDetailsModalProps) {
   const isOpen = Boolean(details || isLoading || error);
-  useCloseOnEsc(onClose, isOpen);
 
   if (!isOpen) return null;
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      onClose();
-    }
-  };
-
   return (
-    <div
-      className="fixed inset-0 z-120 flex items-center justify-center bg-black/65 p-6 backdrop-blur-xs starting:opacity-0 max-[640px]:p-4"
-      onClick={onClose}
-      onKeyDown={handleKeyDown}
-      role="button"
-      tabIndex={0}
-      aria-label="Close modal overlay"
-    >
+    <ModalDialog isOpen={isOpen} onClose={onClose} label="Szczegóły zdarzenia" className="fixed inset-0 z-120 flex items-center justify-center p-6 starting:opacity-0 max-[640px]:p-4">
+      <button
+        type="button"
+        className="absolute inset-0 border-0 bg-transparent p-0"
+        onClick={onClose}
+        aria-label="Zamknij szczegóły zdarzenia"
+      />
       <div
         className="relative max-h-[85vh] w-full max-w-175 overflow-y-auto rounded-2xl bg-app-card p-8 text-app-text shadow-strong starting:translate-y-4 starting:opacity-0 max-[640px]:max-h-[90vh] max-[640px]:p-6"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={(e) => e.stopPropagation()}
-        role="dialog"
-        aria-modal="true"
       >
         <button
           className="absolute top-5 right-5 flex size-8 items-center justify-center rounded-md text-[32px] leading-none text-app-muted transition hover:bg-surface-elevated-hover hover:text-app-text"
@@ -202,7 +180,7 @@ export function AccidentDetailsModal({
 
         {details && <ModalContent details={details} severity={severity} district={district} />}
       </div>
-    </div>
+    </ModalDialog>
   );
 }
 

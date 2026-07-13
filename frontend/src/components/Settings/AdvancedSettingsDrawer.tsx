@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { H3_RESOLUTION } from '@/constants/h3.constants';
 import { HEX_HIDE_ZOOM } from '@/constants/map.constants';
+import { ModalDialog } from '@/components/shared/ModalDialog';
 import { classNames } from '@/utils/classNames';
 
 interface AdvancedSettingsDrawerProps {
@@ -88,42 +88,15 @@ export function AdvancedSettingsDrawer({
   onToggleDistrict,
   onResetDistricts,
 }: AdvancedSettingsDrawerProps) {
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [isOpen, onClose]);
-
   return (
-    <div
-      className={classNames('fixed inset-0 z-50', isOpen ? 'visible' : 'invisible')}
-      aria-hidden={!isOpen}
-    >
+    <ModalDialog isOpen={isOpen} onClose={onClose} label="Rozszerzone ustawienia" className="fixed inset-0 z-50 flex items-stretch justify-start p-0">
       <button
         type="button"
-        className={classNames(
-          'absolute inset-0 border-0 bg-black/25 p-0 backdrop-blur-xs transition-opacity duration-200',
-          isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
-        )}
-        aria-label="Zamknij ustawienia"
+        className="absolute inset-0 border-0 bg-transparent p-0"
         onClick={onClose}
-        tabIndex={isOpen ? 0 : -1}
+        aria-label="Zamknij rozszerzone ustawienia"
       />
-
-      <aside
-        className={classNames(
-          'advanced-drawer-shell elevated-dialog thin-scrollbar',
-          isOpen ? 'pointer-events-auto translate-x-0 opacity-100' : 'pointer-events-none -translate-x-4 opacity-0'
-        )}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Rozszerzone ustawienia"
-      >
+      <div className="advanced-drawer-shell elevated-dialog thin-scrollbar relative z-10 pointer-events-auto translate-x-0 opacity-100">
         <header className="flex items-start justify-between gap-3 px-4 pt-4">
           <div>
             <span className="overline-label">Rozszerzone</span>
@@ -220,7 +193,7 @@ export function AdvancedSettingsDrawer({
             </Section>
           )}
         </div>
-      </aside>
-    </div>
+      </div>
+    </ModalDialog>
   );
 }
