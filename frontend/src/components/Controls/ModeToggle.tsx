@@ -16,9 +16,9 @@ interface ModeOptionButtonProps {
 }
 
 const MODES: ReadonlyArray<{ value: VisualizationMode; label: string; icon: string }> = [
-  { value: 'points', label: 'Points', icon: '📍' },
-  { value: 'hex_2d', label: 'Hex 2D', icon: '⬡' },
-  { value: 'hex_3d', label: 'Hex 3D', icon: '📊' },
+  { value: 'points', label: 'Zdarzenia', icon: '📍' },
+  { value: 'hex_2d', label: 'Zagęszczenie 2D', icon: '⬡' },
+  { value: 'hex_3d', label: 'Zagęszczenie 3D', icon: '📊' },
 ];
 
 function ModeOptionButton({
@@ -53,7 +53,7 @@ export function ModeToggle({ mode, onModeChange, vertical = false }: ModeToggleP
         vertical ? 'flex-col gap-0.5 rounded-xl' : 'gap-1'
       )}
       role="radiogroup"
-      aria-label="Visualization mode"
+      aria-label="Tryb wizualizacji"
     >
       {MODES.map(({ value, label, icon }) => (
         <ModeOptionButton
