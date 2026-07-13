@@ -1,3 +1,8 @@
+minimumReleaseAge: 10080
+trustPolicy: no-downgrade
+overrides:
+  semver@^6.3.1: ^7.7.3
+
 allowBuilds:
   '@vaadin/vaadin-usage-statistics': true
   sharp: true
