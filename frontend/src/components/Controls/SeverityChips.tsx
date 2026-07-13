@@ -39,7 +39,6 @@ function SeverityChip({ id, label, isActive, onToggle }: SeverityChipProps) {
         )}
       onClick={() => onToggle(id)}
       aria-pressed={isActive}
-      role="switch"
       type="button"
     >
       <span
