@@ -1,8 +1,8 @@
 'use client';
 
-import { Component, useCallback, useMemo, useState, type ReactNode } from 'react';
+import { Component, startTransition, useCallback, useMemo, useRef, useState, type ReactNode } from 'react';
 import dynamic from 'next/dynamic';
-import type { PickingInfo, ViewStateChangeParameters } from '@deck.gl/core';
+import { WebMercatorViewport, type PickingInfo, type ViewStateChangeParameters } from '@deck.gl/core';
 import { Map } from 'react-map-gl/maplibre';
 import { AccidentDetailsModal } from '@/components/AccidentDetails/AccidentDetailsModal';
 import { AboutOverlay } from '@/components/About/AboutOverlay';
@@ -19,6 +19,8 @@ import { useResponsivePanel } from '@/hooks/useResponsivePanel';
 import { useTheme } from '@/hooks/useTheme';
 import { createAccidentPredicate } from '@/utils/filterPredicates';
 import type { AccidentPoint, HexBin, MapPageData, SeverityLevel, ZdarzenieDetails } from '@/modules/accidents/domain/types';
+import type { StreetSearchResult } from '@/modules/streets/domain/types';
+import { searchStreets } from '@/modules/streets/infrastructure/street-search-api';
 import type { AppViewState, VisualizationMode } from '@/types/map.types';
 
 const MapContainer = dynamic(
@@ -95,6 +97,34 @@ function toggleListItem<T>(items: T[], value: T) {
     : [...items, value];
 }
 
+function fitStreetBounds(bounds: StreetSearchResult['bounds'], currentViewState: AppViewState): AppViewState {
+  const viewport = new WebMercatorViewport({
+    width: globalThis.innerWidth,
+    height: globalThis.innerHeight,
+    longitude: currentViewState.longitude,
+    latitude: currentViewState.latitude,
+    zoom: currentViewState.zoom,
+    pitch: currentViewState.pitch,
+    bearing: currentViewState.bearing,
+  });
+
+  const next = viewport.fitBounds(
+    [
+      [bounds.west, bounds.south],
+      [bounds.east, bounds.north],
+    ],
+    { padding: 96, maxZoom: 16 },
+  );
+
+  return {
+    longitude: next.longitude,
+    latitude: next.latitude,
+    zoom: next.zoom,
+    pitch: 0,
+    bearing: 0,
+  };
+}
+
 export function MapPageClient({ initialData }: MapPageClientProps) {
   const { points, stats, dateIndex, availableYears } = initialData;
   const availableDistricts = useMemo(() => {
@@ -120,6 +150,11 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
   const [hexResolution, setHexResolution] = useState(H3_RESOLUTION.DEFAULT);
   const [hideHexOnZoom, setHideHexOnZoom] = useState(false);
   const [hexHideZoom, setHexHideZoom] = useState(HEX_HIDE_ZOOM.DEFAULT);
+  const [streetQuery, setStreetQuery] = useState('');
+  const [streetResults, setStreetResults] = useState<StreetSearchResult[]>([]);
+  const [isStreetSearchLoading, setIsStreetSearchLoading] = useState(false);
+  const [streetSearchError, setStreetSearchError] = useState<string | null>(null);
+  const [selectedStreet, setSelectedStreet] = useState<StreetSearchResult | null>(null);
   const [selectedSeverity, setSelectedSeverity] = useState<SeverityLevel | null>(null);
   const [detailsState, setDetailsState] = useState<DetailsState>({
     details: null,
@@ -129,6 +164,8 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
 
   const { theme, toggleTheme } = useTheme();
   const { isControlPanelOpen, toggleControlPanel, closeControlPanel } = useResponsivePanel();
+  const searchAbortRef = useRef<AbortController | null>(null);
+  const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const filteredPoints = useMemo(() => {
     const predicate = createAccidentPredicate(
@@ -230,6 +267,91 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
     }
   }, []);
 
+  const clearStreetSearch = useCallback(() => {
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+      searchTimeoutRef.current = null;
+    }
+
+    searchAbortRef.current?.abort();
+    searchAbortRef.current = null;
+    setStreetQuery('');
+    setStreetResults([]);
+    setIsStreetSearchLoading(false);
+    setStreetSearchError(null);
+    setSelectedStreet(null);
+  }, []);
+
+  const handleSelectStreet = useCallback((result: StreetSearchResult) => {
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+      searchTimeoutRef.current = null;
+    }
+
+    searchAbortRef.current?.abort();
+    searchAbortRef.current = null;
+
+    setSelectedStreet(result);
+    setStreetQuery(result.name);
+    setStreetResults([]);
+    setStreetSearchError(null);
+    setIsStreetSearchLoading(false);
+    setViewState((current) => fitStreetBounds(result.bounds, current));
+  }, []);
+
+  const handleStreetQueryChange = useCallback((value: string) => {
+    setStreetQuery(value);
+    setSelectedStreet(null);
+
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+      searchTimeoutRef.current = null;
+    }
+
+    searchAbortRef.current?.abort();
+    searchAbortRef.current = null;
+
+    const normalizedValue = value.trim();
+
+    if (normalizedValue.length < 2) {
+      setStreetResults([]);
+      setStreetSearchError(null);
+      setIsStreetSearchLoading(false);
+      return;
+    }
+
+    setIsStreetSearchLoading(true);
+    setStreetSearchError(null);
+
+    searchTimeoutRef.current = setTimeout(() => {
+      const controller = new AbortController();
+      searchAbortRef.current = controller;
+
+      searchStreets(normalizedValue, controller.signal)
+        .then((results) => {
+          startTransition(() => {
+            setStreetResults(results);
+            setStreetSearchError(null);
+          });
+        })
+        .catch((error) => {
+          if (controller.signal.aborted) {
+            return;
+          }
+
+          startTransition(() => {
+            setStreetResults([]);
+            setStreetSearchError(error instanceof Error ? error.message : 'Street search failed.');
+          });
+        })
+        .finally(() => {
+          if (!controller.signal.aborted) {
+            setIsStreetSearchLoading(false);
+          }
+        });
+    }, 220);
+  }, []);
+
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-app-bg text-app-text">
       <div className="absolute inset-0 z-0">
@@ -259,6 +381,16 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
           onNavigate={handleNavigate}
           isControlPanelOpen={isControlPanelOpen}
           onToggleControlPanel={toggleControlPanel}
+          streetSearch={{
+            query: streetQuery,
+            results: streetResults,
+            isLoading: isStreetSearchLoading,
+            errorMessage: streetSearchError,
+            selectedStreetName: selectedStreet?.name ?? null,
+            onQueryChange: handleStreetQueryChange,
+            onSelectResult: handleSelectStreet,
+            onClear: clearStreetSearch,
+          }}
         />
 
         <div

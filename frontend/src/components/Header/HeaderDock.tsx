@@ -1,4 +1,6 @@
 import type { AppTheme } from '@/hooks/useTheme';
+import type { StreetSearchResult } from '@/modules/streets/domain/types';
+import { StreetSearchBox } from '@/modules/streets/presentation/StreetSearchBox';
 
 interface NavItem {
   label: string;
@@ -11,6 +13,16 @@ interface HeaderDockProps {
   onNavigate?: (href: string) => void;
   isControlPanelOpen: boolean;
   onToggleControlPanel: () => void;
+  streetSearch: {
+    query: string;
+    results: StreetSearchResult[];
+    isLoading: boolean;
+    errorMessage: string | null;
+    selectedStreetName: string | null;
+    onQueryChange: (value: string) => void;
+    onSelectResult: (result: StreetSearchResult) => void;
+    onClear: () => void;
+  };
 }
 
 interface ThemeToggleIconProps {
@@ -206,16 +218,18 @@ export function HeaderDock({
   onNavigate,
   isControlPanelOpen,
   onToggleControlPanel,
+  streetSearch,
 }: HeaderDockProps) {
   const isDark = theme === 'dark';
 
   return (
-    <header className="header-dock-shell elevated-panel pointer-events-auto absolute top-5 left-1/2 z-40 flex max-w-[900px] -translate-x-1/2 items-center justify-between gap-6 rounded-full px-6 py-2.5 transition-shadow hover:shadow-surface-elevated-hover max-[768px]:gap-4 max-[768px]:px-4 max-[768px]:py-2 max-[540px]:gap-2 max-[540px]:rounded-2xl max-[540px]:px-3">
+    <header className="header-dock-shell elevated-panel pointer-events-auto absolute top-5 left-1/2 z-40 flex max-w-[1100px] -translate-x-1/2 items-center justify-between gap-4 rounded-[28px] px-5 py-2.5 transition-shadow hover:shadow-surface-elevated-hover max-[900px]:flex-wrap max-[768px]:gap-3 max-[768px]:px-4 max-[768px]:py-2 max-[540px]:gap-2 max-[540px]:rounded-2xl max-[540px]:px-3">
       <LogoSection
         isControlPanelOpen={isControlPanelOpen}
         onToggleControlPanel={onToggleControlPanel}
       />
       <NavSection onNavigate={onNavigate} />
+      <StreetSearchBox {...streetSearch} />
       <ToolsSection isDark={isDark} onToggleTheme={onToggleTheme} />
     </header>
   );
