@@ -2,6 +2,18 @@ import { latLngToCell, cellToLatLng } from 'h3-js';
 import type { AccidentPoint, HexBin } from '@/types/accident.types';
 import { H3_RESOLUTION } from '@/constants/h3.constants';
 
+function getDominantSeverity(points: AccidentPoint[]): AccidentPoint['severity'] {
+  const counts = { L: 0, C: 0, S: 0 };
+
+  for (const point of points) {
+    counts[point.severity] += 1;
+  }
+
+  if (counts.S >= counts.C && counts.S >= counts.L) return 'S';
+  if (counts.C >= counts.L) return 'C';
+  return 'L';
+}
+
 export function aggregateToHexBins(
   points: AccidentPoint[],
   resolution: number = H3_RESOLUTION.DEFAULT
@@ -36,6 +48,7 @@ export function aggregateToHexBins(
       count: cellPoints.length,
       totalSeverityWeight,
       avgSeverityWeight: totalSeverityWeight / cellPoints.length,
+      dominantSeverity: getDominantSeverity(cellPoints),
       centroid: [lng, lat],
     });
   }

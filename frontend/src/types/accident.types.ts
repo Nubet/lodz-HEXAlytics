@@ -66,6 +66,7 @@ export interface HexBin {
   count: number;
   totalSeverityWeight: number;
   avgSeverityWeight: number;
+  dominantSeverity: SeverityLevel;
   centroid: [number, number];  // [lng, lat]
 }
 

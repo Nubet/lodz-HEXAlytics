@@ -174,7 +174,7 @@ function formatAccidentTooltip(
 function formatHexTooltip(hex: HexBin): string {
   return [
     `Zdarzenia: ${hex.count}`,
-    `Średnia ciężkość: ${hex.avgSeverityWeight.toFixed(2)}`,
+    `Dominują: ${SEVERITY_LABELS[hex.dominantSeverity]}`,
   ].join('\n');
 }
 
