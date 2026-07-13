@@ -20,7 +20,6 @@
     "@luma.gl/webgl": "^9.3.3",
     "@phosphor-icons/react": "^2.1.10",
     "d3-scale": "^4.0.2",
-    "deck.gl": "^9.2.7",
     "h3-js": "^4.4.0",
     "maplibre-gl": "^5.18.0",
     "next": "^15.4.6",
