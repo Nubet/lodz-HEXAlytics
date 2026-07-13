@@ -34,7 +34,7 @@ function Stat({ label, value, tone }: { label: string; value: string; tone?: 'de
 
 export function StreetInsightsCard({ street, insights, onClear }: StreetInsightsCardProps) {
   return (
-    <section className="elevated-panel pointer-events-auto absolute top-24 right-5 z-35 flex w-[min(360px,calc(100vw-40px))] flex-col gap-3 rounded-[24px] p-4 max-[900px]:top-38 max-[900px]:right-4 max-[640px]:top-40 max-[640px]:w-[calc(100vw-24px)] max-[640px]:right-3">
+    <section className="elevated-panel pointer-events-auto absolute top-24 right-5 z-35 flex w-[min(360px,calc(100vw-40px))] flex-col gap-3 rounded-3xl p-4 max-[900px]:top-38 max-[900px]:right-4 max-[640px]:top-40 max-[640px]:w-[calc(100vw-24px)] max-[640px]:right-3">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="overline-label">Analiza ulicy</div>
