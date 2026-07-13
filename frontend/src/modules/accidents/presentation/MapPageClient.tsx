@@ -19,8 +19,10 @@ import { useResponsivePanel } from '@/hooks/useResponsivePanel';
 import { useTheme } from '@/hooks/useTheme';
 import { createAccidentPredicate } from '@/utils/filterPredicates';
 import type { AccidentPoint, HexBin, MapPageData, SeverityLevel, ZdarzenieDetails } from '@/modules/accidents/domain/types';
+import { getStreetAccidents, getStreetInsights } from '@/modules/streets/application/get-street-insights';
 import type { StreetSearchResult } from '@/modules/streets/domain/types';
 import { searchStreets } from '@/modules/streets/infrastructure/street-search-api';
+import { StreetInsightsCard } from '@/modules/streets/presentation/StreetInsightsCard';
 import type { AppViewState, VisualizationMode } from '@/types/map.types';
 
 const MapContainer = dynamic(
@@ -182,6 +184,14 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
   const { hexBins, stats: hexStats } = useHexAggregation(filteredPoints, hexResolution);
   const mapStyle = theme === 'dark' ? MAP_STYLE_DARK : MAP_STYLE;
   const isHexMode = mode !== 'points';
+  const streetAccidents = useMemo(() => getStreetAccidents(filteredPoints, selectedStreet), [filteredPoints, selectedStreet]);
+  const streetInsights = useMemo(() => {
+    if (!selectedStreet) {
+      return null;
+    }
+
+    return getStreetInsights(streetAccidents, filteredPoints, dateIndex);
+  }, [dateIndex, filteredPoints, selectedStreet, streetAccidents]);
 
   const selectedDistrict = useMemo(() => {
     if (!detailsState.details) {
@@ -296,6 +306,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
     setStreetResults([]);
     setStreetSearchError(null);
     setIsStreetSearchLoading(false);
+    setMode('points');
     setViewState((current) => fitStreetBounds(result.bounds, current));
   }, []);
 
@@ -437,6 +448,14 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
         onToggleDistrict={handleToggleDistrict}
         onResetDistricts={() => setActiveDistricts(availableDistricts)}
       />
+
+      {selectedStreet && streetInsights && (
+        <StreetInsightsCard
+          street={selectedStreet}
+          insights={streetInsights}
+          onClear={clearStreetSearch}
+        />
+      )}
 
       <AccidentDetailsModal
         details={detailsState.details}
