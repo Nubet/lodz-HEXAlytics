@@ -1,36 +1,3 @@
-export interface RawAccidentData {
-  mapa: {
-    wojewodztwa: Wojewodztwo[];
-  };
-}
-
-export interface Wojewodztwo {
-  powiaty: Powiat[];
-}
-
-export interface Powiat {
-  gminy: Gmina[];
-}
-
-export interface Gmina {
-  zdarzenia: number;
-  gmi_nazwa: string;
-  mie_nazwa: string;
-  mie_rodzaj: string;
-  gmi_kod: number;
-  gmi_rodzaj: string | null;
-  fallback_center_lng: number;
-  fallback_center_lat: number;
-  zdarzenia_detale: ZdarzenieDetail[];
-}
-
-export interface ZdarzenieDetail {
-  id: number;
-  wsp_gps_x: number;  // longitude
-  wsp_gps_y: number;  // latitude
-  ciezkosc: SeverityLevel;
-}
-
 export type SeverityLevel = 'S' | 'C' | 'L';
 
 export interface AccidentPoint {
@@ -61,6 +28,22 @@ export interface AccidentFiltersApiResponse {
   eventTypes: string[];
 }
 
+export interface MapPageData {
+  points: AccidentPoint[];
+  stats: {
+    total: number;
+    bySeverity: Record<string, number>;
+    bounds: {
+      minLng: number;
+      maxLng: number;
+      minLat: number;
+      maxLat: number;
+    };
+  } | null;
+  dateIndex: Record<number, string>;
+  availableYears: number[];
+}
+
 export interface HexBin {
   h3Index: string;
   count: number;
@@ -68,30 +51,6 @@ export interface HexBin {
   avgSeverityWeight: number;
   dominantSeverity: SeverityLevel;
   centroid: [number, number];  // [lng, lat]
-}
-
-export interface ZdarzenieDetailsResponse {
-  wsp_gps_x: number;
-  wsp_gps_y: number;
-  id_w_czas: string;
-  czas_zdarzenia: string;
-  woj_nazwa: string;
-  pow_nazwa: string;
-  gmi_nazwa: string;
-  mie_nazwa: string;
-  opis_zdarzenia: string;
-  uczestnicy: Record<string, Uczestnik>;
-  zdarzenie_id: number;
-  id_systemu_zr: string;
-}
-
-export interface Uczestnik {
-  ofiary: Record<string, OfiaraDetails>;
-  opis_pojazdu: string;
-}
-
-export interface OfiaraDetails {
-  obrazenia: string[];
 }
 
 export interface ZdarzenieDetails {
