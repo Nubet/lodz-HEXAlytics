@@ -59,6 +59,7 @@ function ToggleRow({
         )}
         role="switch"
         aria-checked={checked}
+        aria-label={title}
         onClick={onClick}
       >
         <span
