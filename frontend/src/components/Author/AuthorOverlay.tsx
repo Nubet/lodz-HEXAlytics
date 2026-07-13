@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 interface AuthorOverlayProps {
@@ -58,8 +59,15 @@ export function AuthorOverlay({ isOpen, onClose }: AuthorOverlayProps) {
 
         <div className="relative z-10 grid gap-8 grid-cols-[220px_minmax(0,1fr)] max-[900px]:grid-cols-1">
           <div className="flex flex-col items-start gap-4.5">
-            <div className="author-avatar-card grid size-40 place-items-center rounded-2xl max-[900px]:size-35">
-              <span className="font-display text-[40px] tracking-[0.18em] text-app-text">NF</span>
+            <div className="author-avatar-card relative size-40 overflow-hidden rounded-2xl max-[900px]:size-35">
+              <Image
+                src="/images/authors/norbert-fila-white.jpg"
+                alt="Norbert Fila"
+                fill
+                sizes="(max-width: 900px) 140px, 160px"
+                className="object-cover"
+                priority
+              />
             </div>
             <div className="author-location-badge grid gap-0.5 rounded-full px-3.5 py-2.5 font-mono text-[11px] uppercase tracking-[0.16em]">
               <span>LODZ</span>
