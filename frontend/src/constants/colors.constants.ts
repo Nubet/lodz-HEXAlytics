@@ -17,8 +17,3 @@ export const DENSITY_COLOR_STOPS: RGBAColor[] = [
   [255, 69, 0, 200],      // Red-Orange
   [220, 20, 60, 200],     // Crimson - highest
 ];
-
-export const ELEVATION_SCALE = {
-  min: 0,
-  max: 5000,
-};
