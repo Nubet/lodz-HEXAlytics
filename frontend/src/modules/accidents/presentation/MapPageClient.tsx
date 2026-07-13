@@ -191,8 +191,8 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
       return null;
     }
 
-    return getStreetInsights(streetAccidents, filteredPoints, dateIndex);
-  }, [dateIndex, filteredPoints, selectedStreet, streetAccidents]);
+    return getStreetInsights(streetAccidents, dateIndex);
+  }, [dateIndex, selectedStreet, streetAccidents]);
 
   const selectedDistrict = useMemo(() => {
     if (!detailsState.details) {
@@ -240,6 +240,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
     }
 
     const accident = info.object as AccidentPoint;
+    setSelectedStreet(null);
     setSelectedSeverity(accident.severity);
     setDetailsState({ details: null, isLoading: true, error: null });
 

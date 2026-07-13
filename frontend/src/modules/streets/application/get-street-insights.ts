@@ -8,7 +8,6 @@ interface StreetInsights {
     year: number;
     count: number;
   } | null;
-  shareOfVisibleAccidents: number;
 }
 
 export function getStreetAccidents(points: AccidentPoint[], street: StreetSearchResult | null) {
@@ -26,7 +25,6 @@ export function getStreetAccidents(points: AccidentPoint[], street: StreetSearch
 
 export function getStreetInsights(
   streetPoints: AccidentPoint[],
-  allVisiblePoints: AccidentPoint[],
   dateIndex: Record<number, string> | null,
 ): StreetInsights {
   const severityCounts: Record<SeverityLevel, number> = { L: 0, C: 0, S: 0 };
@@ -59,6 +57,5 @@ export function getStreetInsights(
     accidentCount: streetPoints.length,
     severityCounts,
     topYear,
-    shareOfVisibleAccidents: allVisiblePoints.length > 0 ? streetPoints.length / allVisiblePoints.length : 0,
   };
 }

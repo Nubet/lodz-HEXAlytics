@@ -10,7 +10,6 @@ interface StreetInsightsCardProps {
       year: number;
       count: number;
     } | null;
-    shareOfVisibleAccidents: number;
   };
   onClear: () => void;
 }
@@ -67,7 +66,6 @@ export function StreetInsightsCard({ street, insights, onClear }: StreetInsights
 
       <div className="grid grid-cols-2 gap-2.5 max-[420px]:grid-cols-1">
         <Stat label="Zdarzenia" value={insights.accidentCount.toLocaleString('pl-PL')} />
-        <Stat label="Udział w widoku" value={`${(insights.shareOfVisibleAccidents * 100).toFixed(1)}%`} />
         <Stat label="Śmiertelne" value={insights.severityCounts.S.toLocaleString('pl-PL')} tone="danger" />
         <Stat label="Ciężkie" value={insights.severityCounts.C.toLocaleString('pl-PL')} tone="warning" />
         <Stat label="Lekkie" value={insights.severityCounts.L.toLocaleString('pl-PL')} tone="success" />
