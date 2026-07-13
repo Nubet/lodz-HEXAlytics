@@ -97,7 +97,7 @@ export function AdvancedSettingsDrawer({
         onClick={onClose}
         aria-label="Zamknij rozszerzone ustawienia"
       />
-      <div className="advanced-drawer-shell elevated-dialog thin-scrollbar relative z-10 pointer-events-auto translate-x-0 opacity-100">
+      <div className="advanced-drawer-shell elevated-dialog thin-scrollbar z-10 pointer-events-auto translate-x-0 opacity-100">
         <header className="flex items-start justify-between gap-3 px-4 pt-4">
           <div>
             <span className="overline-label">Rozszerzone</span>
