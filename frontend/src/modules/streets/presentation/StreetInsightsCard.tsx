@@ -1,4 +1,4 @@
-import { X } from '@phosphor-icons/react/dist/ssr';
+import { XIcon } from '@phosphor-icons/react/dist/ssr';
 import type { StreetSearchResult } from '@/modules/streets/domain/types';
 import type { SeverityLevel } from '@/modules/accidents/domain/types';
 
@@ -48,7 +48,7 @@ export function StreetInsightsCard({ street, insights, onClear }: StreetInsights
           onClick={onClear}
           aria-label="Wyczyść fokus ulicy"
         >
-          <X size={16} weight="bold" aria-hidden="true" />
+          <XIcon size={16} weight="bold" aria-hidden="true" />
         </button>
       </div>
 

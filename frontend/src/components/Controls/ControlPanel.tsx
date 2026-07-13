@@ -114,12 +114,6 @@ export function ControlPanel({
           : 'control-panel-shell-closed',
       ].join(' ')}
     >
-      <div className="elevated-panel sticky top-0 z-10 flex items-center justify-between rounded-xl px-3 py-2">
-        <span className="panel-kicker">
-          Panel filtrów
-        </span>
-      </div>
-
       <PanelSection title="Tryb Wizualizacji">
         <ModeToggle mode={mode} onModeChange={onModeChange} vertical />
       </PanelSection>

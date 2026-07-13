@@ -269,7 +269,7 @@ export function MapContainer({
       <DeckGL
         width="100%"
         height="100%"
-        style={{ position: 'absolute', inset: 0 }}
+        style={{ position: 'absolute', inset: '0' }}
         deviceProps={{ type: 'webgl' }}
         viewState={viewState}
         onViewStateChange={handleViewStateChange}

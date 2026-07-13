@@ -111,7 +111,7 @@ function NavSection({ onNavigate }: NavSectionProps) {
           <li key={item.href}>
             <a
               href={item.href}
-              className="nav-pill block whitespace-nowrap px-4 py-2 text-sm font-medium text-surface-elevated-muted max-[768px]:px-3 max-[768px]:py-1.5 max-[768px]:text-[13px]"
+              className="nav-pill block whitespace-nowrap px-4 py-2 text-sm font-medium text-surface-elevated-muted max-[768px]:px-3 max-[768px]:py-1.5 max-[768px]:text-ui-sm"
               onClick={(e) => handleClick(e, item.href)}
             >
               {item.label}
@@ -168,7 +168,7 @@ export function HeaderDock({
   const isDark = theme === 'dark';
 
   return (
-    <header className="header-dock-shell elevated-panel pointer-events-auto absolute top-5 left-1/2 z-40 flex max-w-[1100px] -translate-x-1/2 items-center justify-between gap-4 rounded-[28px] px-5 py-2.5 transition-shadow hover:shadow-surface-elevated-hover max-[900px]:flex-wrap max-[768px]:gap-3 max-[768px]:px-4 max-[768px]:py-2 max-[540px]:gap-2 max-[540px]:rounded-2xl max-[540px]:px-3">
+    <header className="header-dock-shell elevated-panel pointer-events-auto absolute top-5 left-1/2 z-40 flex max-w-275 -translate-x-1/2 items-center justify-between gap-4 rounded-[28px] px-5 py-2.5 transition-shadow hover:shadow-surface-elevated-hover max-[900px]:flex-wrap max-[768px]:gap-3 max-[768px]:px-4 max-[768px]:py-2 max-[540px]:gap-2 max-[540px]:rounded-2xl max-[540px]:px-3">
       <LogoSection
         isControlPanelOpen={isControlPanelOpen}
         onToggleControlPanel={onToggleControlPanel}
