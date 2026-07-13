@@ -51,7 +51,7 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
         <button
           className="dialog-close-button absolute top-4 right-4 z-10 size-8.5 text-xl leading-none"
           onClick={onClose}
-          aria-label="Close"
+          aria-label="Zamknij"
         >
           ×
         </button>
@@ -62,8 +62,8 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
             Szybki wgląd w zdarzenia drogowe
           </h2>
           <p className="text-body-muted">
-            Strona prezentuje zdarzenia drogowe w Łodzi w formie, którą można zrozumieć w kilka sekund.
-            Projekt oferuje trzy perspektywy wizualizacji: punkty, heksy oraz widok 3D.
+            To interaktywna mapa zdarzeń drogowych w Łodzi, zaprojektowana tak, aby szybko przechodzić
+            od ogólnego obrazu miasta do konkretnych przypadków i ich szczegółów.
           </p>
         </header>
 
@@ -71,16 +71,16 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
           <h3 className="mb-3 text-base font-semibold">Co tu zobaczysz</h3>
           <ul className="grid gap-2.5">
             <li className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label">Punkty</span>
-              <span className="text-sm text-surface-elevated-muted">pojedyncze zdarzenia w konkretnych lokalizacjach</span>
+              <span className="overline-label">Zdarzenia</span>
+              <span className="text-sm text-surface-elevated-muted">pojedyncze wypadki i kolizje pokazane w konkretnych lokalizacjach</span>
             </li>
             <li className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label">Heksagony</span>
-              <span className="text-sm text-surface-elevated-muted">zagęszczenie zdarzeń w podziale przestrzennym</span>
+              <span className="overline-label">Zagęszczenie 2D</span>
+              <span className="text-sm text-surface-elevated-muted">szybki obraz skali zjawiska i zmian widocznych po filtrowaniu lub zmianie rozmiaru siatki</span>
             </li>
             <li className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label">3D</span>
-              <span className="text-sm text-surface-elevated-muted">wysokość słupków pokazuje natężenie w danym obszarze</span>
+              <span className="overline-label">Zagęszczenie 3D</span>
+              <span className="text-sm text-surface-elevated-muted">wysokość słupków dodatkowo wzmacnia różnice między obszarami</span>
             </li>
           </ul>
         </section>
@@ -89,16 +89,16 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
           <h3 className="mb-3 text-base font-semibold">Kiedy używać którego widoku</h3>
           <div className="grid gap-3">
             <div className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label">Punkty</span>
-              <p className="text-sm text-surface-elevated-muted">gdy interesuje Cię lokalny obraz i rozkład „na ulicach”</p>
+              <span className="overline-label">Zdarzenia</span>
+              <p className="text-sm text-surface-elevated-muted">Wybierz ten widok, gdy chcesz zobaczyć konkretne przypadki, ich położenie oraz szczegóły pojedynczych zdarzeń.</p>
             </div>
             <div className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label">Heksagony</span>
-              <p className="text-sm text-surface-elevated-muted">gdy chcesz szybko znaleźć hotspoty i porównać obszary bez szumu punktów</p>
+              <span className="overline-label">Zagęszczenie 2D</span>
+              <p className="text-sm text-surface-elevated-muted">To najszybszy sposób, aby ocenić skalę zjawiska, wychwycić skupiska i zobaczyć, jak zmienia się obraz po zmianie filtrów lub rozmiaru heksagonów.</p>
             </div>
             <div className="surface-info-card grid gap-1 px-3.5 py-3">
-              <span className="overline-label">3D</span>
-              <p className="text-sm text-surface-elevated-muted">gdy zależy Ci na porównaniu natężenia między obszarami w jednym kadrze</p>
+              <span className="overline-label">Zagęszczenie 3D</span>
+              <p className="text-sm text-surface-elevated-muted">Sprawdza się wtedy, gdy chcesz mocniej podkreślić różnice między obszarami, bo wysokość słupków od razu wzmacnia wizualny odbiór natężenia.</p>
             </div>
           </div>
         </section>
@@ -111,9 +111,9 @@ export function AboutOverlay({ isOpen, onClose }: AboutOverlayProps) {
         </section>
 
         <section className="relative z-10 mt-5 border-t border-surface-elevated-divider pt-4">
-          <h3 className="mb-3 text-base font-semibold">Po co to powstało</h3>
+          <h3 className="mb-3 text-base font-semibold">Jaki jest cel projektu</h3>
           <ul className="grid gap-2 pl-4.5 text-sm leading-7 text-surface-elevated-muted">
-            <li>aby mieć narzędzie, w którym dane można przeglądać interaktywnie w estetyczny i przejrzysty sposób.</li>
+            <li>Pokazać dane o zdarzeniach drogowych w formie, która jest czytelna, szybka w odbiorze i faktycznie pomaga porównywać różne części miasta.</li>
           </ul>
         </section>
       </div>
