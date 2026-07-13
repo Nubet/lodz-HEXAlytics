@@ -166,9 +166,24 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
   });
 
   const { theme, toggleTheme } = useTheme();
-  const { isControlPanelOpen, toggleControlPanel, closeControlPanel } = useResponsivePanel();
+  const { isControlPanelOpen, toggleControlPanel, closeControlPanel } = useResponsivePanel(() => {
+    setIsAdvancedOpen(false);
+  });
   const searchAbortRef = useRef<AbortController | null>(null);
   const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleToggleControlPanel = useCallback(() => {
+    if (isControlPanelOpen) {
+      setIsAdvancedOpen(false);
+    }
+
+    toggleControlPanel();
+  }, [isControlPanelOpen, toggleControlPanel]);
+
+  const handleCloseControlPanel = useCallback(() => {
+    setIsAdvancedOpen(false);
+    closeControlPanel();
+  }, [closeControlPanel]);
 
   const filteredPoints = useMemo(() => {
     const predicate = createAccidentPredicate(
@@ -401,7 +416,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
           onToggleTheme={toggleTheme}
           onNavigate={handleNavigate}
           isControlPanelOpen={isControlPanelOpen}
-          onToggleControlPanel={toggleControlPanel}
+          onToggleControlPanel={handleToggleControlPanel}
           streetSearch={{
             query: streetQuery,
             results: streetResults,
@@ -420,7 +435,7 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
             'absolute inset-0 bg-slate-950/35 backdrop-blur-[2px] transition-opacity duration-200 min-[901px]:hidden',
             isControlPanelOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
           ].join(' ')}
-          onClick={closeControlPanel}
+          onClick={handleCloseControlPanel}
           aria-hidden="true"
         />
 
@@ -439,7 +454,6 @@ export function MapPageClient({ initialData }: MapPageClientProps) {
           accidentStats={accidentStats}
           onOpenAdvancedSettings={() => setIsAdvancedOpen((current) => !current)}
           isOpen={isControlPanelOpen}
-          onClose={closeControlPanel}
         />
       </div>
 

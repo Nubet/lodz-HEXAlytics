@@ -6,7 +6,7 @@ interface ResponsivePanelResult {
   closeControlPanel: () => void;
 }
 
-export function useResponsivePanel(): ResponsivePanelResult {
+export function useResponsivePanel(onClosePanel?: () => void): ResponsivePanelResult {
   const [isControlPanelOpen, setIsControlPanelOpen] = useState(() => {
     if (typeof window === 'undefined') return true;
     return !window.matchMedia('(max-width: 900px)').matches;
@@ -16,6 +16,10 @@ export function useResponsivePanel(): ResponsivePanelResult {
     if (typeof window === 'undefined') return undefined;
     const media = window.matchMedia('(max-width: 900px)');
     const handleChange = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        onClosePanel?.();
+      }
+
       setIsControlPanelOpen(!event.matches);
     };
 
@@ -32,27 +36,35 @@ export function useResponsivePanel(): ResponsivePanelResult {
         media.removeListener(handleChange);
       }
     };
-  }, []);
+  }, [onClosePanel]);
 
   useEffect(() => {
     if (!isControlPanelOpen) return undefined;
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        onClosePanel?.();
         setIsControlPanelOpen(false);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isControlPanelOpen]);
+  }, [isControlPanelOpen, onClosePanel]);
 
   const toggleControlPanel = useCallback(() => {
-    setIsControlPanelOpen((prev) => !prev);
-  }, []);
+    setIsControlPanelOpen((prev) => {
+      if (prev) {
+        onClosePanel?.();
+      }
+
+      return !prev;
+    });
+  }, [onClosePanel]);
 
   const closeControlPanel = useCallback(() => {
+    onClosePanel?.();
     setIsControlPanelOpen(false);
-  }, []);
+  }, [onClosePanel]);
 
   return {
     isControlPanelOpen,

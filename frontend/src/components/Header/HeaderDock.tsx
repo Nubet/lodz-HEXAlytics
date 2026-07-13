@@ -91,9 +91,10 @@ function LogoSection({ isControlPanelOpen, onToggleControlPanel }: LogoSectionPr
     <div className="flex shrink-0 items-center gap-3">
       <button
         type="button"
-        className="icon-control nav-pill hidden size-9 text-surface-elevated-subtle max-[900px]:inline-flex"
+        className="icon-control nav-pill size-9 text-surface-elevated-subtle"
         onClick={onToggleControlPanel}
-        aria-label={isControlPanelOpen ? 'Ukryj panel filtrów' : 'Pokaż panel filtrów'}
+        aria-label={isControlPanelOpen ? 'Ukryj panel boczny' : 'Pokaż panel boczny'}
+        title={isControlPanelOpen ? 'Ukryj panel boczny' : 'Pokaż panel boczny'}
         aria-expanded={isControlPanelOpen}
         aria-controls="control-panel"
       >

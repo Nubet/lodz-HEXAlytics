@@ -340,11 +340,9 @@
 }
 
 @utility control-panel-shell-closed {
-  @media (width <= 900px) {
-    pointer-events: none;
-    transform: translateX(calc(-100% - 24px));
-    opacity: 0;
-  }
+  pointer-events: none;
+  transform: translateX(calc(-100% - 24px));
+  opacity: 0;
 }
 
 @utility advanced-drawer-shell {
