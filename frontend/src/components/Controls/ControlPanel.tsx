@@ -79,7 +79,11 @@ function HexDensityLegend({ hexStats, accidentStats, mode }: HexDensityLegendPro
           ))}
         </ul>
         {mode === 'hex_3d' && (
-          <p className="text-micro rounded-md border-l-2 border-app-accent bg-surface-elevated-hover px-2 py-1.5 leading-5">
+          <p className="text-micro relative overflow-hidden rounded-md bg-surface-elevated-hover px-2 py-1.5 pl-3 leading-5">
+            <span
+              aria-hidden="true"
+              className="absolute inset-y-0 left-0 w-0.75 bg-app-accent"
+            />
             Wysokość = liczba wypadków
           </p>
         )}
