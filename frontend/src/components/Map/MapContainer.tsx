@@ -12,6 +12,7 @@ import { createHexagonLayer } from './layers/createHexagonLayer';
 import { createScatterplotLayer } from './layers/createScatterplotLayer';
 
 const EMPTY_HIGHLIGHTED_POINTS: AccidentPoint[] = [];
+const HEX_LABEL_MIN_ZOOM = 9.5;
 
 let isCanvasContextPatched = false;
 
@@ -215,7 +216,12 @@ export function MapContainer({
   onHover,
   onClick,
 }: MapContainerProps) {
-  const shouldRenderHexLabels = showHexLabels && mode !== 'points' && !(hideHexOnZoom && viewState.zoom >= hexHideZoom);
+  const shouldRenderHexLabels = (
+    showHexLabels
+    && mode !== 'points'
+    && !(hideHexOnZoom && viewState.zoom >= hexHideZoom)
+    && viewState.zoom >= HEX_LABEL_MIN_ZOOM
+  );
   const layers = useMemo(
     () =>
         getLayers(
