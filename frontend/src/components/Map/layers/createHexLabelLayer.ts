@@ -9,22 +9,30 @@ interface HexLabelLayerConfig {
 
 export function createHexLabelLayer({ hexBins, theme }: HexLabelLayerConfig) {
   const labelColor: [number, number, number, number] = theme === 'dark'
-    ? [235, 242, 255, 220]
-    : [17, 24, 39, 220];
+    ? [248, 250, 252, 255]
+    : [15, 23, 42, 255];
 
   return new TextLayer<HexBin>({
     id: 'hex-label-layer',
     data: hexBins,
     getPosition: (d) => d.centroid,
     getText: (d) => String(d.count),
-    getSize: 12,
+    getSize: 14,
     sizeUnits: 'pixels',
-    fontFamily: 'Space Grotesk, Manrope, sans-serif',
+    sizeMinPixels: 14,
+    sizeMaxPixels: 14,
+    characterSet: '0123456789',
+    fontFamily: 'Arial, Helvetica, sans-serif',
+    fontWeight: 'bold',
     getColor: labelColor,
     getTextAnchor: 'middle',
     getAlignmentBaseline: 'center',
     billboard: true,
     pickable: false,
+    parameters: {
+      depthCompare: 'always',
+      depthWriteEnabled: false,
+    },
     updateTriggers: {
       getColor: [theme],
     },

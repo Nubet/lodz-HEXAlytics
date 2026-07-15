@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react';
-import type { PickingInfo, ViewStateChangeParameters } from '@deck.gl/core';
+import { WebMercatorViewport, type PickingInfo, type ViewStateChangeParameters } from '@deck.gl/core';
 import DeckGL from '@deck.gl/react';
 import { CanvasContext } from '@luma.gl/core';
 import { WebGLCanvasContext } from '@luma.gl/webgl';
@@ -9,7 +9,6 @@ import type { AccidentPoint, HexBin } from '@/types/accident.types';
 import type { AppTheme } from '@/hooks/useTheme';
 import type { AppViewState, VisualizationMode } from '@/types/map.types';
 import { createHexagonLayer } from './layers/createHexagonLayer';
-import { createHexLabelLayer } from './layers/createHexLabelLayer';
 import { createScatterplotLayer } from './layers/createScatterplotLayer';
 
 const EMPTY_HIGHLIGHTED_POINTS: AccidentPoint[] = [];
@@ -80,7 +79,6 @@ function getLayers(
   highlightedPoints: AccidentPoint[],
   hexBins: HexBin[],
   hexStats: MapContainerProps['hexStats'],
-  showHexLabels: boolean,
   theme: AppTheme,
   zoom: number,
   hideHexOnZoom: boolean,
@@ -102,12 +100,6 @@ function getLayers(
       fillOpacityMultiplier,
       lineColor,
       lineWidth,
-    });
-
-  const buildHexLabelsLayer = () =>
-    createHexLabelLayer({
-      hexBins,
-      theme,
     });
 
   switch (mode) {
@@ -133,13 +125,9 @@ function getLayers(
 
       return [createScatterplotLayer({ points })];
     case 'hex_2d':
-      return showHexLabels
-        ? [buildHexLayer(false), buildHexLabelsLayer()]
-        : [buildHexLayer(false)];
+      return [buildHexLayer(false)];
     case 'hex_3d':
-      return showHexLabels
-        ? [buildHexLayer(true), buildHexLabelsLayer()]
-        : [buildHexLayer(true)];
+      return [buildHexLayer(true)];
     default:
       return [];
   }
@@ -227,6 +215,7 @@ export function MapContainer({
   onHover,
   onClick,
 }: MapContainerProps) {
+  const shouldRenderHexLabels = showHexLabels && mode !== 'points' && !(hideHexOnZoom && viewState.zoom >= hexHideZoom);
   const layers = useMemo(
     () =>
         getLayers(
@@ -235,7 +224,6 @@ export function MapContainer({
           highlightedPoints,
           hexBins,
         hexStats,
-        showHexLabels,
         theme,
         viewState.zoom,
         hideHexOnZoom,
@@ -247,13 +235,47 @@ export function MapContainer({
       highlightedPoints,
       hexBins,
       hexStats,
-      showHexLabels,
       theme,
       viewState.zoom,
       hideHexOnZoom,
       hexHideZoom,
     ]
   );
+
+  const hexLabels = useMemo(() => {
+    if (!shouldRenderHexLabels) {
+      return [];
+    }
+
+    const viewport = new WebMercatorViewport({
+      width: globalThis.innerWidth || 1,
+      height: globalThis.innerHeight || 1,
+      longitude: viewState.longitude,
+      latitude: viewState.latitude,
+      zoom: viewState.zoom,
+      pitch: viewState.pitch,
+      bearing: viewState.bearing,
+    });
+
+    return hexBins
+      .map((hexBin) => {
+        const [x, y] = viewport.project(hexBin.centroid);
+        return {
+          h3Index: hexBin.h3Index,
+          count: hexBin.count,
+          x,
+          y,
+        };
+      })
+      .filter((label) => (
+        Number.isFinite(label.x)
+        && Number.isFinite(label.y)
+        && label.x >= 0
+        && label.x <= (globalThis.innerWidth || 0)
+        && label.y >= 0
+        && label.y <= (globalThis.innerHeight || 0)
+      ));
+  }, [hexBins, shouldRenderHexLabels, viewState.bearing, viewState.latitude, viewState.longitude, viewState.pitch, viewState.zoom]);
 
   const handleViewStateChange = useCallback(
     (params: ViewStateChangeParameters) => {
@@ -286,6 +308,28 @@ export function MapContainer({
       >
         <Map mapStyle={mapStyle} reuseMaps style={{ width: '100%', height: '100%' }} />
       </DeckGL>
+
+      {hexLabels.length > 0 && (
+        <div className="pointer-events-none absolute inset-0 z-10">
+          {hexLabels.map((label) => (
+            <div
+              key={label.h3Index}
+              className="absolute text-[14px] leading-none font-bold tracking-tight"
+              style={{
+                left: label.x,
+                top: label.y,
+                color: theme === 'dark' ? '#f8fafc' : '#0f172a',
+                textShadow: theme === 'dark'
+                  ? '0 0 4px rgba(15, 23, 42, 0.95), 0 0 10px rgba(15, 23, 42, 0.85)'
+                  : '0 0 4px rgba(248, 250, 252, 0.95), 0 0 10px rgba(248, 250, 252, 0.85)',
+                transform: 'translate(-50%, -50%)',
+              }}
+            >
+              {label.count}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
